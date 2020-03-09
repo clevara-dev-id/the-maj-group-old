@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Verlag B';
+  font-style: bold;
+  font-weight: bold;
+  src: url('./Assets/Font/Verlag/Verlag-Bold.ttf');
+}

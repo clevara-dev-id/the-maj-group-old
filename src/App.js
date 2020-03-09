@@ -1,25 +1,50 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+import { 
+  ButtonLargeFristEnable, 
+  ButtonLargeFristDisable,
+  ButtonLargeSecondEnable,
+  ButtonLargeSecondDisable,
+  ButtonLargeThirdEnable,
+  ButtonLargeThirdDisable,
+  ButtonSmallFristEnable, 
+  ButtonSmallFristDisable,
+  ButtonSmallSecondEnable,
+  ButtonSmallSecondDisable,
+  ButtonSmallThirdEnable,
+  ButtonSmallThirdDisable
+} from './components/base_components/base/';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <br />
+        <ButtonLargeFristEnable buttonName="Default" handleButton={()=>{console.log("Button Enable")}} />
+        <pre>....</pre>
+        <ButtonLargeFristDisable buttonName="Disable" />
+        <br /><br /><br />
+        <ButtonLargeSecondEnable buttonName="Default" />
+        <pre>...</pre>
+        <ButtonLargeSecondDisable buttonName="Disable" />
+        <br /><br /><br />
+        <ButtonLargeThirdEnable buttonName="Default" />
+        <pre>...</pre>
+        <ButtonLargeThirdDisable buttonName="Enable" />
+        <br /><br /><br />
+        <ButtonSmallFristEnable buttonName="Default" handleButton={()=>{console.log("Button Enable")}} />
+        <pre>....</pre>
+        <ButtonSmallFristDisable buttonName="Disable" />
+        <br /><br /><br />
+        <ButtonSmallSecondEnable buttonName="Default" />
+        <pre>...</pre>
+        <ButtonSmallSecondDisable buttonName="Disable" />
+        <br /><br /><br />
+        <ButtonSmallThirdEnable buttonName="Default" />
+        <pre>...</pre>
+        <ButtonSmallThirdDisable buttonName="Enable" />
+    </>
   );
 }
 

@@ -28,29 +28,35 @@ function SamplePrevArrow(props) {
 class CustomSlide extends Component {
   render() {
     const Card = styled.div`
-            position: absolute;
-            width: 445px;
-            height: 300px;
-            color: '#833488;
-            backgroud:#000;
-            border: 5px solid red;
-            
-            /* white */
-            background: #FFFFFF;
-            
-            /* shadow-1 */
-            box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.03);
-            border-radius: 2px;
+        position: relative;
+        z-index: 1;
+        background-color: #0003;
+        width: 825px;
+        height: 450px;
+        margin-top: -25%;
+        margin-left: 5%;
         `;
+        const Card2 = styled.div`
+        position: relative;
+        z-index: 3;
+        background-color: red;
+        width: 200px;
+        height: 100px;
+        margin-top: -25%;
+        margin-left: 6%;
+        `;
+    
     const { index, ...props } = this.props;
     return (
       <div {...props}>
-        <div><img src={index.source} width="825px" height="450px"/></div>
+        <Card><img src={index.source} width="825px" height="450px"/></Card>
+        <Card2>2-sds</Card2>
+        {/* <div><img src={index.source} width="825px" height="450px"/></div>
         <div >
             <Card>
                 w3-cardhkhlkhkhlkhklhkhkhkhkkhlkhlkhkh
             </Card> 
-        </div>
+        </div> */}
 
       </div>
     );

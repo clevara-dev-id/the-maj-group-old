@@ -43,3 +43,50 @@
   font-weight: bold;
   src: url('./Assets/Font/Verlag/Verlag-Bold.ttf');
 }
+
+@font-face {
+  font-family: 'Miller Display SB';
+  font-style: bold;
+  font-weight: bold;
+  src: url('./Assets/Font/MillerDisplay/MillerDisplay-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Ideal Sans N';
+  font-style: normal;
+  src: url('./Assets/Font/IdealSans/IdealSans-Black-Pro.otf');
+}
+
+h1{
+  font-family: "Miller Display SB";
+  font-size: 34px;
+}
+
+h2{
+  font-family: "Miller Display SB";
+  font-size: 22px;
+}
+
+h3{
+  font-family: "Miller Display SB";
+  font-size: 17px;
+}
+
+h4{
+  font-family: "Miller Display SB";
+  font-size: 15px;
+}
+
+h5{
+  font-family: "Verlag B";
+  font-size: 14px;
+}
+
+h6{
+  font-family: "Verlag B";
+  font-size: 11px;
+}
+
+body{
+
+}

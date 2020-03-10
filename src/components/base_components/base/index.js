@@ -1,22 +1,22 @@
 import { 
-    ButtonLargeFristEnable, 
-    ButtonLargeFristDisable,
-    ButtonLargeSecondEnable,
-    ButtonLargeSecondDisable,
-    ButtonLargeThirdEnable,
-    ButtonLargeThirdDisable
+    ButtonPrimary, 
+    ButtonPrimaryDisable,
+    ButtonSecondary,
+    ButtonSecondaryDisable,
+    ButtonOutline,
+    ButtonOutlineDisable
  } from './ButtonMaster';
 
  import { 
-    ButtonSmallFristEnable, 
-    ButtonSmallFristDisable,
-    ButtonSmallSecondEnable,
-    ButtonSmallSecondDisable,
-    ButtonSmallThirdEnable,
-    ButtonSmallThirdDisable
+    ButtonPrimarySmall, 
+    ButtonPrimarySmallDisable,
+    ButtonSecondarySmall,
+    ButtonSecondarySmallDisable,
+    ButtonOutlineSmall,
+    ButtonOutlineSmallDisable
  } from './ButtonMasterSmall';
 
-ButtonLargeFristEnable.defaultProps = {
+ButtonPrimary.defaultProps = {
     color : "#ffffff",
     fontFamily :"Verlag B",
     background :"#232323",
@@ -25,7 +25,7 @@ ButtonLargeFristEnable.defaultProps = {
     border: "0px"
 }
 
-ButtonLargeFristDisable.defaultProps = {
+ButtonPrimaryDisable.defaultProps = {
     color : "#C8C8C8",
     fontFamily :"Verlag B",
     background :"#EAE4E4",
@@ -34,7 +34,7 @@ ButtonLargeFristDisable.defaultProps = {
     border: "0px"
 }
 
-ButtonLargeSecondEnable.defaultProps = {
+ButtonSecondary.defaultProps = {
     color : "#5A5A5A;",
     fontFamily :"Verlag B",
     background :"#C8C8C8",
@@ -43,7 +43,7 @@ ButtonLargeSecondEnable.defaultProps = {
     border: "0px"
 }
 
-ButtonLargeSecondDisable.defaultProps = {
+ButtonSecondaryDisable.defaultProps = {
     color : "#C8C8C8",
     fontFamily :"Verlag B",
     background :"#EAE4E4",
@@ -52,7 +52,7 @@ ButtonLargeSecondDisable.defaultProps = {
     border: "0px"
 }
 
-ButtonLargeThirdEnable.defaultProps = {
+ButtonOutline.defaultProps = {
     color : "#232323",
     fontFamily :"Verlag B",
     fontSize : "17px",
@@ -61,7 +61,7 @@ ButtonLargeThirdEnable.defaultProps = {
     border: "2px solid #232323"
 }
 
-ButtonLargeThirdDisable.defaultProps = {
+ButtonOutlineDisable.defaultProps = {
     color : "#C8C8C8",
     fontFamily :"Verlag B",
     fontSize : "17px",
@@ -69,7 +69,7 @@ ButtonLargeThirdDisable.defaultProps = {
     border: "2px solid #C8C8C8"
 }
 
-ButtonSmallFristEnable.defaultProps = {
+ButtonPrimarySmall.defaultProps = {
     color : "#ffffff",
     fontFamily :"Verlag B",
     background :"#232323",
@@ -78,7 +78,7 @@ ButtonSmallFristEnable.defaultProps = {
     border: "0px"
 }
 
-ButtonSmallFristDisable.defaultProps = {
+ButtonPrimarySmallDisable.defaultProps = {
     color : "#C8C8C8",
     fontFamily :"Verlag B",
     background :"#EAE4E4",
@@ -87,7 +87,7 @@ ButtonSmallFristDisable.defaultProps = {
     border: "0px"
 }
 
-ButtonSmallSecondEnable.defaultProps = {
+ButtonSecondarySmall.defaultProps = {
     color : "#5A5A5A;",
     fontFamily :"Verlag B",
     background :"#C8C8C8",
@@ -96,7 +96,7 @@ ButtonSmallSecondEnable.defaultProps = {
     border: "0px"
 }
 
-ButtonSmallSecondDisable.defaultProps = {
+ButtonSecondarySmallDisable.defaultProps = {
     color : "#C8C8C8",
     fontFamily :"Verlag B",
     background :"#EAE4E4",
@@ -105,7 +105,7 @@ ButtonSmallSecondDisable.defaultProps = {
     border: "0px"
 }
 
-ButtonSmallThirdEnable.defaultProps = {
+ButtonOutlineSmall.defaultProps = {
     color : "#232323",
     fontFamily :"Verlag B",
     fontSize : "12px",
@@ -114,7 +114,7 @@ ButtonSmallThirdEnable.defaultProps = {
     border: "2px solid #232323"
 }
 
-ButtonSmallThirdDisable.defaultProps = {
+ButtonOutlineSmallDisable.defaultProps = {
     color : "#C8C8C8",
     fontFamily :"Verlag B",
     fontSize : "12px",
@@ -123,17 +123,17 @@ ButtonSmallThirdDisable.defaultProps = {
 }
 
 export {
-    ButtonLargeFristEnable,
-    ButtonLargeFristDisable,
-    ButtonLargeSecondEnable,
-    ButtonLargeSecondDisable,
-    ButtonLargeThirdEnable,
-    ButtonLargeThirdDisable,
-    ButtonSmallFristEnable, 
-    ButtonSmallFristDisable,
-    ButtonSmallSecondEnable,
-    ButtonSmallSecondDisable,
-    ButtonSmallThirdEnable,
-    ButtonSmallThirdDisable
+    ButtonPrimary,
+    ButtonPrimaryDisable,
+    ButtonSecondary,
+    ButtonSecondaryDisable,
+    ButtonOutline,
+    ButtonOutlineDisable,
+    ButtonPrimarySmall, 
+    ButtonPrimarySmallDisable,
+    ButtonSecondarySmall,
+    ButtonSecondarySmallDisable,
+    ButtonOutlineSmall,
+    ButtonOutlineSmallDisable
 };
 

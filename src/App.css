@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #f9f9f9;
 }
 
 .App-logo {
@@ -28,6 +29,10 @@
   color: #61dafb;
 }
 
+body{
+  background-color: #f9f9f9;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -54,39 +59,79 @@
 @font-face {
   font-family: 'Ideal Sans N';
   font-style: normal;
-  src: url('./Assets/Font/IdealSans/IdealSans-Black-Pro.otf');
+  src: url('./Assets/Font/IdealSans/IdealSans-Book-Pro.otf');
 }
 
 h1{
   font-family: "Miller Display SB";
   font-size: 34px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 41px;
+  color: #232323;
 }
 
 h2{
   font-family: "Miller Display SB";
   font-size: 22px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 36px;
+  color: #232323;
 }
 
 h3{
   font-family: "Miller Display SB";
   font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 22px;
+  color: #232323;
 }
 
 h4{
   font-family: "Miller Display SB";
   font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 20px;
+  color: #232323;
 }
 
 h5{
   font-family: "Verlag B";
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 16px;
+  letter-spacing: 3px;
+  color: #232323;
 }
 
 h6{
   font-family: "Verlag B";
   font-size: 11px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 13px;
+  color: #232323;
+}
+
+p{
+  font-family: "Ideal Sans N";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #232323;
 }
 
 body{
-
+  font-family: "Ideal Sans N";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  color: #232323;
 }

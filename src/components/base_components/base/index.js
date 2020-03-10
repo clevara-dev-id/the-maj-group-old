@@ -16,6 +16,11 @@ import {
     ButtonOutlineSmallDisable
  } from './ButtonMasterSmall';
 
+ import {
+    CardText,
+    CardTextSecondary,
+ } from './CardText'
+
 ButtonPrimary.defaultProps = {
     color : "#ffffff",
     fontFamily :"Verlag B",
@@ -134,6 +139,8 @@ export {
     ButtonSecondarySmall,
     ButtonSecondarySmallDisable,
     ButtonOutlineSmall,
-    ButtonOutlineSmallDisable
+    ButtonOutlineSmallDisable,
+    CardText,
+    CardTextSecondary
 };
 

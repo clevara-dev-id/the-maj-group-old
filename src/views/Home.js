@@ -27,6 +27,7 @@ import {
   PrimaryArticle,
   SecondaryArticle,
   SmallArticle,
+  NavigationBar,
 } from '../components/base_components/base'
 
 export default class Home extends Component {
@@ -57,6 +58,8 @@ export default class Home extends Component {
           text="Occasions & Offers"
           image="http://timpietrusky.com/cdn/army.png"
         /> */}
+
+        <NavigationBar />
 
         <CardImage
           title="RAJA AMPAT ISLAND"

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
  
 export class ButtonPrimary extends Component {
     constructor(props){
@@ -328,7 +331,7 @@ export class ButtonOutline extends Component {
         
         return (
             <>
-                <Button as="a" className={this.props.className} href={this.props.link||"#"} onClick={this.props.handleButton}>{this.state.buttonName}</Button>
+                <Button as="a" className={this.props.className||""} href={this.props.link||"#"} onClick={this.props.handleButton}>{this.state.buttonName}</Button>
             </>
         )
     }
@@ -389,9 +392,76 @@ export class ButtonOutlineDisable extends Component {
         `;
         
         return (
-            <div>
+            <>
                 <Button as="a" onClick={this.props.handleButton}>{this.state.buttonName}</Button>
-            </div>
+            </>
+        )
+    }
+}
+
+export class ButtonLink extends Component {
+    constructor(props){
+        super(props);
+    }
+    
+    render(){
+        
+        const Button = styled.button`
+            width:120px;
+            height:40px;
+            padding: 11px 38px;
+
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: ${props=>props.color};
+            transition: .15s all;
+            &:hover {
+                color: #232323;
+                text-decoration: none;
+            }
+        `;
+        return(
+            <>
+                <Button as="a" color={this.props.inverse?"#000":"#fff"} href={this.props.link||"#"} className={this.props.className||""}>{this.props.buttonName}</Button>
+            </>
+        )
+    }
+}
+
+export class ButtonSearch extends Component {
+    constructor(props){
+        super(props);
+        
+    }
+    render(){
+        const Button = styled.button`
+            width:120px;
+            height:40px;
+            padding: 11px 0px;
+
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            transition: .15s all;
+            &:hover {
+                color: #232323;
+                text-decoration: none;
+            }
+        `;
+        return(
+            <>
+                <Button as="a" href={this.props.link||"#"} className={this.props.className||""}><FontAwesomeIcon style={{marginRight:"25px"}} icon={faSearch} />{this.props.buttonName}</Button>
+            </>
         )
     }
 }

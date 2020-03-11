@@ -270,8 +270,8 @@ export class ButtonOutline extends Component {
             color : "#ffffff",
             fontFamily :"Verlag B",
             background :"#232323",
-            fontSize : "22px",
-            padding: "4.8px 22px",
+            fontSize : "13px",
+            padding: "11px 29px",
             border: "0px"
         }
         // this.onSubmit = this.onSubmit.bind(this);
@@ -293,24 +293,30 @@ export class ButtonOutline extends Component {
         });
     }
     render() {
-        const Button = styled.button`
+        const Button = styled.button` 
             color: ${this.state.color};
             font-size : ${this.state.fontSize};
-            margin: 1em;
             padding: ${this.state.padding};
             border: ${this.state.border};
             border-radius: 0px;
-            display: block;
+            display: inline-block;
+            vertical-align: middle;
 
             font-family: ${this.state.fontFamily};
             font-style: ${this.state.fontStyle};
-            line-height: 22px;
+            line-height: 18px;
+            letter-spacing: 2px;
 
-            position: absolute;
+            position: relative;
             background: ${this.state.background};
             text-align: center;
             text-transform: uppercase;
             text-decoration:none;
+            transition: .15s all;
+            max-width: 160px;
+            max-height: 40px;
+            width:100%;
+            height:100%;
             &:hover {
                 background-color: #232323;
                 color: #fff;
@@ -321,9 +327,9 @@ export class ButtonOutline extends Component {
         `;
         
         return (
-            <div>
-                <Button as="a" href={this.props.link||"#"} onClick={this.props.handleButton}>{this.state.buttonName}</Button>
-            </div>
+            <>
+                <Button as="a" className={this.props.className} href={this.props.link||"#"} onClick={this.props.handleButton}>{this.state.buttonName}</Button>
+            </>
         )
     }
 }

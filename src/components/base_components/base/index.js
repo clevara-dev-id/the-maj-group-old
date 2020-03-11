@@ -21,6 +21,14 @@ import {
     CardTextSecondary,
  } from './CardText'
 
+ import {
+     Title
+ } from './Title'
+
+ import {
+     CardImageRight 
+ } from './CardImage'
+
 ButtonPrimary.defaultProps = {
     color : "#ffffff",
     fontFamily :"Verlag B",
@@ -60,8 +68,8 @@ ButtonSecondaryDisable.defaultProps = {
 ButtonOutline.defaultProps = {
     color : "#232323",
     fontFamily :"Verlag B",
-    fontSize : "17px",
-    padding: "4.8px 22px",
+    fontSize : "13px",
+    padding: "11px 29px",
     border: "0px",
     border: "2px solid #232323"
 }
@@ -141,6 +149,8 @@ export {
     ButtonOutlineSmall,
     ButtonOutlineSmallDisable,
     CardText,
-    CardTextSecondary
+    CardTextSecondary,
+    Title,
+    CardImageRight,
 };
 

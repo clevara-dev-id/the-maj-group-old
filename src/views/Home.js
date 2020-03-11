@@ -22,6 +22,8 @@ import {
   Title,
   CardImageRight,
 } from '../components/base_components/base'
+import CardImage from '../components/base_components/base/cardImageTopDown/CardImage'
+import SliderCardImage from '../components/base_components/base/cardImageTopDown/SliderCardImage'
 
 export default class Home extends Component {
   constructor(props){
@@ -52,13 +54,55 @@ export default class Home extends Component {
           image="http://timpietrusky.com/cdn/army.png"
         /> */}
 
-        <CardImageRight
+        {/* <CardImageRight
           title="RAJA AMPAT ISLAND"
           text="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
           link="#linkTo"
           buttonName="View More"
           background={background}
-        />
+        /> */}
+
+        {/* <CardImage 
+          caps="Jakarta"
+          head="Senayan" 
+          desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit" 
+        /> */}
+
+        <div style={{display: "flex", justifyContent: "center"}}>
+          <SliderCardImage
+            // reversed
+            store={[
+              {
+                id: 1,
+                caps: "Jakarta",
+                head: "Senayan",
+                desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                image: background
+              },
+              {
+                id: 2,
+                caps: "Bandung",
+                head: "Dago",
+                desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                image: background
+              },
+              {
+                id: 3,
+                caps: "Bali",
+                head: "Nusa Dua",
+                desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                image: background
+              },
+              {
+                id: 4,
+                caps: "Hongkong",
+                head: "Bekasi",
+                desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                image: background
+              }
+            ]}
+          />
+        </div>
 
       </div>
     )

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 // dummy image
 import background from '../Assets/tmp/CardImage.png'
 import backgroundLarge from '../Assets/tmp/CardImageLarge.png'
+import backgroundSmall from '../Assets/tmp/CardImage.png'
 
 import CustomArrows from '../components/base_components/base/CarousellMaster'
 import { 
@@ -23,6 +24,9 @@ import {
   Title,
   CardImage,
   CardImageLarge,
+  PrimaryArticle,
+  SecondaryArticle,
+  SmallArticle,
 } from '../components/base_components/base'
 
 export default class Home extends Component {
@@ -90,6 +94,17 @@ export default class Home extends Component {
           buttonName="View More"
           background={backgroundLarge}
           reverse={true}
+        />
+
+        <SmallArticle 
+          caption = "test"
+          title ="Tester lorem ipsum"
+          firstParagraph ="Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id.
+          Amet pariatur veniam non Lorem sunt aliquip. Aute ipsum adipisicing sint proident ad nostrud minim labore ex adipisicing voluptate occaecat aliqua. Dolor ea reprehenderit occaecat dolore sunt."
+          image={backgroundSmall}
+          alt="background"
+          secondParagraph="Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id.
+          Amet pariatur veniam non Lorem sunt aliquip. Aute ipsum adipisicing sint proident ad nostrud minim labore ex adipisicing voluptate occaecat aliqua. Dolor ea reprehenderit occaecat dolore sunt. Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id."
         />
 
       </div>

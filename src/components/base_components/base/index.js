@@ -30,6 +30,12 @@ import {
      CardImageLarge, 
  } from './CardImage'
 
+ import {
+    PrimaryArticle,
+    SecondaryArticle,
+    SmallArticle,
+ } from './ArticleComponent'
+
 ButtonPrimary.defaultProps = {
     color : "#ffffff",
     fontFamily :"Verlag B",
@@ -154,5 +160,8 @@ export {
     Title,
     CardImage,
     CardImageLarge,
+    PrimaryArticle,
+    SecondaryArticle,
+    SmallArticle,
 };
 

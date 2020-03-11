@@ -26,7 +26,8 @@ import {
  } from './Title'
 
  import {
-     CardImageRight 
+     CardImage,
+     CardImageLarge, 
  } from './CardImage'
 
 ButtonPrimary.defaultProps = {
@@ -151,6 +152,7 @@ export {
     CardText,
     CardTextSecondary,
     Title,
-    CardImageRight,
+    CardImage,
+    CardImageLarge,
 };
 

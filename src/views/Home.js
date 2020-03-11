@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 // dummy image
 import background from '../Assets/tmp/CardImage.png'
+import backgroundLarge from '../Assets/tmp/CardImageLarge.png'
 
 import CustomArrows from '../components/base_components/base/CarousellMaster'
 import { 
@@ -20,7 +21,8 @@ import {
   CardText,
   CardTextSecondary,
   Title,
-  CardImageRight,
+  CardImage,
+  CardImageLarge,
 } from '../components/base_components/base'
 
 export default class Home extends Component {
@@ -52,12 +54,42 @@ export default class Home extends Component {
           image="http://timpietrusky.com/cdn/army.png"
         /> */}
 
-        <CardImageRight
+        <CardImage
+          title="RAJA AMPAT ISLAND"
+          text="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+          link="#linkTo"
+          buttonName="View More"
+          btnClassName="float-right"
+          background={background}
+          reverse={false}
+        />
+
+        <CardImage
           title="RAJA AMPAT ISLAND"
           text="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
           link="#linkTo"
           buttonName="View More"
           background={background}
+          reverse={true}
+        />
+
+        <CardImageLarge 
+          caption="occasions"
+          title="Idyllic Honeymoons"
+          text="Reprehenderit enim exercitation eu laboris ea deserunt sunt proident. Ut officia aliqua voluptate commodo magna officia Lorem dolor consectetur eiusmod do enim est exercitation."
+          link="#linkTo"
+          buttonName="View More"
+          background={backgroundLarge}
+          reverse={false}
+        />
+        <CardImageLarge 
+          caption="occasions"
+          title="Idyllic Honeymoons"
+          text="Reprehenderit enim exercitation eu laboris ea deserunt sunt proident. Ut officia aliqua voluptate commodo magna officia Lorem dolor consectetur eiusmod do enim est exercitation."
+          link="#linkTo"
+          buttonName="View More"
+          background={backgroundLarge}
+          reverse={true}
         />
 
       </div>

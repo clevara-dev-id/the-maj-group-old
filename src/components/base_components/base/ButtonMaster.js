@@ -181,6 +181,7 @@ export class ButtonSecondary extends Component {
             background: ${this.state.background};
             text-align: center;
             text-transform: uppercase;
+            transition: .05s all;
             text-decoration:none;
             &:hover {
                 background-color: #fff;
@@ -310,6 +311,7 @@ export class ButtonOutline extends Component {
             background: ${this.state.background};
             text-align: center;
             text-transform: uppercase;
+            transition: .05s all;
             text-decoration:none;
             &:hover {
                 background-color: #232323;

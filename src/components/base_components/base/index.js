@@ -1,3 +1,4 @@
+// Import Button
 import { 
     ButtonPrimary, 
     ButtonPrimaryDisable,
@@ -15,6 +16,10 @@ import {
     ButtonOutlineSmall,
     ButtonOutlineSmallDisable
  } from './ButtonMasterSmall';
+
+//Import Carousel
+import CarousellPrimary from "./CarousellMaster"
+import CarousellSecondary from "./CarousellMasterSecondary"
 
 ButtonPrimary.defaultProps = {
     color : "#ffffff",
@@ -134,6 +139,8 @@ export {
     ButtonSecondarySmall,
     ButtonSecondarySmallDisable,
     ButtonOutlineSmall,
-    ButtonOutlineSmallDisable
+    ButtonOutlineSmallDisable,
+    CarousellPrimary,
+    CarousellSecondary
 };
 

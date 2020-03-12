@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-import CustomArrows from './components/base_components/base/CarousellMaster'
 import { 
   ButtonPrimary, 
   ButtonPrimaryDisable,
@@ -21,12 +20,45 @@ import {
   ButtonOutlineSmall,
   ButtonOutlineSmallDisable
 } from './components/base_components/base/';
+import {
+  CarousellPrimary,
+  CarousellSecondary
+} from './components/base_components/base/';
 
+let dataCrousel=[];
+
+dataCrousel[0]={
+    source      :`/assets/images/Rectangle45.png`,
+    name        : 'Hotel',
+    description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+    link        : '/homepage'
+}
+dataCrousel[1]={
+  source      :`/assets/images/Rectangle45.png`,
+  name        : 'Hotel',
+  description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+  link        : '/profile'
+}
+dataCrousel[2]={
+  source      :`/assets/images/Rectangle45.png`,
+  name        : 'Hotel',
+  description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+  link        : '/about'
+}
+dataCrousel[3]={
+  source      :`/assets/images/Rectangle45.png`,
+  name        : 'Hotel',
+  description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+  link        : '/contact'
+}
 function App() {
   return (
     <>
     <div>
-        <CustomArrows />
+      <br />
+        <CarousellPrimary dataCrousel={dataCrousel} />
+      <br /><br /><br />
+        <CarousellSecondary dataCrousel={dataCrousel} orientation="top"  />
     </div>
     </>
     // <>

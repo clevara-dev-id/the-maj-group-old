@@ -1,0 +1,21 @@
+#carouselOverlayPrimary > .slick-slider > .slick-prev::before, .slick-next::before {
+    font-size: 32px;
+    background-color:#000 ;
+    -webkit-filter: invert(100%);
+}
+#carouselOverlayPrimary > .slick-slider > .slick-prev, .slick-next{
+    width: 32px;
+    height: 32px;
+    margin-left: -15px;
+    margin-right: -15px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#carouselOverlayPrimary > .slick-slider > .slick-dots > ul > li > button::before {
+    font-size: 12px;
+} 
+
+/* #carouselOverlayPrimary > .slick-slider > .slick-list > .slick-track > .slick-active, .slick-current > div > div > div > div > div > a  */

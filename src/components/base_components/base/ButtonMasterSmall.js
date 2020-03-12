@@ -50,6 +50,7 @@ export class ButtonPrimarySmall extends Component {
             background: ${this.state.background};
             text-align: center;
             text-transform: uppercase;
+            transition: .05s all;
             text-decoration:none;
             &:hover {
                 background-color: #fff;
@@ -179,6 +180,7 @@ export class ButtonSecondarySmall extends Component {
             background: ${this.state.background};
             text-align: center;
             text-transform: uppercase;
+            transition: .05s all;
             text-decoration:none;
             &:hover {
                 background-color: #fff;
@@ -308,6 +310,7 @@ export class ButtonOutlineSmall extends Component {
             background: ${this.state.background};
             text-align: center;
             text-transform: uppercase;
+            transition: .05s all;
             text-decoration:none;
             &:hover {
                 background-color: #232323;

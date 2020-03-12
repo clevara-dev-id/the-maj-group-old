@@ -1,10 +1,13 @@
+// Import Button
 import { 
     ButtonPrimary, 
     ButtonPrimaryDisable,
     ButtonSecondary,
     ButtonSecondaryDisable,
     ButtonOutline,
-    ButtonOutlineDisable
+    ButtonOutlineDisable,
+    ButtonLink,
+    ButtonSearch,
  } from './ButtonMaster';
 
  import { 
@@ -13,7 +16,7 @@ import {
     ButtonSecondarySmall,
     ButtonSecondarySmallDisable,
     ButtonOutlineSmall,
-    ButtonOutlineSmallDisable
+    ButtonOutlineSmallDisable,
  } from './ButtonMasterSmall';
 
  import {
@@ -35,6 +38,13 @@ import {
     SecondaryArticle,
     SmallArticle,
  } from './ArticleComponent'
+
+ import {
+    NavigationBar
+ } from './NavbarComponent'
+//Import Carousel
+import CarousellPrimary from "./CarousellMaster"
+import CarousellSecondary from "./CarousellMasterSecondary"
 
 ButtonPrimary.defaultProps = {
     color : "#ffffff",
@@ -76,7 +86,7 @@ ButtonOutline.defaultProps = {
     color : "#232323",
     fontFamily :"Verlag B",
     fontSize : "13px",
-    padding: "11px 29px",
+    padding: "11px 20px",
     border: "0px",
     border: "2px solid #232323"
 }
@@ -155,6 +165,8 @@ export {
     ButtonSecondarySmallDisable,
     ButtonOutlineSmall,
     ButtonOutlineSmallDisable,
+    ButtonLink,
+    ButtonSearch,
     CardText,
     CardTextSecondary,
     Title,
@@ -163,5 +175,8 @@ export {
     PrimaryArticle,
     SecondaryArticle,
     SmallArticle,
+    NavigationBar,
+    CarousellPrimary,
+    CarousellSecondary
 };
 

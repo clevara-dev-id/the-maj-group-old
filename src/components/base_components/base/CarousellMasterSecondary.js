@@ -35,6 +35,8 @@ class CustomSlide extends Component {
         background-color: #0003;
         width: 825px;
         height: 450px;
+        padding-bottom: 0px;
+        bottom: -221px;
         `;
     const Card2 = styled.div`
         position: relative;
@@ -42,8 +44,8 @@ class CustomSlide extends Component {
         background-color: red;
         width: 445px;
         height: 300px;
-        margin-top: -35%;
-        margin-left: 58.5%;
+        margin-top: -42.3%;
+        margin-left: 29.6%;
         margin-bottom: 0px;
         background: #FFFFFF;
 
@@ -53,8 +55,8 @@ class CustomSlide extends Component {
         `
     const Card3 = styled.div`
         z-index: 4;
-        width: 825px;
-        height: 450px;
+        width: 1095px;
+        height: 667px;
         margin-top: -35%;
         margin-left: 0%;
         background-color: transparent;
@@ -101,7 +103,7 @@ class CustomSlide extends Component {
     const { index, ...props } = this.props;
     return (
       <div {...props}>
-        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="825px" height="450px" /></Card>
+        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="1095px" height="450px" /></Card>
         <Card2>
             <Mydiv>
               <HeaderTitle><h2>{index.name}</h2></HeaderTitle>
@@ -115,14 +117,13 @@ class CustomSlide extends Component {
   }
 }
 
-class CustomSlideRight extends Component {
+class CustomSlideBottom extends Component {
   render() {
     const Card = styled.div`
         position: relative;
         z-index: 1;
-        width: 1110px;
+        width: 1095px;
         height: 450px;
-        padding-left: 250px;
         `;
     const Card2 = styled.div`
         position: relative;
@@ -130,8 +131,8 @@ class CustomSlideRight extends Component {
         background-color: red;
         width: 445px;
         height: 300px;
-        margin-top: -35%;
-        margin-left: 0%;
+        margin-top: -92px;
+        margin-left: 29.6%;
         margin-bottom: 0px;
         background: #FFFFFF;
 
@@ -141,11 +142,11 @@ class CustomSlideRight extends Component {
         `
     const Card3 = styled.div`
         z-index: 4;
-        width: 1110px;
-        height: 450px;
+        width: 1095px;
+        height: 667px;
         margin-top: -35%;
         margin-left: 0%;
-        background-color: transparent;
+        background-color: red;
 
         `;
     const Mydiv = styled.div`
@@ -189,7 +190,7 @@ class CustomSlideRight extends Component {
     const { index, ...props } = this.props;
     return (
       <div {...props}>
-        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="825px" height="450px" /></Card>
+        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="1095px" height="450px" /></Card>
         <Card2>
             <Mydiv>
               <HeaderTitle><h2>{index.name}</h2></HeaderTitle>
@@ -197,21 +198,22 @@ class CustomSlideRight extends Component {
               <DivButton><ButtonLink href={index.link}>Discover now</ButtonLink></DivButton>
             </Mydiv>
         </Card2>
-        <Card3></Card3>
       </div>
     );
   }
 }
 
-export default class CarousellPrimary extends Component {
+export default class CarousellSecondary extends Component {
   constructor(props){
     super(props);
   }
   render() {
     let orient="";
     let margin="";
-    this.props.orientation === "left" ? orient="Left" : orient="Right";
-    this.props.orientation === "left" ? margin="margin-left: -10px" : margin="margin-right: -10px";
+    let marginTop="";
+    this.props.orientation === "top" ? orient="Left" : orient="Right";
+    this.props.orientation === "top" ? margin="margin-left: -10px" : margin="margin-right: -10px";
+    this.props.orientation === "top" ? marginTop="margin-top: -23px" : marginTop="margin-top: -232px";
     console.log(orient);
     const Divstyle = styled.div` 
             color: #000;
@@ -228,7 +230,7 @@ export default class CarousellPrimary extends Component {
         margin-top: -30px;
         font-size : 32px;
         padding-left : 0px;
-        margin-top: -23px;
+        ${marginTop};
         ${margin};
     `;
     const settings = {
@@ -252,7 +254,7 @@ export default class CarousellPrimary extends Component {
             .container, .container-lg, .container-md, 
             .container-sm, .container-xl{ width: 1110px; height:450px; }`}} />
         <Slider {...settings}>
-            {this.props.orientation==="left" ? 
+            {this.props.orientation==="top" ? 
             this.props.dataCrousel.map((data)=>{
               return (<CustomSlide index={{
                 source : data.source,
@@ -262,7 +264,7 @@ export default class CarousellPrimary extends Component {
               }} />);
             }) : 
             this.props.dataCrousel.map((data)=>{
-              return (<CustomSlideRight index={{
+              return (<CustomSlideBottom index={{
                 source : data.source,
                 name   : data.name,
                 description : data.description,

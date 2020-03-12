@@ -4,8 +4,8 @@
     -webkit-filter: invert(100%);
 }
 #carouselOverlayPrimary > .slick-slider > .slick-prev, .slick-next{
-    width: 32px;
-    height: 32px;
+    width: 33px;
+    height: 33px;
     margin-left: -15px;
     margin-right: -15px;
     border-radius: 100%;

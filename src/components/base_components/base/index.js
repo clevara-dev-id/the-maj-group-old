@@ -1,3 +1,4 @@
+// Import Button
 import { 
     ButtonPrimary, 
     ButtonPrimaryDisable,
@@ -41,6 +42,9 @@ import {
  import {
     NavigationBar
  } from './NavbarComponent'
+//Import Carousel
+import CarousellPrimary from "./CarousellMaster"
+import CarousellSecondary from "./CarousellMasterSecondary"
 
 ButtonPrimary.defaultProps = {
     color : "#ffffff",
@@ -172,5 +176,7 @@ export {
     SecondaryArticle,
     SmallArticle,
     NavigationBar,
+    CarousellPrimary,
+    CarousellSecondary
 };
 

@@ -22,7 +22,6 @@ import {
   CardText,
   CardTextSecondary,
   Title,
-  CardImage,
   CardImageLarge,
   PrimaryArticle,
   SecondaryArticle,
@@ -31,6 +30,8 @@ import {
 } from '../components/base_components/base'
 import CardImage from '../components/base_components/base/cardImageTopDown/CardImage'
 import SliderCardImage from '../components/base_components/base/cardImageTopDown/SliderCardImage'
+
+import CardSix from '../components/base_components/base/cardSix/CardSix'
 
 export default class Home extends Component {
   constructor(props){
@@ -110,6 +111,43 @@ export default class Home extends Component {
           alt="background"
           secondParagraph="Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id.
           Amet pariatur veniam non Lorem sunt aliquip. Aute ipsum adipisicing sint proident ad nostrud minim labore ex adipisicing voluptate occaecat aliqua. Dolor ea reprehenderit occaecat dolore sunt. Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id."
+        /> */}
+
+        
+        <CardSix
+          className="container"
+          store={[
+            {
+              id: 1,
+              image: background,
+              head: "Hotel"
+            },
+            {
+              id: 2,
+              image: background,
+              head: "Phinisi Cruise"
+            },
+            {
+              id: 3,
+              image: background,
+              head: "Residential"
+            },
+            {
+              id: 4,
+              image: background,
+              head: "Golf"
+            },
+            {
+              id: 5,
+              image: background,
+              head: "Restaurant"
+            },
+            {
+              id: 6,
+              image: background,
+              head: "Entertainment"
+            }
+          ]}
         />
 
       </div>

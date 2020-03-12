@@ -29,6 +29,7 @@ import {
 } from '../components/base_components/base'
 
 import CardSix from '../components/base_components/base/cardSix/CardSix'
+import SliderCardSix from '../components/base_components/base/cardSix/SliderCardSix'
 
 export default class Home extends Component {
   constructor(props){
@@ -109,7 +110,8 @@ export default class Home extends Component {
         /> */}
 
         
-        <CardSix
+        {/* <CardSix */}
+        <SliderCardSix
           className="container"
           store={[
             {
@@ -141,6 +143,11 @@ export default class Home extends Component {
               id: 6,
               image: background,
               head: "Entertainment"
+            },
+            {
+              id: 7,
+              image: background,
+              head: "Cianjur"
             }
           ]}
         />

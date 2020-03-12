@@ -34,6 +34,17 @@ import CardImageTopDown from '../components/base_components/base/cardImageTopDow
 import SliderCardImageTopDown from '../components/base_components/base/cardImageTopDown/SliderCardImageTopDown'
 import CardSix from '../components/base_components/base/cardSix/CardSix'
 
+
+import { layoutGenerator } from 'react-break';
+import MobileCardImageTopDown from '../components/base_components/base/cardImageTopDown/mobile/CardImageTopDown'
+const layout = layoutGenerator({
+  mobile: 0,
+  tablet: 768,
+  desktop: 992,
+});
+const OnMobileAndTablet = layout.isAtMost('tablet');
+const OnDesktop = layout.is('desktop');
+
 export default class Home extends Component {
   constructor(props){
     super(props)
@@ -63,9 +74,9 @@ export default class Home extends Component {
           image="http://timpietrusky.com/cdn/army.png"
         /> */}
 
-        <NavigationBar />
+        {/* <NavigationBar /> */}
 
-        <CardImage
+        {/* <CardImage
           title="RAJA AMPAT ISLAND"
           text="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
           link="#linkTo"
@@ -101,9 +112,9 @@ export default class Home extends Component {
           buttonName="View More"
           background={backgroundLarge}
           reverse={true}
-        />
+        /> */}
 
-        <SmallArticle 
+        {/* <SmallArticle 
           caption = "test"
           title ="Tester lorem ipsum"
           firstParagraph ="Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id.
@@ -112,10 +123,10 @@ export default class Home extends Component {
           alt="background"
           secondParagraph="Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id.
           Amet pariatur veniam non Lorem sunt aliquip. Aute ipsum adipisicing sint proident ad nostrud minim labore ex adipisicing voluptate occaecat aliqua. Dolor ea reprehenderit occaecat dolore sunt. Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id."
-        />
+        /> */}
 
         
-        <CardSix
+        {/* <CardSix
           className="container"
           store={[
             {
@@ -149,8 +160,61 @@ export default class Home extends Component {
               head: "Entertainment"
             }
           ]}
-        />
+        /> */}
 
+        <OnDesktop>
+          <div className="container" style={{display: "flex", flexDirection: "row", border: "1px solid", justifyContent: "space-between"}}>
+            <div>
+              <CardImageTopDown
+                caps="Jakarta"
+                head="Senayan"
+                image={background}
+                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+              />
+            </div>
+            <div>
+              <CardImageTopDown
+                caps="Bandung"
+                head="Dago"
+                image={background}
+                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+              />
+            </div>
+            <div>
+              <CardImageTopDown
+                caps="Bali"
+                head="Nusa Dua"
+                image={background}
+                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+              />
+            </div>
+          </div>
+        </OnDesktop>
+
+        <OnMobileAndTablet>
+          <div className="container" style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+            <MobileCardImageTopDown
+              caps="Jakarta"
+              head="Senayan"
+              image={background}
+              desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+            />
+            <MobileCardImageTopDown
+              containerStyle={{marginTop: "80px"}}
+              caps="Bandung"
+              head="Dago"
+              image={background}
+              desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+            />
+            <MobileCardImageTopDown
+              containerStyle={{marginTop: "80px"}}
+              caps="Bali"
+              head="Nusa Dua"
+              image={background}
+              desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+            />
+          </div>
+        </OnMobileAndTablet>
       </div>
     )
   }

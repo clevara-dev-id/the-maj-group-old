@@ -5,6 +5,8 @@ import { ButtonOutline, ButtonLink, ButtonSearch } from '.'
 import LogoImg from '../../../Assets/logo.svg'
 import { Navbar, Nav } from 'react-bootstrap'
 
+import './css/navbar.css'
+
 
 export class NavigationBar extends Component {
     constructor(props){
@@ -35,12 +37,9 @@ export class NavigationBar extends Component {
     render(){
         return(
             <>
-                <Container id="navbar" bg={this.state.isScroll? "rgba(255, 255, 255, 1);" : "rgba(47, 46, 46, 0.2);"}>
+                <Container id="navbar" className={this.state.isScroll?"bg-white":"bg-dark-transparent"}>
                     <NavHead 
-                        visible={this.state.isScroll? "visible": "visible"}
-                        margin={this.state.isScroll? "-50px auto -50px auto" : "45px auto 100px auto"}
-                        opacity={this.state.isScroll? "0" : "1"}
-                        display={this.state.isScroll? "none": "block"}
+                        className={this.state.isScroll?"hide":"show"}
                     >
                         <Navbar>
                             <Nav className="justify-content-start">
@@ -55,24 +54,24 @@ export class NavigationBar extends Component {
                         </Navbar>
                     </NavHead>
                     <NavBottom 
-                        border={this.state.isScroll? "none": "1px solid #fff"}
+                        className={this.state.isScroll?"border-none":"border-top-1"}
                     >
                         <NavBottomContainer>
                             <Nav className="justify-content-center">
                                 <Nav.Item>
-                                    <ButtonLink inverse={this.state.isScroll? true : false} className="" link="#destination" buttonName="destination" />
+                                    <ButtonLink className={this.state.isScroll?"text-dark":"text-white"} link="#destination" buttonName="destination" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink inverse={this.state.isScroll? true : false} className="" link="#portfolio" buttonName="portfolio" />
+                                    <ButtonLink className={this.state.isScroll?"text-dark":"text-white"} link="#portfolio" buttonName="portfolio" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink inverse={this.state.isScroll? true : false} className="" link="#occasions" buttonName="occasions" />
+                                    <ButtonLink className={this.state.isScroll?"text-dark":"text-white"} link="#occasions" buttonName="occasions" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink inverse={this.state.isScroll? true : false} className="" link="#offers" buttonName="offers" />
+                                    <ButtonLink className={this.state.isScroll?"text-dark":"text-white"} link="#offers" buttonName="offers" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink inverse={this.state.isScroll? true : false} className="" link="#about" buttonName="about" />
+                                    <ButtonLink className={this.state.isScroll?"text-dark":"text-white"} link="#about" buttonName="about" />
                                 </Nav.Item>
                             </Nav>
                         </NavBottomContainer>
@@ -85,8 +84,6 @@ export class NavigationBar extends Component {
 const Container = styled.div`
     width:100%;
     height:auto;
-    transition: .15s all;
-    background:${props=>props.bg};
     position:fixed;
     z-index:9;
 `;
@@ -94,16 +91,10 @@ const NavHead = styled.div`
     max-width:1337px;
     width:100%;
     margin: 45px auto 100px auto;
-    opacity: ${props=>props.opacity};
-    transition: .15s all;
-    visibility: ${props=>props.visible};
-    display: ${props=>props.display};
 `;
 const NavBottom = styled.div`
     max-width:1337px;
     width: 100%;
-    transition: .15s all;
-    border-top: ${props=>props.border};
     margin-bottom:34px;
     margin-left:auto;
     margin-right:auto;

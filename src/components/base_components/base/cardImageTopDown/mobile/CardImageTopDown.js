@@ -32,11 +32,7 @@ const MobileCardImageTopDown = props => {
                     </Group>
                 </>
             )}
-            {/* <ButtonOutlineSmall 
-                margin={props.reversed? "40px 0 0 0": "48px 0 0 0"} 
-                buttonName="View More" 
-                {...props} 
-            /> */}
+            <Button href="#" color="#C4964B" padding="10px 40px" margin="24px auto 0 auto">View More</Button>
         </Container>
     )
 }
@@ -46,7 +42,7 @@ const Container = styled.div(
         display: "block", 
         margin: "0 auto",
         padding: props.padding,
-        boxSizing: "border-box"
+        boxSizing: "border-box",
     })
 )
 
@@ -84,8 +80,29 @@ const P = styled.p(
     })
 )
 
-// const Button = styled(ButtonOutline)`
-//     margin: ${props => props.margin};
-// `;
+const Button = styled.a(
+    props => ({
+        color: props.color, 
+        fontSize: "13px",
+        margin: props.margin,
+        padding: props.padding,
+        display: "block",
+        lineHeight: "18px",
+        position: "relative",
+        textTransform: "uppercase",
+        transition: ".05s all",
+        backgroundColor: "transparent",
+        border: "2px solid " + props.color,
+        textAlign: "center",
+        letterSpacing: "2px",
+        "&:hover": {
+            backgroundColor: props.color,
+            color: "#FFFFFF",
+            cursor: "pointer",
+            textDecoration: "none"
+        },
+        width: "50%",
+    })
+)
 
 export default MobileCardImageTopDown

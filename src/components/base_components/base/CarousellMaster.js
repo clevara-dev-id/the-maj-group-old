@@ -203,10 +203,23 @@ class CustomSlideRight extends Component {
   }
 }
 
-export default class CarousellPrimary extends Component {
+export default class MobileCarousellPrimary extends Component {
   constructor(props){
     super(props);
+
+    this.state = {
+      localStore: []
+    }
   }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.store, prevState.localStore) {
+      return {
+        localStore: nextProps.store
+      }
+    }
+  }
+
   render() {
     let orient="";
     let margin="";
@@ -253,24 +266,26 @@ export default class CarousellPrimary extends Component {
             .container-sm, .container-xl{ width: 1110px; height:450px; }`}} />
         <Slider {...settings}>
             {this.props.orientation==="left" ? 
-            this.props.dataCrousel.map((data)=>{
-              return (<CustomSlide index={{
-                source : data.source,
-                name   : data.name,
-                description : data.description,
-                link   : data.link
-              }} />);
-            }) : 
-            this.props.dataCrousel.map((data)=>{
-              return (<CustomSlideRight index={{
-                source : data.source,
-                name   : data.name,
-                description : data.description,
-                link   : data.link
-
-              }} />);
-            })}
-          
+            this.state.localStore && this.state.localStore.map((data, i) => (
+                <CustomSlide index={{
+                  source : data.source,
+                  name   : data.name,
+                  description : data.description,
+                  link   : data.link
+                }} />
+              )
+            ) : (
+            this.state.localStore && this.state.localStore.map((data, i) =>  (
+              <CustomSlideRight 
+                  index={{
+                  source : data.source,
+                  name   : data.name,
+                  description : data.description,
+                  link   : data.link
+                }} 
+              />
+              )
+            ))}
         </Slider>
       </div>
     );

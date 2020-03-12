@@ -29,6 +29,8 @@ import {
   SmallArticle,
   NavigationBar,
 } from '../components/base_components/base'
+import CardImage from '../components/base_components/base/cardImageTopDown/CardImage'
+import SliderCardImage from '../components/base_components/base/cardImageTopDown/SliderCardImage'
 
 export default class Home extends Component {
   constructor(props){

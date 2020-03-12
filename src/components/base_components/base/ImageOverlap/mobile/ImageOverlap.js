@@ -24,33 +24,35 @@ export default class MobileImageOverlap extends Component {
 
   render() {
     return (
-      <div id="mobile-card-img-overlay" style={{maxWidth: "345px", maxHeight: "188px", margin: "0 auto"}}>
-        <Slider
-          autoplay={true}
-          autoplaySpeed={2000}
-          arrows={false}
-          beforeChange={(prev, next) => this.setState({indexActive: next})}
-          customPaging={i => (
-            <div id="dots" />
-          )}
-          dots={true}
-          infinite={true}
-          speed={3000}
-          slidesToShow={1}
-          slidesToScroll={1}
-          swipe={true}
-          pauseOnHover={true}
-          
-        >
-            {this.state.localStore && this.state.localStore.map((data, i) =>  (
-              <div> 
-                <img src={data.source} style={{width: "inherit", height: "inherit"}} alt="mobile-image-overlap" />
-              </div> 
-              )
+      <div id="mobile-card-img-overlay" style={{display: "flex", flexDirection: "column", maxHeight: "422px"}}>
+        <div style={{maxWidth: "345px", maxHeight: "188px", margin: "0 auto", padding: "0"}}>
+          <Slider
+            autoplay={true}
+            autoplaySpeed={2000}
+            arrows={false}
+            beforeChange={(prev, next) => this.setState({indexActive: next})}
+            customPaging={i => (
+              <div id="dots" />
             )}
-        </Slider>
+            dots={true}
+            infinite={true}
+            speed={3000}
+            slidesToShow={1}
+            slidesToScroll={1}
+            swipe={true}
+            pauseOnHover={true}
+            
+          >
+              {this.state.localStore && this.state.localStore.map((data, i) =>  (
+                <div> 
+                  <img src={data.source} style={{width: "345px", height: "188px"}} alt="mobile-image-overlap" />
+                </div> 
+                )
+              )}
+          </Slider>
+        </div>
 
-        <div style={{marginTop: "40px"}}>
+        <div style={{display: "flex", flexDirection: "column", margin: "40px auto 0 auto", padding: "0", maxWidth: "344px", maxHeight: "194px"}}>
           {this.state.localStore && this.state.localStore.map((data, i) => {
             if (i === this.state.indexActive) {
               return (
@@ -94,5 +96,6 @@ const A = styled.a(
     lineHeight: "26px",
     margin: props.margin,
     padding: props.padding,
+    width: "110px",
   })
 )

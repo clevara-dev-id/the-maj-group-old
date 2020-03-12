@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const MobilePortfolioVideo = props => {
     return (
-        <Container margin="71px auto 0 auto">
+        <Container margin="0 auto">
             <div style={{width: "345px", margin: "0 auto"}}>
                 <Caps1>Portfolio</Caps1>
                 <H1>Phinisy Cruise</H1>

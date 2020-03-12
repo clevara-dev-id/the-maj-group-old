@@ -153,28 +153,32 @@ export default class Home extends Component {
           </OnDesktop>
 
           <OnMobileAndTablet>
-            <div className="container" style={{display: "flex", flexDirection: "column", justifyContent: "space-arround", marginTop: "371px"}}>
               <MobileCardImageTopDown
-                caps="Jakarta"
-                head="Senayan"
-                image={background}
-                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+                store={[
+                  {
+                    id: 1,
+                    caps: "Jakarta",
+                    head: "Senayan",
+                    desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                    image: background,
+                    link: "#link1"
+                  },{
+                    id: 2,
+                    caps: "Bandung",
+                    head: "Dago",
+                    desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                    image: background,
+                    link: "#link2"
+                  },{
+                    id: 3,
+                    caps: "Bali",
+                    head: "Nusa Dua",
+                    desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                    image: background,
+                    link: "#link3"
+                  }
+                ]}
               />
-              <MobileCardImageTopDown
-                containerStyle={{marginTop: "80px"}}
-                caps="Bandung"
-                head="Dago"
-                image={background}
-                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
-              />
-              <MobileCardImageTopDown
-                containerStyle={{marginTop: "80px"}}
-                caps="Bali"
-                head="Nusa Dua"
-                image={background}
-                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
-              />
-            </div>
           </OnMobileAndTablet>
         </section>
 
@@ -186,6 +190,10 @@ export default class Home extends Component {
           <OnMobileAndTablet>
             <MobilePortfolioVideo />
           </OnMobileAndTablet>
+        </section>
+
+        <section>
+          
         </section>
 
         {/* <CardText

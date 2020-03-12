@@ -1,40 +1,62 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import { ButtonOutlineSmall } from '../../'
 
-const MobileCardImageTopDown = props => {
-    return (
-        <Container style={{...props.containerStyle}}>
-            {props.reversed ? (
-                <>
-                    <Group margin="0 0 48px 0" style={props.groupStyle}>
-                        <Caps1 color="#C4964B">{props.caps}</Caps1>
-                        <H2>{props.head}</H2>
-                        <P width="350px">{props.desc}</P>
-                    </Group>
-                    <img 
-                        src={props.image} 
-                        style={{width: "350px", height: "400px", ...props.imageStyle}} 
-                        alt="card-img-top-down" 
-                    />
-                </>
-            ) : (
-                <>
-                    <img 
-                        src={props.image} 
-                        style={{width: "350px", height: "400px",...props.imageStyle}}
-                        alt="card-img-top-down" 
-                    />
-                    <Group margin="40px 0 0 0" style={props.groupStyle}>
-                        <Caps1 color="#C4964B">{props.caps}</Caps1>
-                        <H2>{props.head}</H2>
-                        <P width="350px">{props.desc}</P>
-                    </Group>
-                </>
-            )}
-            <Button href="#" color="#C4964B" padding="10px 40px" margin="24px auto 0 auto">View More</Button>
-        </Container>
-    )
+class MobileCardImageTopDown extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             localStore: [],
+        }
+    }
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.store !== prevState.localStore) {
+            return {
+                localStore: nextProps.store
+            }
+        }
+        return null
+    }
+    
+    render() {
+        return (
+            <div className="container" style={{display: "flex", flexDirection: "column", justifyContent: "space-arround", marginTop: "79px", height: "100%"}}>
+                {this.state.localStore && this.state.localStore.map((item, i) => (
+                    this.props.reversed ? (
+                            <Container style={{...this.props.containerStyle}}>
+                                <Group margin="0 0 48px 0" style={this.props.groupStyle}>
+                                    <Caps1 color="#C4964B">{item.caps}</Caps1>
+                                    <H2>{item.head}</H2>
+                                    <P width="350px">{item.desc}</P>
+                                </Group>
+                                <img 
+                                    src={item.image} 
+                                    style={{width: "350px", height: "400px", ...this.props.imageStyle}} 
+                                    alt="card-img-top-down" 
+                                />
+                                <Button href={item.link} color="#C4964B" padding="10px 40px" margin="24px auto 0 auto">View More</Button>
+                            </Container>
+                        ) : (
+                            <Container padding="0 0 80px 0" style={{...this.props.containerStyle}}>
+                                <img 
+                                    src={item.image} 
+                                    style={{width: "350px", height: "400px",...this.props.imageStyle}}
+                                    alt="card-img-top-down" 
+                                />
+                                <Group margin="40px 0 0 0" style={this.props.groupStyle}>
+                                    <Caps1 color="#C4964B">{item.caps}</Caps1>
+                                    <H2>{item.head}</H2>
+                                    <P width="350px">{item.desc}</P>
+                                </Group>
+                                <Button href={item.link} color="#C4964B" padding="10px 40px" margin="24px auto 0 auto">View More</Button>
+                            </Container>
+                        )
+                ))}
+            </div>
+        )
+    }
 }
 
 const Container = styled.div(

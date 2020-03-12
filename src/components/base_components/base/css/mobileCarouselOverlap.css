@@ -1,0 +1,17 @@
+#mobile-card-img-overlay .slick-dots {
+    text-align: right;
+}
+
+#mobile-card-img-overlay #dots {
+    background-color: #5A5A5A;
+    border-radius: 8px;;
+    margin: 16px 4px;
+    width: 12px;
+    height: 12px;
+    opacity: 0.25;
+}
+
+#mobile-card-img-overlay .slick-active #dots {
+    opacity: 1;
+    background-color: #C4964B;
+}

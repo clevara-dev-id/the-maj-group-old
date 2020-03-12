@@ -46,13 +46,15 @@ import {
 import CarousellPrimary from "./CarousellMaster"
 import CarousellSecondary from "./CarousellMasterSecondary"
 
+import {Footer} from './footer/FooterComponent'
+
 ButtonPrimary.defaultProps = {
     color : "#ffffff",
     fontFamily :"Verlag B",
     background :"#232323",
     fontSize : "17px",
-    padding: "6.8px 22px",
-    border: "0px"
+    padding: "11px 28px",
+    border: "0px",
 }
 
 ButtonPrimaryDisable.defaultProps = {
@@ -177,6 +179,7 @@ export {
     SmallArticle,
     NavigationBar,
     CarousellPrimary,
-    CarousellSecondary
+    CarousellSecondary,
+    Footer,
 };
 

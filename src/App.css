@@ -104,3 +104,6 @@ body{
   line-height: 18px;
   color: #232323;
 }
+.form-control{
+  border-radius: 0;
+}

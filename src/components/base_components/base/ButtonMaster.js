@@ -13,7 +13,7 @@ export class ButtonPrimary extends Component {
             fontFamily :"Verlag B",
             background :"#232323",
             fontSize : "22px",
-            padding: "4.8px 22px",
+            padding: "11 28px",
             border: "0px"
         }
         // this.onSubmit = this.onSubmit.bind(this);
@@ -38,7 +38,6 @@ export class ButtonPrimary extends Component {
         const Button = styled.button`
             color: ${this.state.color};
             font-size : ${this.state.fontSize};
-            margin: 1em;
             padding: ${this.state.padding};
             border: ${this.state.border};
             border-radius: 0px;
@@ -55,8 +54,8 @@ export class ButtonPrimary extends Component {
             transition: .05s all;
             text-decoration: none;
             &:hover {
-                background-color: #fff;
-                color: #232323;
+                background-color: #CC9980;
+                color: ${this.state.background};
                 border: 2px solid #232323;
                 cursor: pointer;
                 text-decoration:none;

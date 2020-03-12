@@ -38,8 +38,9 @@ import CardSix from '../components/base_components/base/cardSix/CardSix'
 
 import { layoutGenerator } from 'react-break';
 import MobileCardImageTopDown from '../components/base_components/base/cardImageTopDown/mobile/CardImageTopDown'
-import PortfolioVideo from '../components/PortfolioVideo'
-import MobileCarousellPrimary from '../components/base_components/base/ImageOverlap/mobile/CarousellMaster'
+import PortfolioVideo from '../components/base_components/base/portfolio/PortfolioVideo'
+import MobileImageOverlap from '../components/base_components/base/ImageOverlap/mobile/ImageOverlap'
+import MobilePortfolioVideo from '../components/base_components/base/portfolio/mobile/PortfolioVideo'
 const layout = layoutGenerator({
   mobile: 0,
   tablet: 768,
@@ -63,7 +64,6 @@ export default class Home extends Component {
         
         <section>
           <OnDesktop>
-            <div className="container">
               <CarousellPrimary
                 store={[
                   {
@@ -89,12 +89,11 @@ export default class Home extends Component {
                   }
                 ]}
               />
-            </div>
           </OnDesktop>
 
           <OnMobileAndTablet>
             <div className="container">
-              <MobileCarousellPrimary
+              <MobileImageOverlap
                 store={[
                   {
                     id: 1,
@@ -125,26 +124,32 @@ export default class Home extends Component {
 
         <section>
           <OnDesktop>
-            <div className="container" style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
                 <CardImageTopDown
-                  caps="Jakarta"
-                  head="Senayan"
-                  image={background}
-                  desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+                  store={[
+                    {
+                      id: 1,
+                      caps: "Jakarta",
+                      head: "Senayan",
+                      desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                      image: background,
+                      link: "#link1"
+                    },{
+                      id: 2,
+                      caps: "Bandung",
+                      head: "Dago",
+                      desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                      image: background,
+                      link: "#link2"
+                    },{
+                      id: 3,
+                      caps: "Bali",
+                      head: "Nusa Dua",
+                      desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                      image: background,
+                      link: "#link3"
+                    }
+                  ]}
                 />
-                <CardImageTopDown
-                  caps="Bandung"
-                  head="Dago"
-                  image={background}
-                  desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
-                />
-                <CardImageTopDown
-                  caps="Bali"
-                  head="Nusa Dua"
-                  image={background}
-                  desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
-                />
-            </div>
           </OnDesktop>
 
           <OnMobileAndTablet>
@@ -173,11 +178,15 @@ export default class Home extends Component {
           </OnMobileAndTablet>
         </section>
 
-        {/* <section>
+        <section>
           <OnDesktop>
-            <PortfolioVideo />
+              <PortfolioVideo />
           </OnDesktop>
-        </section> */}
+
+          <OnMobileAndTablet>
+            <MobilePortfolioVideo />
+          </OnMobileAndTablet>
+        </section>
 
         {/* <CardText
           title="Our Story"

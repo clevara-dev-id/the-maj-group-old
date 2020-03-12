@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import '../../css/mobileCarouselOverlap.css'
 
-export default class MobileCarousellPrimary extends Component {
+export default class MobileImageOverlap extends Component {
   constructor(props){
     super(props);
 

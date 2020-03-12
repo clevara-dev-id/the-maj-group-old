@@ -23,14 +23,15 @@ import {
   CardTextSecondary,
   Title,
   CardImageLarge,
+  CardImage,
   PrimaryArticle,
   SecondaryArticle,
   SmallArticle,
   NavigationBar,
 } from '../components/base_components/base'
-import CardImage from '../components/base_components/base/cardImageTopDown/CardImage'
-import SliderCardImage from '../components/base_components/base/cardImageTopDown/SliderCardImage'
 
+import CardImageTopDown from '../components/base_components/base/cardImageTopDown/CardImageTopDown'
+import SliderCardImageTopDown from '../components/base_components/base/cardImageTopDown/SliderCardImageTopDown'
 import CardSix from '../components/base_components/base/cardSix/CardSix'
 
 export default class Home extends Component {
@@ -111,7 +112,7 @@ export default class Home extends Component {
           alt="background"
           secondParagraph="Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id.
           Amet pariatur veniam non Lorem sunt aliquip. Aute ipsum adipisicing sint proident ad nostrud minim labore ex adipisicing voluptate occaecat aliqua. Dolor ea reprehenderit occaecat dolore sunt. Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id."
-        /> */}
+        />
 
         
         <CardSix

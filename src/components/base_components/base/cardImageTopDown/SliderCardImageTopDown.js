@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Slider from "react-slick"
 import styled from 'styled-components'
-import CardImage from './CardImage'
+import CardImageTopDown from './CardImageTopDown'
 import './styles.css'
 
-export class SliderCardImage extends Component {
+export class SliderCardImageTopDown extends Component {
     constructor(props) {
         super(props)
     
@@ -47,7 +47,7 @@ export class SliderCardImage extends Component {
                 >
                     {this.state.localStore && this.state.localStore.map((item, i) => (
                         <div>
-                            <CardImage
+                            <CardImageTopDown
                                 {...this.props}
                                 image={item.image}
                                 caps={item.caps}
@@ -71,4 +71,4 @@ const Container = styled.div(
     })
 )
 
-export default SliderCardImage
+export default SliderCardImageTopDown

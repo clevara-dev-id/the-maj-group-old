@@ -203,7 +203,7 @@ class CustomSlideRight extends Component {
   }
 }
 
-export default class MobileCarousellPrimary extends Component {
+export default class CarousellPrimary extends Component {
   constructor(props){
     super(props);
 

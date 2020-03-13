@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import CardImageTopDown from './CardImageTopDown'
 import './styles.css'
 
-export class SliderCardImageTopDown extends Component {
+export default class SliderCardImageTopDown extends Component {
     constructor(props) {
         super(props)
     
@@ -71,4 +71,3 @@ const Container = styled.div(
     })
 )
 
-export default SliderCardImageTopDown

@@ -1,9 +1,7 @@
 import React, { Component, createRef } from 'react'
-import { NavigationBar, HeadComponent } from '../components/base_components/base'
 
 // tmp img
 import HeadBackground from '../Assets/tmp/headBg.png'
-import React, { Component } from 'react'
 
 // dummy image
 import background from '../Assets/tmp/CardImage.png'
@@ -34,6 +32,7 @@ import {
   SecondaryArticle,
   SmallArticle,
   NavigationBar,
+  HeadComponent,
 } from '../components/base_components/base'
 
 import CardImageTopDown from '../components/base_components/base/cardImageTopDown/CardImageTopDown'

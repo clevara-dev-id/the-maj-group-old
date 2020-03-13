@@ -1,4 +1,8 @@
 import React, { Component, createRef } from 'react'
+import { NavigationBar, HeadComponent } from '../components/base_components/base'
+
+// tmp img
+import HeadBackground from '../Assets/tmp/headBg.png'
 
 export default class Home extends Component {
   constructor(props){
@@ -38,7 +42,9 @@ export default class Home extends Component {
   render(){
     return(
       <div id="home">
-        
+        <NavigationBar />
+
+        <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
 
 
       </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ButtonOutline } from '..'
+import { ButtonOutlineSmall } from '../../'
 
-const CardImageTopDown = props => {
+const MobileCardImageTopDown = props => {
     return (
-        <Container style={props.containerStyle}>
+        <Container style={{...props.containerStyle}}>
             {props.reversed ? (
                 <>
                     <Group margin="0 0 48px 0" style={props.groupStyle}>
@@ -32,19 +32,17 @@ const CardImageTopDown = props => {
                     </Group>
                 </>
             )}
-            <Button href="#" color="#C4964B" margin="48px auto" padding="10px 40px">View More</Button>
+            <Button href="#" color="#C4964B" padding="10px 40px" margin="24px auto 0 auto">View More</Button>
         </Container>
     )
 }
 
 const Container = styled.div(
     props => ({
-        display: "flex", 
-        flexDirection: "column", 
-        alignItems: "center",
-        margin: props.margin,
+        display: "block", 
+        margin: "0 auto",
         padding: props.padding,
-        boxSizing: "border-box"
+        boxSizing: "border-box",
     })
 )
 
@@ -58,10 +56,10 @@ const Group = styled.div(
 
 const Caps1 = styled.h5(
     props => ({
-        color: props.color,
         textTransform: "uppercase",
         margin: props.margin,
-        padding: props.padding
+        padding: props.padding,
+        color: props.color,
     })
 )
 
@@ -86,7 +84,6 @@ const Button = styled.a(
     props => ({
         color: props.color, 
         fontSize: "13px",
-        fontWeight: "bold",
         margin: props.margin,
         padding: props.padding,
         display: "block",
@@ -102,9 +99,10 @@ const Button = styled.a(
             backgroundColor: props.color,
             color: "#FFFFFF",
             cursor: "pointer",
-            textDecoration: "none",
-        }
+            textDecoration: "none"
+        },
+        width: "50%",
     })
 )
 
-export default CardImageTopDown
+export default MobileCardImageTopDown

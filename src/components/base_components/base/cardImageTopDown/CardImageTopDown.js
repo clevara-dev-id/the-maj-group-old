@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { ButtonOutline } from '..'
 
-const CardImage = props => {
+const CardImageTopDown = props => {
     return (
         <Container style={props.containerStyle}>
             {props.reversed ? (
@@ -89,4 +89,4 @@ const P = styled.p(
 //     margin: ${props => props.margin};
 // `;
 
-export default CardImage
+export default CardImageTopDown

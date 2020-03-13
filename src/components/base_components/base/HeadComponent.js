@@ -16,6 +16,8 @@ const HeadBackground = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content:center;
 `;
 const H1 = styled.h1`
     width: 825px;
@@ -26,4 +28,6 @@ const H1 = styled.h1`
     text-align: center;
     color: #fff;
     text-shadow: 0px 20px 60px rgba(138, 149, 158, 0.2);
+    position:absolute;
+    bottom: 15%;
 `;

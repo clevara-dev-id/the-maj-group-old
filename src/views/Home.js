@@ -3,10 +3,48 @@ import { NavigationBar, HeadComponent } from '../components/base_components/base
 
 // tmp img
 import HeadBackground from '../Assets/tmp/headBg.png'
+import React, { Component } from 'react'
+
+// dummy image
+import background from '../Assets/tmp/CardImage.png'
+import backgroundLarge from '../Assets/tmp/CardImageLarge.png'
+import backgroundSmall from '../Assets/tmp/CardImage.png'
+
+import CustomArrows from '../components/base_components/base/CarousellMaster'
+import { 
+  ButtonPrimary, 
+  ButtonPrimaryDisable,
+  ButtonSecondary,
+  ButtonSecondaryDisable,
+  ButtonOutline,
+  ButtonOutlineDisable,
+  ButtonPrimarySmall, 
+  ButtonPrimarySmallDisable,
+  ButtonSecondarySmall,
+  ButtonSecondarySmallDisable,
+  ButtonOutlineSmall,
+  ButtonOutlineSmallDisable,
+  CarousellPrimary,
+  CardText,
+  CardTextSecondary,
+  Title,
+  CardImageLarge,
+  CardImage,
+  PrimaryArticle,
+  SecondaryArticle,
+  SmallArticle,
+  NavigationBar,
+} from '../components/base_components/base'
+
+import CardImageTopDown from '../components/base_components/base/cardImageTopDown/CardImageTopDown'
+import SliderCardImageTopDown from '../components/base_components/base/cardImageTopDown/SliderCardImageTopDown'
+import CardSix from '../components/base_components/base/cardSix/CardSix'
 
 
 import { layoutGenerator } from 'react-break';
 import MobileCardImageTopDown from '../components/base_components/base/cardImageTopDown/mobile/CardImageTopDown'
+import PortfolioVideo from '../components/PortfolioVideo'
+import MobileCarousellPrimary from '../components/base_components/base/ImageOverlap/mobile/CarousellMaster'
 const layout = layoutGenerator({
   mobile: 0,
   tablet: 768,
@@ -56,6 +94,125 @@ export default class Home extends Component {
         <NavigationBar />
 
         <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
+        {/* <NavigationBar /> */}
+        
+        <section>
+          <OnDesktop>
+            <div className="container">
+              <CarousellPrimary
+                store={[
+                  {
+                    id: 1,
+                    source: background,
+                    name: "Hotel",
+                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
+                    link: "#linkTo"
+                  },
+                  {
+                    id: 2,
+                    source: background,
+                    name: "Rumah",
+                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
+                    link: "#linkTo"
+                  },
+                  {
+                    id: 3,
+                    source: background,
+                    name: "Restaurant",
+                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
+                    link: "#linkTo"
+                  }
+                ]}
+              />
+            </div>
+          </OnDesktop>
+
+          <OnMobileAndTablet>
+            <div className="container">
+              <MobileCarousellPrimary
+                store={[
+                  {
+                    id: 1,
+                    source: background,
+                    name: "Hotel",
+                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
+                    link: "#linkTo"
+                  },
+                  {
+                    id: 2,
+                    source: background,
+                    name: "Rumah",
+                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
+                    link: "#linkTo"
+                  },
+                  {
+                    id: 3,
+                    source: background,
+                    name: "Restaurant",
+                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
+                    link: "#linkTo"
+                  }
+                ]}
+              />
+            </div>
+          </OnMobileAndTablet>
+        </section>
+
+        <section>
+          <OnDesktop>
+            <div className="container" style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
+                <CardImageTopDown
+                  caps="Jakarta"
+                  head="Senayan"
+                  image={background}
+                  desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+                />
+                <CardImageTopDown
+                  caps="Bandung"
+                  head="Dago"
+                  image={background}
+                  desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+                />
+                <CardImageTopDown
+                  caps="Bali"
+                  head="Nusa Dua"
+                  image={background}
+                  desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+                />
+            </div>
+          </OnDesktop>
+
+          <OnMobileAndTablet>
+            <div className="container" style={{display: "flex", flexDirection: "column", justifyContent: "space-arround", marginTop: "371px"}}>
+              <MobileCardImageTopDown
+                caps="Jakarta"
+                head="Senayan"
+                image={background}
+                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+              />
+              <MobileCardImageTopDown
+                containerStyle={{marginTop: "80px"}}
+                caps="Bandung"
+                head="Dago"
+                image={background}
+                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+              />
+              <MobileCardImageTopDown
+                containerStyle={{marginTop: "80px"}}
+                caps="Bali"
+                head="Nusa Dua"
+                image={background}
+                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+              />
+            </div>
+          </OnMobileAndTablet>
+        </section>
+
+        {/* <section>
+          <OnDesktop>
+            <PortfolioVideo />
+          </OnDesktop>
+        </section> */}
 
         {/* <CardText
           title="Our Story"
@@ -74,8 +231,6 @@ export default class Home extends Component {
           text="Occasions & Offers"
           image="http://timpietrusky.com/cdn/army.png"
         /> */}
-
-        {/* <NavigationBar /> */}
 
         {/* <CardImage
           title="RAJA AMPAT ISLAND"
@@ -163,59 +318,47 @@ export default class Home extends Component {
           ]}
         /> */}
 
-        <OnDesktop>
-          <div className="container" style={{display: "flex", flexDirection: "row", border: "1px solid", justifyContent: "space-between"}}>
-            <div>
-              <CardImageTopDown
-                caps="Jakarta"
-                head="Senayan"
-                image={background}
-                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
-              />
-            </div>
-            <div>
-              <CardImageTopDown
-                caps="Bandung"
-                head="Dago"
-                image={background}
-                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
-              />
-            </div>
-            <div>
-              <CardImageTopDown
-                caps="Bali"
-                head="Nusa Dua"
-                image={background}
-                desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
-              />
-            </div>
-          </div>
-        </OnDesktop>
 
-        <OnMobileAndTablet>
-          <div className="container" style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
-            <MobileCardImageTopDown
-              caps="Jakarta"
-              head="Senayan"
-              image={background}
-              desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
-            />
-            <MobileCardImageTopDown
-              containerStyle={{marginTop: "80px"}}
-              caps="Bandung"
-              head="Dago"
-              image={background}
-              desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
-            />
-            <MobileCardImageTopDown
-              containerStyle={{marginTop: "80px"}}
-              caps="Bali"
-              head="Nusa Dua"
-              image={background}
-              desc="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+        
+
+        {/* <OnDesktop>
+          <div className="container">
+            <SliderCardImageTopDown 
+              store={[
+                {
+                  id: 1,
+                  image: background,
+                  head: "Hotel"
+                },
+                {
+                  id: 2,
+                  image: background,
+                  head: "Phinisi Cruise"
+                },
+                {
+                  id: 3,
+                  image: background,
+                  head: "Residential"
+                },
+                {
+                  id: 4,
+                  image: background,
+                  head: "Golf"
+                },
+                {
+                  id: 5,
+                  image: background,
+                  head: "Restaurant"
+                },
+                {
+                  id: 6,
+                  image: background,
+                  head: "Entertainment"
+                }
+              ]}
             />
           </div>
-        </OnMobileAndTablet>
+        </OnDesktop> */}
       </div>
     )
   }

@@ -25,41 +25,43 @@ import {
   CarousellSecondary
 } from './components/base_components/base/';
 
-let dataCrousel=[];
+import Sliderbar from './components/base_components/base/SlidebarComponent'
 
-dataCrousel[0]={
-    source      :`/assets/images/Rectangle45.png`,
-    name        : 'Hotel',
-    description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-    link        : '/homepage'
-}
-dataCrousel[1]={
-  source      :`/assets/images/Rectangle45.png`,
-  name        : 'Hotel',
-  description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-  link        : '/profile'
-}
-dataCrousel[2]={
-  source      :`/assets/images/Rectangle45.png`,
-  name        : 'Hotel',
-  description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-  link        : '/about'
-}
-dataCrousel[3]={
-  source      :`/assets/images/Rectangle45.png`,
-  name        : 'Hotel',
-  description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-  link        : '/contact'
-}
+
+const data = [{
+  "source"      :`/assets/images/Rectangle45.png`,
+  "name"        : 'Hotel',
+  "description" : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+  "link"        : '/homepage'
+},
+{
+  "source"      :`/assets/images/Rectangle45.png`,
+  "name"        : 'Hotel',
+  "description" : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+  "link"        : '/profile'
+},
+{
+  "source"      :`/assets/images/Rectangle45.png`,
+  "name"        : 'Hotel',
+  "description" : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+  "link"        : '/about'
+},
+{
+  "source"      :`/assets/images/Rectangle45.png`,
+  "name"        : 'Hotel',
+  "description" : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+  "link"        : '/contact'
+}];
+
+let parseData=JSON.parse(data);
+console.log(parseData);
+
 function App() {
   return (
     <>
-    <div>
-      <br />
-        <CarousellPrimary dataCrousel={dataCrousel} />
-      <br /><br /><br />
-        <CarousellSecondary dataCrousel={dataCrousel} orientation="top"  />
-    </div>
+      
+      {/* <CarousellPrimary dataCrousel={parseData} orientation="left" /> */}
+      {/* <Sliderbar /> */}
     </>
     // <>
     //   <Container>

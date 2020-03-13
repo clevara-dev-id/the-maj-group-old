@@ -1,3 +1,4 @@
+import {device} from './DeviceWidth'
 // Import Button
 import { 
     ButtonPrimary, 
@@ -154,6 +155,7 @@ ButtonOutlineSmallDisable.defaultProps = {
     padding: "4.8px 22px",
     border: "2px solid #C8C8C8"
 }
+  
 
 export {
     ButtonPrimary,
@@ -183,5 +185,6 @@ export {
     CarousellSecondary,
     Footer,
     HeadComponent,
+    device,
 };
 

@@ -18,8 +18,11 @@ import {
  } from './ButtonMasterSmall';
 
 //Import Carousel
-import CarousellPrimary from "./CarousellMaster"
-import CarousellSecondary from "./CarousellMasterSecondary"
+import CarousellPrimary from "./CarousellMaster";
+import CarousellSecondary from "./CarousellMasterSecondary";
+
+//Import Sliderbar
+import { SlidebarComponent } from './SlidebarComponent';
 
 ButtonPrimary.defaultProps = {
     color : "#ffffff",
@@ -141,6 +144,7 @@ export {
     ButtonOutlineSmall,
     ButtonOutlineSmallDisable,
     CarousellPrimary,
-    CarousellSecondary
+    CarousellSecondary,
+    SlidebarComponent
 };
 

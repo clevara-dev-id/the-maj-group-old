@@ -14,22 +14,22 @@
             link        : '/homepage'
         }
         dataCrousel[1]={
-        source      :`/assets/images/Rectangle45.png`,
-        name        : 'Hotel',
-        description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-        link        : '/profile'
+            source      :`/assets/images/Rectangle45.png`,
+            name        : 'Hotel',
+            description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+            link        : '/profile'
         }
         dataCrousel[2]={
-        source      :`/assets/images/Rectangle45.png`,
-        name        : 'Hotel',
-        description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-        link        : '/about'
+            source      :`/assets/images/Rectangle45.png`,
+            name        : 'Hotel',
+            description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+            link        : '/about'
         }
         dataCrousel[3]={
-        source      :`/assets/images/Rectangle45.png`,
-        name        : 'Hotel',
-        description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-        link        : '/contact'
+            source      :`/assets/images/Rectangle45.png`,
+            name        : 'Hotel',
+            description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+            link        : '/contact'
         }
     
     2.  To use left model use React tag like this :

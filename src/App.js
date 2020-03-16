@@ -25,43 +25,19 @@ import {
   CarousellSecondary
 } from './components/base_components/base/';
 
-import Sliderbar from './components/base_components/base/SlidebarComponent'
+import Sliderbar from './components/base_components/base/SlidebarComponent';
+import Home from './views/Home'
 
 
-const data = [{
-  "source"      :`/assets/images/Rectangle45.png`,
-  "name"        : 'Hotel',
-  "description" : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-  "link"        : '/homepage'
-},
-{
-  "source"      :`/assets/images/Rectangle45.png`,
-  "name"        : 'Hotel',
-  "description" : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-  "link"        : '/profile'
-},
-{
-  "source"      :`/assets/images/Rectangle45.png`,
-  "name"        : 'Hotel',
-  "description" : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-  "link"        : '/about'
-},
-{
-  "source"      :`/assets/images/Rectangle45.png`,
-  "name"        : 'Hotel',
-  "description" : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
-  "link"        : '/contact'
-}];
-
-let parseData=JSON.parse(data);
-console.log(parseData);
+// let parseData=JSON.parse(data);
+// console.log(parseData);
 
 function App() {
   return (
     <>
-      
-      {/* <CarousellPrimary dataCrousel={parseData} orientation="left" /> */}
-      {/* <Sliderbar /> */}
+      <Home />
+      {/* <CarousellPrimary dataCrousel={data} orientation="left" />
+      <Sliderbar /> */}
     </>
     // <>
     //   <Container>

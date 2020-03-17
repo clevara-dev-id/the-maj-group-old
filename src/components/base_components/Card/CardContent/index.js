@@ -37,8 +37,8 @@ export const SmallArticle = (props) => (
     <>
         <ContainerSmall>
             <HeadContent>
-                <H5 align="left">{props.caption}</H5>
-                <H1 align="left">{props.title}</H1>
+                <H5 align={props.align}>{props.caption}</H5>
+                <H1 align={props.align}>{props.title}</H1>
             </HeadContent>
             <P align={props.left}>{props.firstParagraph}</P>
             <Img src={props.image} alt={props.alt} />

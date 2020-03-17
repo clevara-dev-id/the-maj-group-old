@@ -28,11 +28,12 @@ export default class Home extends Component {
         }];
         return (
             <div>
-                <SlidebarComponent store={button123} search={event =>{
-                    if(event.key==="Enter")
-                    {
-                        // Use function in here
-                        console.log(event.target.value)
+                <SlidebarComponent store={button123} booklink="/book2"
+                    search={event =>{
+                      if(event.key==="Enter")
+                      {
+                          // Use function in here
+                          console.log(event.target.value)
                     }}} 
                 />
             </div>

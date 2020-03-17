@@ -14,8 +14,8 @@ export class SlidebarComponent extends Component {
             document.getElementById("mySidenav") &&
             document.getElementById("main")
           ) {
-            document.getElementById("mySidenav").style.width = "100%";
-            document.getElementById("main").style.marginLeft = "100%";
+            document.getElementById("mySidenav").style.width = "375px";
+            document.getElementById("main").style.marginLeft = "375px";
           }
     }
     closeNav = () =>{
@@ -77,7 +77,7 @@ export class SlidebarComponent extends Component {
                 </div>
                 <div>
                     <div className="labelHum">
-                        <p>BOOK</p>
+                        <BookButton href={this.props.booklink}>BOOK</BookButton>
                     </div>
                 </div>
             </div>
@@ -144,4 +144,16 @@ const DivButton = styled.div`
     padding-top: 40px;
     text-align:left;
     padding-left:15px;
+`;
+
+const BookButton = styled.a`
+    text-decoration:none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color : #C4964B;
+    &:hover{
+        text-decoration:none;
+        color : #C4964B;    
+    }
 `;

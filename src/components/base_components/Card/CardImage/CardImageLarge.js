@@ -23,7 +23,7 @@ export const CardImageLarge = (props) => (
 )
 
 const FirstColLarge = (props) => (
-    <Col style={MarginContentStyleLarge} sm={6}>
+    <Col style={MarginContentStyleLarge} lg={6}>
         <Caption>{props.caption}</Caption>
         <TitleLarge>{props.title}</TitleLarge>
         <Text>{props.text}</Text>
@@ -32,12 +32,13 @@ const FirstColLarge = (props) => (
 )
 
 const SecondColLarge = (props) => (
-    <Col sm={6}>
+    <Col lg={6}>
         <BackgroundLarge background={props.background} />
     </Col>
 )
 
 const ContainerLarge = styled.div`
+    clear: both;
     height: 900px;
     padding: 85px 0px;
 `;
@@ -68,6 +69,9 @@ const Text = styled.p`
 
 const BackgroundLarge = styled.div`
     background: url(${props => props.background});
+    background-position: center;
+    background-repeat: no-repeat;
+    padding:0px;
     width:540px;
     height:730px;
 `;

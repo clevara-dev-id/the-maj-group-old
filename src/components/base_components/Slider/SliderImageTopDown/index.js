@@ -42,7 +42,7 @@ export class SliderCardImageTopDown extends Component {
         }
 
         return (
-            <Container id="card-img-top-down">
+            <Container id="card-img-top-down" {...this.props}>
                 <Slider 
                     {...settings}
                 >
@@ -65,6 +65,7 @@ export class SliderCardImageTopDown extends Component {
 
 const Container = styled.div(
     props => ({
+        border: "1px solid #232323",
         width: "1111px", 
         height: "652px",
         margin: props.margin,

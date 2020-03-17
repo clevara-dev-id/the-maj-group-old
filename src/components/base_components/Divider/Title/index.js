@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 export const Title = (props) => (
-  <>
+  <Container {...props}>
     <Heading
       url = {props.image}
     >
       {props.text}
     </Heading>
-  </>
+  </Container>
 )
 
 
@@ -24,3 +24,11 @@ const Heading = styled.h1`
   background: -o-linear-gradient(transparent, transparent);
   -webkit-background-clip: text;
 `;
+
+const Container = styled.div(
+  props => ({
+    margin: props.margin,
+    padding: props.padding,
+    className: props.className,
+  })
+)

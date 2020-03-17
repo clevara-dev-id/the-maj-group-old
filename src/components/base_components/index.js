@@ -39,6 +39,8 @@ import {
     SliderCardImageTopDown,
 } from './Slider'
 
+import { PortfolioVideo } from './VIdeo/Portfolio'
+
 import { Title } from './Divider/Title'
 import { NavigationBar } from './Navbar'
 import { HeadComponent } from './HeadComponent'
@@ -86,6 +88,8 @@ export {
     CarousellSecondary,
     SliderCardSix,
     SliderCardImageTopDown,
+
+    PortfolioVideo,
 
     Title,
     NavigationBar,

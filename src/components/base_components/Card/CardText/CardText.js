@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const CardText = (props) => (
     <>
-      <Card className={props.className}>
+      <Card className={props.className} {...props}>
         <h2>{props.title}</h2>
         <P>{props.text}</P>
         <Link href={props.link}>{props.linkName}</Link>
@@ -13,18 +13,28 @@ export const CardText = (props) => (
 
 export const CardTextSecondary = (props) => (  
     <>
-      <div className={props.className}>
+      <Container className={props.className} {...props}>
         <H5>Destination</H5>
         <H1>{props.title}</H1>
         <P>{props.text}</P>
-      </div>
+      </Container>
     </>
+)
+
+const Container = styled.div(
+  props => ({
+    className: props.className,
+    margin: props.margin,
+    padding: props.padding,
+    width: props.width,
+    height: props.height,
+  })
 )
 
 const Card = styled.div`
   width: 920px;
   height: 400px;
-  margin: 0px auto;
+  margin: ${props => props.margin};
   padding: 99px 77px;
   background: #FFFFFF;
   border-radius: 2px;

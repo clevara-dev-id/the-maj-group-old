@@ -42,6 +42,8 @@ import {
 } from '../components/base_components'
 
 import { layoutGenerator } from 'react-break';
+import MobileCardTextSecondary from '../components/base_components/MobileCard/CardText/MobileCardTextSecondary'
+import { MobileTitle } from '../components/base_components/MobileDivider/Title'
 const layout = layoutGenerator({
   mobile: 0,
   tablet: 768,
@@ -354,7 +356,17 @@ export default class Home extends Component {
         <OnMobileAndTablet>
           <section>
             <div className="container">
-              
+              <MobileCardTextSecondary 
+                title="lorem ipsum dolor sit amet"
+                text="From timeless icons in buzzing cities to tranquil retreats in hidden corners, The maj offers unforgettable travel experiences in pioneering destinations across the globe."
+                margin="28px 0"
+              />
+
+              <MobileTitle 
+                text="Destination" 
+                image={background}
+                margin="10px 0px 49px 0px" 
+              />
             </div>
           </section>
           
@@ -377,7 +389,7 @@ export default class Home extends Component {
                     link: "#linkTo"
                   },
                   {
-                    id: 3,
+                    id: 3, 
                     source: background,
                     name: "Restaurant",
                     description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",

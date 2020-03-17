@@ -24,7 +24,7 @@ export default class MobileSliderImageOverlap extends Component {
 
   render() {
     return (
-      <div id="mobile-card-img-overlay" style={{display: "flex", flexDirection: "column", maxHeight: "422px"}}>
+      <div id="mobile-card-img-overlay" style={{}}>
         <div style={{maxWidth: "345px", maxHeight: "188px", margin: "0 auto", padding: "0"}}>
           <Slider
             autoplay={true}
@@ -97,5 +97,14 @@ const A = styled.a(
     margin: props.margin,
     padding: props.padding,
     width: "110px",
+  })
+)
+
+const Container = styled.div(
+  props => ({
+    display: "flex", 
+    flexDirection: "column", 
+    maxHeight: "422px",
+    
   })
 )

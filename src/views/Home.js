@@ -44,6 +44,9 @@ import {
 import { layoutGenerator } from 'react-break';
 import MobileCardTextSecondary from '../components/base_components/MobileCard/CardText/MobileCardTextSecondary'
 import { MobileTitle } from '../components/base_components/MobileDivider/Title'
+import MobileCardTextPrimary from '../components/base_components/MobileCard/CardText/MobileCardTextPrimary'
+import MobileCardSix from '../components/base_components/MobileCard/CardSix/CardSix'
+import MobileFooter from '../components/base_components/MobileFooter/MobileFooter'
 const layout = layoutGenerator({
   mobile: 0,
   tablet: 768,
@@ -62,15 +65,12 @@ export default class Home extends Component {
         data: {}
       }
     }
+
     this.footreftitle = createRef()
+    this.footrefname = createRef()
     this.footrefemail = createRef()
-    this.scrolY = createRef()
-
+    
     this._footer = this._footer.bind(this)
-  }
-
-  _onScroll(ref) {
-    ref.current.scrollIntoView({behavior: "smooth"})
   }
   
   _footer = (e) => {
@@ -86,6 +86,7 @@ export default class Home extends Component {
       name: this.footrefname.current.value,
       email: this.footrefemail.current.value
     }
+    console.log(data)
     this.setState({
       footer: {
         data: data
@@ -348,7 +349,13 @@ export default class Home extends Component {
 
           <section>
             <footer>
-              <Footer />
+              <Footer
+                validated={this.state.footer.validated}
+                onSubmit={this._footer}
+                titleRef={this.footreftitle}
+                nameRef={this.footrefname}
+                emailRef={this.footrefemail}
+              />
             </footer>
           </section>
         </OnDesktop>
@@ -365,7 +372,8 @@ export default class Home extends Component {
               <MobileTitle 
                 text="Destination" 
                 image={background}
-                margin="10px 0px 49px 0px" 
+                margin="38px 0px 49px 0px" 
+                textAlign="right"
               />
             </div>
           </section>
@@ -373,6 +381,7 @@ export default class Home extends Component {
           <section>
             <div className="container">
               <MobileSliderImageOverlap
+                margin="0 0 71px 0"
                 store={[
                   {
                     id: 1,
@@ -399,10 +408,9 @@ export default class Home extends Component {
               />
             </div>
           </section>
-        </OnMobileAndTablet>
 
-        {/* <section>
-          <OnMobileAndTablet>
+          <section>
+            <div className="container">
               <MobileCardImageTopDown
                 store={[
                   {
@@ -429,140 +437,162 @@ export default class Home extends Component {
                   }
                 ]}
               />
-          </OnMobileAndTablet>
-        </section> */}
+            </div>
+          </section>
 
-        {/* <section>
-          <OnDesktop>
-              <PortfolioVideo />
-          </OnDesktop>
+          <section>
+            <div className="container">
+              <MobilePortfolioVideo
+                margin="71px auto 37px auto"
+              />
+            </div>
+          </section>
 
-          <OnMobileAndTablet>
-            <MobilePortfolioVideo />
-          </OnMobileAndTablet>
-        </section> */}
+          <section>
+            <div className="container">
+              <MobileCardImage
+                store={[
+                  {
+                    id: 1,
+                    title: "Raja Ampat Island",
+                    text: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                    link: "#linkTo1",
+                    background: background
+                  },{
+                    id: 2,
+                    title: "Komodo Island",
+                    text: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                    link: "#linkTo2",
+                    background: background
+                  }
+                ]}
+              />
+            </div>
+          </section>
 
-        {/* <section>
-          <OnDesktop>
-            <CardImage
-              title="RAJA AMPAT ISLAND"
-              text="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
-              link="#linkTo"
-              buttonName="View More"
-              btnClassName="float-right"
-              background={background}
-              reverse={false}
-            />
-          </OnDesktop>
+          <section>
+            <div className="container">
+              <MobileTitle
+                image={background}
+                text="Occasions & Offers"
+                textAlign="right"
+              />
+            </div>
+          </section>
 
-          <OnMobileAndTablet>
-            <MobileCardImage
-              store={[
-                {
-                  id: 1,
-                  title: "Raja Ampat Island",
-                  text: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
-                  link: "#linkTo1",
-                  background: background
-                },{
-                  id: 2,
-                  title: "Komodo Island",
-                  text: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
-                  link: "#linkTo2",
-                  background: background
-                }
-              ]}
-            />
-          </OnMobileAndTablet>
-        </section> */}
-        
-        {/* <OnDesktop>
-          <Title 
-            text="Occasions & Offers"
-            image="http://timpietrusky.com/cdn/army.png"
-          />
-        </OnDesktop> */}
+          <section>
+            <div className="container">
+              <MobileCardImageLarge
+                store={[
+                  {
+                    id: 1,
+                    caption: "occasions",
+                    title: "Exclusive Savings",
+                    text:"Book in advance and enjoy great savings. It’s the perfect excuse for an unforgettable adventure.",
+                    list: ["Luxury accommodation", "Booking conditions apply"],
+                    link: "#link1",
+                    background: backgroundLarge
+                  },
+                  {
+                    id: 2,
+                    caption: "offers",
+                    title: "Idyllic Honeymoons",
+                    text: "Reprehenderit enim exercitation eu laboris ea deserunt sunt proident. Ut officia aliqua voluptate commodo magna officia Lorem dolor consectetur eiusmod do enim est exercitation.",
+                    link: "#link2",
+                    background: backgroundLarge,
+                  }
+                ]}
+              />
+            </div>
+          </section>
 
-        {/* <section>
-          <OnMobileAndTablet>
-            <MobileCardImageLarge
-              store={[
-                {
-                  id: 1,
-                  caption: "occasions",
-                  title: "Idyllic Honeymoons",
-                  text:"Reprehenderit enim exercitation eu laboris ea deserunt sunt proident. Ut officia aliqua voluptate commodo magna officia Lorem dolor consectetur eiusmod do enim est exercitation.",
-                  link: "#link1",
-                  background: backgroundLarge
-                },
-                {
-                  id: 2,
-                  caption: "occasions",
-                  title: "Idyllic Honeymoons",
-                  text: "Reprehenderit enim exercitation eu laboris ea deserunt sunt proident. Ut officia aliqua voluptate commodo magna officia Lorem dolor consectetur eiusmod do enim est exercitation.",
-                  link: "#link2",
-                  background: backgroundLarge,
-                }
-              ]}
-            />
-          </OnMobileAndTablet>
-        </section> */}
+          <section>
+            <div className="container">
+              <MobileTitle
+                image={background}
+                text="About Us"
+                textAlign="right"
+                margin="0px 0px 39px 0px"
+              />
+            </div>
+          </section>
 
-        {/* <Title 
-          text="Occasions & Offers"
-          image="http://timpietrusky.com/cdn/army.png"
-        /> */}
+          <section>
+            <div className="container">
+              <MobileCardTextPrimary 
+                title="Our Story"
+                text="Aliquip officia amet dolore occaecat labore minim qui laborum. Cupidatat adipisicing sit anim proident do labore adipisicing deserunt excepteur laboris. Reprehenderit commodo veniam aliqua mollit irure sit sunt anim mollit eu ullamco reprehenderit ullamco laborum. Voluptate dolore consequat sit incididunt proident consequat laborum officia. Exercitation ut ex non anim labore est Lorem labore anim sit enim consectetur reprehenderit ipsum." 
+                link="#linkTo"
+                linkName="Read More"
+              />
+            </div>
+          </section>
 
+          <section>
+            <div className="container">
+              <MobileCardImage
+                textAlign="left"
+                store={[
+                    {
+                      id: 1,
+                      title: "Raja Ampat Island",
+                      text: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                      link: "#linkTo1",
+                      background: background
+                    },{
+                      id: 2,
+                      title: "Komodo Island",
+                      text: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
+                      link: "#linkTo2",
+                      background: background
+                  }]}
+                />
+            </div>
+          </section>
 
-        {/* <SmallArticle 
-          caption = "test"
-          title ="Tester lorem ipsum"
-          firstParagraph ="Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id.
-          Amet pariatur veniam non Lorem sunt aliquip. Aute ipsum adipisicing sint proident ad nostrud minim labore ex adipisicing voluptate occaecat aliqua. Dolor ea reprehenderit occaecat dolore sunt."
-          image={backgroundSmall}
-          alt="background"
-          secondParagraph="Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id.
-          Amet pariatur veniam non Lorem sunt aliquip. Aute ipsum adipisicing sint proident ad nostrud minim labore ex adipisicing voluptate occaecat aliqua. Dolor ea reprehenderit occaecat dolore sunt. Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id."
-        /> */}
+          <section>
+            <div className="container">
+              {/* <MobileTitle
+              /> */}
+            </div>
+          </section>
 
-        {/* <OnDesktop>
-          <div className="container">
-            <SliderCardImageTopDown 
-              store={[
-                {
-                  id: 1,
-                  image: background,
-                  head: "Hotel"
-                },
-                {
-                  id: 2,
-                  image: background,
-                  head: "Phinisi Cruise"
-                },
-                {
-                  id: 3,
-                  image: background,
-                  head: "Residential"
-                },
-                {
-                  id: 4,
-                  image: background,
-                  head: "Golf"
-                },
-                {
-                  id: 5,
-                  image: background,
-                  head: "Restaurant"
-                },
-                {
-                  id: 6,
-                  image: background,
-                  head: "Entertainment"
-                }
-              ]}
-            />
-          </div>
-        </OnDesktop> */}
+          <section>
+            <div className="container">
+              <MobileCardSix
+                store={[
+                  {
+                    id: 1,
+                    image: background,
+                    head: "Hotel"
+                  },
+                  {
+                    id: 2,
+                    image: background,
+                    head: "Phinisi Cruise"
+                  },
+                  {
+                    id: 3,
+                    image: background,
+                    head: "Residential"
+                  },
+                ]}
+              />
+            </div>
+          </section>
+
+          <section>
+            <footer>
+              <MobileFooter
+                validated={this.state.footer.validated}
+                onSubmit={this._footer}
+                titleRef={this.footreftitle}
+                nameRef={this.footrefname}
+                emailRef={this.footrefemail}
+              />
+            </footer>
+          </section>
+        </OnMobileAndTablet>
       </div>
     )
   }

@@ -34,6 +34,8 @@ const H2 = styled.h1(
         margin: props.margin,
         padding: props.padding,
         fontStyle: "normal",
+        fontSize: "22px",
+        lineHeight: "36px"
     })
 )
 

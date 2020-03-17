@@ -225,7 +225,6 @@ export default class CarousellPrimary extends Component {
     let margin="";
     this.props.orientation === "left" ? orient="Left" : orient="Right";
     this.props.orientation === "left" ? margin="margin-left: -10px" : margin="margin-right: -10px";
-    console.log(orient);
     const Divstyle = styled.div` 
             color: #000;
             position: absolute;

@@ -24,8 +24,8 @@ export default class MobileSliderImageOverlap extends Component {
 
   render() {
     return (
-      <div id="mobile-card-img-overlay" style={{}}>
-        <div style={{maxWidth: "345px", maxHeight: "188px", margin: "0 auto", padding: "0"}}>
+      <Container id="mobile-card-img-overlay" {...this.props}>
+        <div style={{maxWidth: "345px", maxHeight: "auto", margin: "0px auto", padding: "0"}}>
           <Slider
             autoplay={true}
             autoplaySpeed={2000}
@@ -45,14 +45,14 @@ export default class MobileSliderImageOverlap extends Component {
           >
               {this.state.localStore && this.state.localStore.map((data, i) =>  (
                 <div> 
-                  <img src={data.source} style={{width: "345px", height: "188px"}} alt="mobile-image-overlap" />
+                  <img src={data.source} style={{width: "100%", height: "100%"}} alt="mobile-image-overlap" />
                 </div> 
                 )
               )}
           </Slider>
         </div>
 
-        <div style={{display: "flex", flexDirection: "column", margin: "40px auto 0 auto", padding: "0", maxWidth: "344px", maxHeight: "194px"}}>
+        <div style={{display: "flex", flexDirection: "column", margin: "40px 0", padding: "0", maxWidth: "344px", maxHeight: "194px"}}>
           {this.state.localStore && this.state.localStore.map((data, i) => {
             if (i === this.state.indexActive) {
               return (
@@ -66,7 +66,7 @@ export default class MobileSliderImageOverlap extends Component {
             return null
           })}
         </div>
-      </div>
+      </Container>
     );
   }
 }
@@ -102,9 +102,7 @@ const A = styled.a(
 
 const Container = styled.div(
   props => ({
-    display: "flex", 
-    flexDirection: "column", 
-    maxHeight: "422px",
-    
+    margin: props.margin,
+    padding: props.padding,
   })
 )

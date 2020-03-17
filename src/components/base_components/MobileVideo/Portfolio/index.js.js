@@ -8,7 +8,7 @@ import 'video-react/dist/video-react.css'
 
 export const MobilePortfolioVideo = props => {
     return (
-        <Container margin="0 auto" maxWidth="347px" maxHeight="244px">
+        <Container margin={props.margin} maxWidth="347px" maxHeight="244px">
             <div style={{width: "345px", margin: "0 auto"}}>
                 <Caps1>Portfolio</Caps1>
                 <H1>Phinisy Cruise</H1>

@@ -15,7 +15,7 @@ export class SlidebarComponent extends Component {
             document.getElementById("main")
           ) {
             document.getElementById("mySidenav").style.width = "100%";
-            document.getElementById("main").style.marginLeft = "100%";
+            // document.getElementById("main").style.marginLeft = "100%";
           }
     }
     closeNav = () =>{
@@ -24,12 +24,12 @@ export class SlidebarComponent extends Component {
             document.getElementById("main")
           ) {
             document.getElementById("mySidenav").style.width = "0%";
-            document.getElementById("main").style.marginLeft = "0%";
+            // document.getElementById("main").style.marginLeft = "0%";
           }
     }
     render() {
         const image = {
-            width: "71.4px",
+            width: "72px",
             height: "63px",
         }
         return (
@@ -38,7 +38,7 @@ export class SlidebarComponent extends Component {
               <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>
                 &times;
               </a>
-                <DivHead><img style={image} src={logo} width="71.4px" height="63px" /></DivHead>
+                <DivHead><img style={image} src={logo} width="72px" height="63px" /></DivHead>
                 <div>
                     <div><DivSearch><Input defaultValue="" onKeyPress={this.props.search} placeholder="SEARCH" type="text" /></DivSearch></div>
                 </div>

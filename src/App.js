@@ -32,12 +32,40 @@ import Home from './views/Home'
 // let parseData=JSON.parse(data);
 // console.log(parseData);
 
+// let data=[];
+
+// data[0]={
+//     source      :`/assets/images/Rectangle45.png`,
+//     name        : 'Hotel',
+//     description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+//     link        : '/homepage'
+// }
+// data[1]={
+//     source      :`/assets/images/Rectangle45.png`,
+//     name        : 'Hotel',
+//     description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+//     link        : '/profile'
+// }
+// data[2]={
+//     source      :`/assets/images/Rectangle45.png`,
+//     name        : 'Hotel',
+//     description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+//     link        : '/about'
+// }
+// data[3]={
+//     source      :`/assets/images/Rectangle45.png`,
+//     name        : 'Hotel',
+//     description : 'Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.',
+//     link        : '/contact'
+// }
+
 function App() {
   return (
     <>
       <Home />
-      {/* <CarousellPrimary dataCrousel={data} orientation="left" />
-      <Sliderbar /> */}
+      {/* <CarousellSecondary store={data} orientation="top" /> */}
+
+      {/* <Sliderbar /> */}
     </>
     // <>
     //   <Container>

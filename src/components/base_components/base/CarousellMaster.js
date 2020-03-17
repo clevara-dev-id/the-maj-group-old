@@ -204,9 +204,6 @@ class CustomSlideRight extends Component {
 }
 
 export default class CarousellPrimary extends Component {
-  constructor(props){
-    super(props);
-  }
   render() {
     let orient="";
     let margin="";
@@ -253,7 +250,7 @@ export default class CarousellPrimary extends Component {
             .container-sm, .container-xl{ width: 1110px; height:450px; }`}} />
         <Slider {...settings}>
             {this.props.orientation==="left" ? 
-            this.props.dataCrousel.map((data)=>{
+            this.props.store.map((data)=>{
               return (<CustomSlide index={{
                 source : data.source,
                 name   : data.name,
@@ -261,7 +258,7 @@ export default class CarousellPrimary extends Component {
                 link   : data.link
               }} />);
             }) : 
-            this.props.dataCrousel.map((data)=>{
+            this.props.store.map((data)=>{
               return (<CustomSlideRight index={{
                 source : data.source,
                 name   : data.name,

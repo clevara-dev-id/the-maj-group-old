@@ -350,37 +350,46 @@ export default class Home extends Component {
             </footer>
           </section>
         </OnDesktop>
-        {/* <OnMobileAndTablet>
-          <div className="container">
-            <MobileSliderImageOverlap
-              store={[
-                {
-                  id: 1,
-                  source: background,
-                  name: "Hotel",
-                  description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
-                  link: "#linkTo"
-                },
-                {
-                  id: 2,
-                  source: background,
-                  name: "Rumah",
-                  description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
-                  link: "#linkTo"
-                },
-                {
-                  id: 3,
-                  source: background,
-                  name: "Restaurant",
-                  description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
-                  link: "#linkTo"
-                }
-              ]}
-            />
-          </div>
-        </OnMobileAndTablet> */}
-        <section>
+        
+        <OnMobileAndTablet>
+          <section>
+            <div className="container">
+              
+            </div>
+          </section>
+          
+          <section>
+            <div className="container">
+              <MobileSliderImageOverlap
+                store={[
+                  {
+                    id: 1,
+                    source: background,
+                    name: "Hotel",
+                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
+                    link: "#linkTo"
+                  },
+                  {
+                    id: 2,
+                    source: background,
+                    name: "Rumah",
+                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
+                    link: "#linkTo"
+                  },
+                  {
+                    id: 3,
+                    source: background,
+                    name: "Restaurant",
+                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
+                    link: "#linkTo"
+                  }
+                ]}
+              />
+            </div>
+          </section>
+        </OnMobileAndTablet>
 
+        {/* <section>
           <OnMobileAndTablet>
               <MobileCardImageTopDown
                 store={[
@@ -409,7 +418,7 @@ export default class Home extends Component {
                 ]}
               />
           </OnMobileAndTablet>
-        </section>
+        </section> */}
 
         {/* <section>
           <OnDesktop>

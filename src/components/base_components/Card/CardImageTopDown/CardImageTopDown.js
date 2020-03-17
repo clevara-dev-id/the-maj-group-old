@@ -21,11 +21,10 @@ export default class CardImageTopDown extends Component {
     
     render() {
         return (
-            <div className="container" style={{display: "flex", flexDirection: "row", justifyContent: "space-between", margin: "213px auto 0 auto", padding: 0}}>
-
+            <Container {...this.props}>
                     {this.state.localStore && this.state.localStore.map((item, i) => {
                         return this.props.reversed ? (
-                            <Container style={this.props.containerStyle}>
+                            <ContainerContent style={this.props.containerStyle}>
                                 <Group margin="0 0 48px 0" style={this.props.groupStyle}>
                                     <Caps1 color="#C4964B">{item.caps}</Caps1>
                                     <H2>{item.head}</H2>
@@ -37,9 +36,9 @@ export default class CardImageTopDown extends Component {
                                     alt="card-img-top-down" 
                                 />
                                 <Button href={item.link} color="#C4964B" margin="48px auto" padding="10px 40px">View More</Button>
-                            </Container>
+                            </ContainerContent>
                         ) : (
-                            <Container style={this.props.containerStyle}>
+                            <ContainerContent style={this.props.containerStyle}>
                                 <img 
                                     src={item.image} 
                                     style={{width: "350px", height: "400px", ...this.props.imageStyle}}
@@ -51,16 +50,25 @@ export default class CardImageTopDown extends Component {
                                     <P width="350px">{item.desc}</P>
                                 </Group>
                                 <Button href={item.link} color="#C4964B" margin="48px auto" padding="10px 40px">View More</Button>
-                            </Container>
+                            </ContainerContent>
                         )
                     })}
-
-            </div>
+            </Container>
         )
     }
 }
 
 const Container = styled.div(
+    props => ({
+        display: "flex", 
+        flexDirection: "row", 
+        justifyContent: "space-between", 
+        margin: props.margin, 
+        padding: "124px 0px",
+    })
+)
+
+const ContainerContent = styled.div(
     props => ({
         display: "flex", 
         flexDirection: "column", 

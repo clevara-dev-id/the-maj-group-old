@@ -260,7 +260,7 @@ export default class CarousellPrimary extends Component {
       
     };
     return (
-      <div className={"container"} id="carouselOverlayPrimary">
+      <Container id="carouselOverlayPrimary" {...this.props}>
         <style dangerouslySetInnerHTML={{__html: `
             .container, .container-lg, .container-md, 
             .container-sm, .container-xl{ width: 1110px; height:450px; }`}} />
@@ -287,7 +287,15 @@ export default class CarousellPrimary extends Component {
               )
             ))}
         </Slider>
-      </div>
+      </Container>
     );
   }
 }
+
+const Container = styled.div(
+  props => ({
+    className: props.className,
+    margin: props.margin,
+    padding: props.padding,
+  })
+)

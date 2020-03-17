@@ -5,9 +5,9 @@ import Poster from '../../../../Assets/tmp/Portfolio.png'
 import styled from 'styled-components'
 import 'video-react/dist/video-react.css'
 
-const PortfolioVideo = props => {
+export const PortfolioVideo = props => {
     return (
-        <Container className="container" margin="475px auto 100px auto" maxWidth="1110px" padding="0">
+        <Container {...props} maxWidth="1110px" padding="0">
             <Caps1>Portfolio</Caps1>
             <H1>Phinisy Cruise</H1>
 
@@ -63,9 +63,5 @@ const H1 = styled.h1(
 const ContainerVideo = styled.div(
     props => ({
         margin: props.margin,
-        padding: "0",
-        height: "500px"
     })
 )
-
-export default PortfolioVideo

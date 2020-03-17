@@ -22,12 +22,14 @@ export const CardImageLarge = (props) => (
     </ContainerLarge>
 )
 
-const FirstColLarge = (props) => (
+const FirstColLarge = (props, {btn=true}) => (
     <Col style={MarginContentStyleLarge} lg={6}>
         <Caption>{props.caption}</Caption>
         <TitleLarge>{props.title}</TitleLarge>
         <Text>{props.text}</Text>
-        <ButtonOutline link={props.link} buttonName={props.buttonName} />
+        {!props.btn? null: (
+            <ButtonOutline link={props.link} buttonName={props.buttonName} />
+        )}
     </Col>
 )
 

@@ -97,7 +97,7 @@ export default class Home extends Component {
   render(){
     return(
       <div id="home">
-        {/* <NavigationBar /> */}
+        <NavigationBar />
 
         <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
         

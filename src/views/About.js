@@ -37,8 +37,6 @@ import {
   MobilePortfolioVideo,
 } from '../components/base_components'
 
-
-
 import { layoutGenerator } from 'react-break';
 
 const layout = layoutGenerator({

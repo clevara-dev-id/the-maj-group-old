@@ -51,6 +51,9 @@ import {
     MobileCardImageLarge, 
     MobileCardImageTopDown 
 } from './MobileCard'
+
+import { TitlePage } from './Titlepage/'
+
 import { MobileSliderImageOverlap } from './MobileSlider'
 import { MobilePortfolioVideo } from './MobileVideo'
 
@@ -104,5 +107,7 @@ export {
 
     Footer,
     SubscribeForm,
+
+    TitlePage,
 };
 

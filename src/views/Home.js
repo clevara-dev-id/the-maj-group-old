@@ -7,32 +7,20 @@ import HeadBackground from '../Assets/tmp/headBg.png'
 import background from '../Assets/tmp/CardImage.png'
 import background2 from '../Assets/tmp/CardImagePhilosoph.svg'
 import backgroundLarge from '../Assets/tmp/CardImageLarge.svg'
-import backgroundSmall from '../Assets/tmp/CardImage.png'
+// import backgroundSmall from '../Assets/tmp/CardImage.png'
 
 import { 
-  PrimaryArticle, 
-  SecondaryArticle, 
-  SmallArticle,
   CardImage,
   CardImageLarge,
   CardImageTopDown,
   CardSix,
-  CardItem,
   CardText,
   CardTextSecondary,
   
   CarousellPrimary,
-  CarousellSecondary,
-  SliderCardSix,
-  SliderCardImageTopDown,
-
   PortfolioVideo,
-
   Title,
-  NavigationBar,
-  HeadComponent,
   device,
-  Footer,
   
   MobileCardImage, 
   MobileCardImageLarge, 
@@ -45,8 +33,6 @@ import MobileCardTextSecondary from '../components/base_components/MobileCard/Ca
 import { MobileTitle } from '../components/base_components/MobileDivider/Title'
 import MobileCardTextPrimary from '../components/base_components/MobileCard/CardText/MobileCardTextPrimary'
 import MobileCardSix from '../components/base_components/MobileCard/CardSix/CardSix'
-import MobileFooter from '../components/base_components/MobileFooter/MobileFooter'
-import BreadcrumbHook from '../components/base_components/Breadcrum'
 import { OnDesktop, OnMobileAndTablet } from '../constants/Breakpoint'
 import Base from './Base'
 

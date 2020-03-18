@@ -26,9 +26,11 @@ import {
   SliderCardImageTopDown,
 
   Title,
+  TitlePage,
   NavigationBar,
   HeadComponent,
   device,
+  Footer,
   
   MobileCardImage, 
   MobileCardImageLarge, 
@@ -38,6 +40,8 @@ import {
 } from '../components/base_components'
 
 import { layoutGenerator } from 'react-break';
+
+import { dataAboutPage } from '../services/dummyData'
 
 const layout = layoutGenerator({
   mobile: 0,
@@ -54,7 +58,7 @@ export default class Home extends Component {
     this.state = {
       footer: {
         validated: true,
-        data: {}
+        data: []
       }
     }
     this.footreftitle = createRef()
@@ -83,31 +87,127 @@ export default class Home extends Component {
     e.preventDefault()
   }
 
-  render(){
+  render(){  
     return(
       <div id="about">
         <NavigationBar />
         <HeadComponent bg={HeadBackground} text="About" />
 
-        <OnDesktop>
-            <section>
-                <div className="container">
-                    <div style={{marginTop : "38px"}}></div>
-                    <SmallArticle 
-                        align="center"
-                        caption = "OUR STORY"
-                        title ="Tester lorem ipsum"
-                        firstParagraph ="Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id.
-                        Amet pariatur veniam non Lorem sunt aliquip. Aute ipsum adipisicing sint proident ad nostrud minim labore ex adipisicing voluptate occaecat aliqua. Dolor ea reprehenderit occaecat dolore sunt."
-                        image={backgroundSmall}
-                        alt="background"
-                        secondParagraph="Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id.
-                        Amet pariatur veniam non Lorem sunt aliquip. Aute ipsum adipisicing sint proident ad nostrud minim labore ex adipisicing voluptate occaecat aliqua. Dolor ea reprehenderit occaecat dolore sunt. Sint anim sunt incididunt aute labore. Cupidatat incididunt aliquip cillum minim sunt reprehenderit nostrud elit qui minim laboris. Aliquip pariatur laborum officia mollit mollit cillum esse. Culpa incididunt veniam sint ex. Deserunt et id anim culpa ullamco nostrud laborum ea consequat est et pariatur eu. Non Lorem sint nulla Lorem dolor et occaecat pariatur magna proident aliqua ut proident id."
-                    />
-                </div>
-            </section>
-        </OnDesktop>
+        <section>
+            <div className="container">
+                <TitlePage name="ABOUT" marginLeft="91px" />
+            </div>
+        </section>
+        <section>
+            <div className="container">
+                <div style={{marginTop : "38px"}}></div>
+                <SmallArticle 
+                    align="center"
+                    caption = "OUR STORY"
+                    title ={dataAboutPage[0].article.title}
+                    firstParagraph ={dataAboutPage[0].article.firstParagraph}
+                    image={dataAboutPage[0].article.image}
+                    alt="background"
+                    secondParagraph={dataAboutPage[0].article.secondParagraph}
+                />
+            </div>
+        </section>
 
+        <section>
+            <div className="container">
+              <CardSix
+                containerStyle={{margin: "145px 0"}}
+                className="container"
+                store={[
+                  {
+                    id: 1,
+                    image: dataAboutPage[0].siximage.image1,
+                    head: "Hotel"
+                  },
+                  {
+                    id: 2,
+                    image: dataAboutPage[0].siximage.image2,
+                    head: "Phinisi Cruise"
+                  },
+                  {
+                    id: 3,
+                    image: dataAboutPage[0].siximage.image3,
+                    head: "Residential"
+                  },
+                  {
+                    id: 4,
+                    image: dataAboutPage[0].siximage.image4,
+                    head: "Golf"
+                  },
+                  {
+                    id: 5,
+                    image: dataAboutPage[0].siximage.image5,
+                    head: "Restaurant"
+                  },
+                  {
+                    id: 6,
+                    image: dataAboutPage[0].siximage.image6,
+                    head: "Entertainment"
+                  }
+                ]}
+              />
+            </div>
+          </section>
+
+          <section>
+            <div className="container">
+              <Title 
+                text="Our Philosophy"
+                image="http://timpietrusky.com/cdn/army.png"
+                margin="92px 0px 0px 0px"
+              />
+            </div>
+          </section>
+
+          <section>
+            <div className="container">
+              <CardImageLarge 
+                caption="OUR PHILOSOPHY"
+                title={dataAboutPage[0].philosophy.title}
+                text={dataAboutPage[0].philosophy.text}
+                link="#linkTo"
+                btn={false}
+                background={dataAboutPage[0].philosophy.image}
+                reverse={true}
+              />
+            </div>
+          </section>
+     
+          <section>
+            <div className="container" align="right">
+              <Title 
+                text="Sustainability"
+                image="http://timpietrusky.com/cdn/army.png"
+                margin="79px 0px 90px 0px"
+              />
+            </div>
+          </section>
+
+          <section>
+            <div className="container">
+              <CardImageLarge 
+                caption="sustainability"
+                title={dataAboutPage[0].sustainability.title}
+                text={dataAboutPage[0].sustainability.text}
+                link="#linkTo"
+                btn={false}
+                background={dataAboutPage[0].sustainability.image}
+                reverse={false}
+              />
+            </div>
+          </section>
+
+
+          <section>
+            <footer>
+              <Footer />
+            </footer>
+          </section>
       </div>
     )
   }

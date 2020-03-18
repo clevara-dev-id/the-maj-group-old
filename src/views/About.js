@@ -39,6 +39,9 @@ import {
   MobilePortfolioVideo,
 } from '../components/base_components'
 
+//CSS
+import '../Assets/tmp/css/about.css'
+
 import { layoutGenerator } from 'react-break';
 
 import { dataAboutPage } from '../services/dummyData'
@@ -50,7 +53,6 @@ const layout = layoutGenerator({
 });
 const OnMobileAndTablet = layout.isAtMost('tablet');
 const OnDesktop = layout.is('desktop');
-
 
 export default class Home extends Component {
   constructor(props){
@@ -155,17 +157,18 @@ export default class Home extends Component {
           </section>
 
           <section>
-            <div className="container">
-              <Title 
-                text="Our Philosophy"
-                image="http://timpietrusky.com/cdn/army.png"
-                margin="92px 0px 0px 0px"
-              />
+            <div className="container" id="philosophy">
+                <Title 
+                    text="Our Philosophy"
+                    image="http://timpietrusky.com/cdn/army.png"
+                    margin="92px 0px 0px 0px"
+                    
+                />
             </div>
           </section>
 
           <section>
-            <div className="container">
+            <div className="container" id="imagephilosophy">
               <CardImageLarge 
                 caption="OUR PHILOSOPHY"
                 title={dataAboutPage[0].philosophy.title}
@@ -179,7 +182,7 @@ export default class Home extends Component {
           </section>
      
           <section>
-            <div className="container" align="right">
+            <div className="container" align="right" id="sustainability">
               <Title 
                 text="Sustainability"
                 image="http://timpietrusky.com/cdn/army.png"
@@ -189,7 +192,7 @@ export default class Home extends Component {
           </section>
 
           <section>
-            <div className="container">
+            <div className="container" id="imagesustainability">
               <CardImageLarge 
                 caption="sustainability"
                 title={dataAboutPage[0].sustainability.title}

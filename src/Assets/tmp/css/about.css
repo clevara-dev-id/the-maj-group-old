@@ -1,0 +1,36 @@
+.titleCardImage{
+    font-size: 84px;
+}
+.sc-fznMnq .jphKY{
+    font-size: 84px;
+}
+
+#philosophy > div > h1 {
+    font-size: 84px;
+    background: none;
+    -webkit-text-fill-color:#C4964B;
+    padding : 0px 0px;
+    top: -32px;
+}
+
+#sustainability > div > h1 {
+    font-size: 84px;
+    background: none;
+    -webkit-text-fill-color:#C4964B;
+    margin-top: -32px;
+    padding : 0px 0px;
+}
+
+#imagephilosophy > div {
+    padding: 0px 0px;
+    height: auto !important;
+
+}
+#imagephilosophy{
+    padding-top: -3;
+}
+
+#imagesustainability> div {
+    padding: 0px 0px;
+    margin-top: -31px;
+}

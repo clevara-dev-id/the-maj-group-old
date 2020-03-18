@@ -14,12 +14,16 @@ export const CardText = (props) => (
 export const CardTextSecondary = (props) => (  
     <>
       <Container className={props.className} {...props}>
-        <H5>Destination</H5>
+      {!props.caption? null : <H5> {props.caption } </H5>}
         <H1>{props.title}</H1>
         <P>{props.text}</P>
       </Container>
     </>
 )
+
+CardTextSecondary.defaultProps = {
+  caption: "Destination"
+}
 
 const Container = styled.div(
   props => ({

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavigationBar, Footer, HeadComponent } from '../components/base_components'
 
-import { OnDesktop, OnMobileAndTablet } from '../constants/Breackpoint'
+import { OnDesktop, OnMobileAndTablet } from '../constants/Breakpoint'
 import MobileFooter from '../components/base_components/MobileFooter/MobileFooter'
 
 // tmp img

@@ -6,7 +6,7 @@ export default class Base extends Component {
     this.state = {
         footer: {
             validated: true,
-            data: {}
+            data: {},
         }
     }
 

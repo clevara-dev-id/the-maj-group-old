@@ -47,7 +47,7 @@ import MobileCardTextPrimary from '../components/base_components/MobileCard/Card
 import MobileCardSix from '../components/base_components/MobileCard/CardSix/CardSix'
 import MobileFooter from '../components/base_components/MobileFooter/MobileFooter'
 import BreadcrumbHook from '../components/base_components/Breadcrum'
-import { OnDesktop, OnMobileAndTablet } from '../constants/Breackpoint'
+import { OnDesktop, OnMobileAndTablet } from '../constants/Breakpoint'
 import Base from './Base'
 
 
@@ -55,12 +55,6 @@ export default class Home extends Base {
   render(){
     return(
       <div id="home">
-        {/* <NavigationBar /> */}
-        {/* <div style={{border: "1px solid"}}>
-          <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
-          <BreadcrumbHook />
-        </div> */}
-        
         <OnDesktop>
           <section>
             <div className="container">

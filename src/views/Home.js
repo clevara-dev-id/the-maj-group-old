@@ -41,66 +41,25 @@ import {
   MobilePortfolioVideo,
 } from '../components/base_components'
 
-import { layoutGenerator } from 'react-break';
 import MobileCardTextSecondary from '../components/base_components/MobileCard/CardText/MobileCardTextSecondary'
 import { MobileTitle } from '../components/base_components/MobileDivider/Title'
 import MobileCardTextPrimary from '../components/base_components/MobileCard/CardText/MobileCardTextPrimary'
 import MobileCardSix from '../components/base_components/MobileCard/CardSix/CardSix'
 import MobileFooter from '../components/base_components/MobileFooter/MobileFooter'
-const layout = layoutGenerator({
-  mobile: 0,
-  tablet: 768,
-  desktop: 992,
-});
-const OnMobileAndTablet = layout.isAtMost('tablet');
-const OnDesktop = layout.is('desktop');
+import BreadcrumbHook from '../components/base_components/Breadcrum'
+import { OnDesktop, OnMobileAndTablet } from '../constants/Breackpoint'
+import Base from './Base'
 
 
-export default class Home extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      footer: {
-        validated: true,
-        data: {}
-      }
-    }
-
-    this.footreftitle = createRef()
-    this.footrefname = createRef()
-    this.footrefemail = createRef()
-    
-    this._footer = this._footer.bind(this)
-  }
-  
-  _footer = (e) => {
-    const form = e.currentTarget;
-    if (form.checkValidity() === false) {
-      this.setState({footer:{validated:false}});
-      e.preventDefault();
-      e.stopPropagation();
-    }
-
-    const data = {
-      title: this.footreftitle.current.value,
-      name: this.footrefname.current.value,
-      email: this.footrefemail.current.value
-    }
-    console.log(data)
-    this.setState({
-      footer: {
-        data: data
-      }
-    })
-    e.preventDefault()
-  }
-
+export default class Home extends Base {
   render(){
     return(
       <div id="home">
         {/* <NavigationBar /> */}
-
-        <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
+        {/* <div style={{border: "1px solid"}}>
+          <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
+          <BreadcrumbHook />
+        </div> */}
         
         <OnDesktop>
           <section>
@@ -346,18 +305,6 @@ export default class Home extends Component {
               />
             </div>
           </section>
-
-          <section>
-            <footer>
-              <Footer
-                validated={this.state.footer.validated}
-                onSubmit={this._footer}
-                titleRef={this.footreftitle}
-                nameRef={this.footrefname}
-                emailRef={this.footrefemail}
-              />
-            </footer>
-          </section>
         </OnDesktop>
         
         <OnMobileAndTablet>
@@ -579,18 +526,6 @@ export default class Home extends Component {
                 ]}
               />
             </div>
-          </section>
-
-          <section>
-            <footer>
-              <MobileFooter
-                validated={this.state.footer.validated}
-                onSubmit={this._footer}
-                titleRef={this.footreftitle}
-                nameRef={this.footrefname}
-                emailRef={this.footrefemail}
-              />
-            </footer>
           </section>
         </OnMobileAndTablet>
       </div>

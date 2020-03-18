@@ -47,7 +47,7 @@ export class SliderCardImageTopDown extends Component {
                     {...settings}
                 >
                     {this.state.localStore && this.state.localStore.map((item, i) => (
-                        <div>
+                        <div key={i}>
                             <CardImageTopDown
                                 {...this.props}
                                 image={item.image}

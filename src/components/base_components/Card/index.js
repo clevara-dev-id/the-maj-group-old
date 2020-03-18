@@ -3,6 +3,7 @@ import { CardImage, CardImageLarge } from './CardImage'
 import { CardImageTopDown } from './CardImageTopDown'
 import { CardSix, CardItem } from './CardSix'
 import { CardText, CardTextSecondary } from './CardText'
+import { CardVideo } from './CardVideo'
 
 export {
     PrimaryArticle, 
@@ -15,4 +16,5 @@ export {
     CardItem,
     CardText,
     CardTextSecondary,
+    CardVideo,
 }

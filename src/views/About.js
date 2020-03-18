@@ -15,6 +15,7 @@ import {
   Title,
   TitlePage,
   device,
+  HeadComponent,
 } from '../components/base_components'
 
 //CSS
@@ -29,6 +30,8 @@ export default class Home extends Base {
     return(
       <div id="about">
         <OnDesktop>
+          <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
+
           <section>
               <div className="container">
                   <TitlePage name="ABOUT" marginLeft="91px" />

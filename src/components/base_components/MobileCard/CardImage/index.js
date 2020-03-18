@@ -209,11 +209,6 @@ export class MobileCardImageLarge extends Component {
     marginBottom: "36px",
   })
 
-  const L = styled.li({
-    margin: "0px",
-    padding: "0px"
-  })
-
   const Item = styled.p({
     color: "#000"
   })

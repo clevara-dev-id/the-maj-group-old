@@ -1,7 +1,4 @@
-import React, { Component, createRef } from 'react'
-
-// tmp img
-import HeadBackground from '../Assets/tmp/headBg.png'
+import React from 'react'
 
 // dummy image
 import background from '../Assets/tmp/CardImage.png'
@@ -20,13 +17,14 @@ import {
   CarousellPrimary,
   PortfolioVideo,
   Title,
-  device,
+  // device,
   
   MobileCardImage, 
   MobileCardImageLarge, 
   MobileCardImageTopDown,
   MobileSliderImageOverlap,
   MobilePortfolioVideo,
+  HeadComponent,
 } from '../components/base_components'
 
 import MobileCardTextSecondary from '../components/base_components/MobileCard/CardText/MobileCardTextSecondary'
@@ -36,12 +34,20 @@ import MobileCardSix from '../components/base_components/MobileCard/CardSix/Card
 import { OnDesktop, OnMobileAndTablet } from '../constants/Breakpoint'
 import Base from './Base'
 
+// tmp img
+import HeadBackground from '../Assets/tmp/headBg.png'
+import { Link } from 'react-router-dom'
 
 export default class Home extends Base {
   render(){
     return(
       <div id="home">
         <OnDesktop>
+          <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
+          <button>
+            <Link to="/about">Go to about</Link>
+          </button>
+          
           <section>
             <div className="container">
               <CardTextSecondary

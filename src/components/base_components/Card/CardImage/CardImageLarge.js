@@ -22,7 +22,7 @@ export const CardImageLarge = (props) => (
     </ContainerLarge>
 )
 
-const FirstColLarge = (props, {btn=true}) => (
+const FirstColLarge = (props) => (
     <Col style={MarginContentStyleLarge} lg={6}>
         <Caption>{props.caption}</Caption>
         <TitleLarge>{props.title}</TitleLarge>
@@ -32,6 +32,10 @@ const FirstColLarge = (props, {btn=true}) => (
         )}
     </Col>
 )
+
+FirstColLarge.defaultProps = {
+    btn: true
+}
 
 const SecondColLarge = (props) => (
     <Col lg={6}>

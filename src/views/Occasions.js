@@ -40,11 +40,11 @@ import {
 } from '../components/base_components'
 
 //CSS
-import '../Assets/tmp/css/about.css'
+import '../Assets/tmp/css/occasions.css'
 
 import { layoutGenerator } from 'react-break';
 
-import { dataAboutPage } from '../services/dummyData'
+import { dataOccasionsPage } from '../services/dummyData'
 
 const layout = layoutGenerator({
   mobile: 0,
@@ -89,9 +89,9 @@ export default class Home extends Component {
     e.preventDefault()
   }
 
-  render(){  
+  render(){   
     return(
-      <div id="about">
+      <div id="occasions">
         <NavigationBar />
         <HeadComponent bg={HeadBackground} text="Occasions" />
 
@@ -102,10 +102,11 @@ export default class Home extends Component {
         </section>
 
         <section>
-            <div className="container">
+            <div className="container" id="topcard">
               <CardTextSecondary
-                title="Lorem Ipsum Dolor Sit Amer"
-                text="From timeless icons in buzzing cities to tranquil retreats in hidden corners, The maj offers unforgettable travel experiences in pioneering destinations across the globe."
+                caption={false}
+                title={dataOccasionsPage[0].cardtext.title}
+                text={dataOccasionsPage[0].cardtext.text}
                 className="text-center"
                 margin="92px auto 80px auto"
                 width="920px"
@@ -114,33 +115,10 @@ export default class Home extends Component {
         </section>
 
         <section>
-            <div className="container">
+            <div className="container" id="imageTopDown">
               <CardImageTopDown
                 margin="124px 0px"
-                store={[
-                  {
-                    id: 1,
-                    caps: "Jakarta",
-                    head: "Senayan",
-                    desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
-                    image: background,
-                    link: "#link1"
-                  },{
-                    id: 2,
-                    caps: "Bandung",
-                    head: "Dago",
-                    desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
-                    image: background,
-                    link: "#link2"
-                  },{
-                    id: 3,
-                    caps: "Bali",
-                    head: "Nusa Dua",
-                    desc: "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
-                    image: background,
-                    link: "#link3"
-                  }
-                ]}
+                store={dataOccasionsPage[0].cardImageTopDown}
               />
             </div>
           </section>
@@ -149,29 +127,7 @@ export default class Home extends Component {
             <div className="container">
               <CarousellPrimary
                 margin="80px auto 96px auto"
-                store={[
-                  {
-                    id: 1,
-                    source: background,
-                    name: "Hotel",
-                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
-                    link: "#linkTo"
-                  },
-                  {
-                    id: 2,
-                    source: background,
-                    name: "Rumah",
-                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
-                    link: "#linkTo"
-                  },
-                  {
-                    id: 3,
-                    source: background,
-                    name: "Restaurant",
-                    description: "Esse tempor qui enim ut aute cupidatat in dolor magna irure voluptate consequat Lorem. Occaecat ad adipisicing enim Lorem minim ea elit exercitation dolor et ad consequat aliqua.",
-                    link: "#linkTo"
-                  }
-                ]}
+                store={dataOccasionsPage[0].carousel}
                 orientation="left"
               />
             </div>
@@ -181,11 +137,11 @@ export default class Home extends Component {
             <div className="container">
               <CardImage
                 caps="Destination"
-                title="RAJA AMPAT ISLAND"
-                text="Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit"
+                title={dataOccasionsPage[0].meetings.title}
+                text={dataOccasionsPage[0].meetings.text}
                 link="#linkTo"
                 buttonName="View More"
-                background={background}
+                background={dataOccasionsPage[0].meetings.image}
                 reverse
               />
             </div>
@@ -194,12 +150,12 @@ export default class Home extends Component {
             <div className="container">
               <CardImage
                 caps="Philosophy"
-                title="The Maj is deeply respectful of its communities and their surroundings"
-                text="Sunt excepteur laborum reprehenderit duis sunt fugiat eu dolore. Laborum mollit nostrud quis proident esse cillum sint laboris in deserunt eu consectetur ad adipisicing. Mollit nulla in quis nisi elit occaecat eu dolore aliquip."
+                title={dataOccasionsPage[0].weddings.title}
+                text={dataOccasionsPage[0].weddings.text}
                 link="#linkTo"
                 buttonName="Learn More"
                 btnClassName="float-right"
-                background={background}
+                background={dataOccasionsPage[0].weddings.image}
                 imageWidth="540px"
                 imageHeight="400px"
                 contentWidth="1110px"

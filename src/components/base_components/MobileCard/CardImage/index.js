@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Row, Col } from 'react-bootstrap'
-import { ButtonOutline } from '../../Button'
 
 export class MobileCardImage extends Component { 
     constructor(props) {
         super(props)
     
         this.state = {
-            localStore: [],
+          localStore: [],
         }
     }
 
@@ -30,7 +28,7 @@ export class MobileCardImage extends Component {
                         background={item.background}
                     />
                     <FirstCol
-                        textAlign={i % 2? "left": "right"}
+                        textAlign={!this.props.textAlign? i % 2? "left": "right" : this.props.textAlign}
                         title={item.title}
                         text={item.text}
                         link={item.link}
@@ -50,7 +48,7 @@ const FirstCol = (props) => (
     <Caps1 margin="16px 0 4px 0">Destination</Caps1>
     <Title>{props.title}</Title>
     <P>{props.text}</P>
-    <ButtonOutlineSmall margin="34px 0 0 0" padding="10px 37.35px" href={props.link}>View More</ButtonOutlineSmall>
+    <ButtonOutlineSmall padding="10px 39px" href={props.link}>View More</ButtonOutlineSmall>
   </div>
 )
 
@@ -96,7 +94,7 @@ const Title = styled.h2`
 const P = styled.p`
   color: #000000;
   margin-top: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 34px;
 `;
 
 const Background = styled.div`
@@ -106,32 +104,13 @@ const Background = styled.div`
   height: 259px;
 `;
 
-const ButtonOutlineSmall = styled.a(
-    props => ({
-        backgroundColor: "transparent",
-        color: "#C4964B",
-        width: "157.26px",
-        height: "40px",
-        padding: props.padding,
-        margin: props.margin,
-        border: "1px solid #C4964B",
-        textAlign: "center",
-        textTransform: "uppercase",
-        letterSpacing: "2px",
-        lineHeight: "18px",
-        "&:hover": {
-            color: "#FFFFFF",
-            backgroundColor: "#C4964B",
-        }
-    })
-)
 
 export class MobileCardImageLarge extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-             localStore: [],
+          localStore: [],
         }
     }
 
@@ -148,7 +127,7 @@ export class MobileCardImageLarge extends Component {
         return (
         <ContainerLarge>
             {this.state.localStore && this.state.localStore.map((item, i) => (
-                <ContentLarge key={i}>
+                <ContentLarge key={i} margin="36px auto">
                     <SecondColLarge
                         background={item.background}
                     />
@@ -157,6 +136,7 @@ export class MobileCardImageLarge extends Component {
                         title={item.title}
                         text={item.text}
                         link={item.link}
+                        list={item.list? item.list: null}
                         buttonName="View More"
                     />
                 </ContentLarge>
@@ -170,47 +150,93 @@ export class MobileCardImageLarge extends Component {
     <div>
       <Caption>{props.caption}</Caption>
       <TitleLarge>{props.title}</TitleLarge>
-      <Text>{props.text}</Text>
-      <ButtonOutline link={props.link} buttonName={props.buttonName} />
+      <Text marginBottom={!props.list? "36px": null}>{props.text}</Text>
+      {props.list? (
+        <List className="container">
+          {props.list.map((data, i) => (
+            <li style={{marginTop: "-15px"}}><Item> {data} </Item></li>
+          ))}
+        </List>
+      ) : null}
+      <ButtonOutlineSmall padding="10px 39px">{props.buttonName}</ButtonOutlineSmall>
     </div>
   )
   
   const SecondColLarge = (props) => (
-    <div>
-      <BackgroundLarge background={props.background} />
-    </div>
+    <BackgroundLarge background={props.background} />
   )
   
   const ContainerLarge = styled.div`
-    height: 900px;
-    padding: 85px 0px;
+    margin: ${props => props.margin}
   `;
   
   const ContentLarge = styled.div`
-    width:1110px;
-    height:730px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 345px;
+    height: 533px;
+    margin: 73px auto;
   `;
+
   const Caption = styled.h5`
     letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
     text-transform: uppercase;
-    color: #000;
+    margin-top: 16px;
+    color: #C4964B;
   `;
+
   const TitleLarge = styled.h1`
     color: #000;
     margin-top: 8px;
   `;
+
   const Text = styled.p`
     color: #000;
     margin-top: 24px;
-    margin-bottom: 42px;
+    margin-bottom: ${props => props.marginBottom}
   `;
+
   const BackgroundLarge = styled.div`
     background: url(${props => props.background});
+    background-position: center;
+    background-repeat: no-repeat;
     width:345px;
-    height:261px;
+    height:250px;
   `;
-  const MarginContentStyleLarge = {
-    marginTop: 116
-  }
+
+  const List = styled.ul({
+    marginTop: "0",
+    marginBottom: "36px",
+  })
+
+  const L = styled.li({
+    margin: "0px",
+    padding: "0px"
+  })
+
+  const Item = styled.p({
+    color: "#000"
+  })
+
+
+const ButtonOutlineSmall = styled.a(
+  props => ({
+      backgroundColor: "transparent",
+      color: "#C4964B !important",
+      width: "157.26px",
+      height: "40px",
+      padding: props.padding,
+      margin: props.margin,
+      border: "1px solid #C4964B",
+      textAlign: "center",
+      textDecoration: "none",
+      textTransform: "uppercase",
+      letterSpacing: "2px",
+      lineHeight: "18px",
+      "&:hover": {
+          color: "#FFFFFF",
+          backgroundColor: "#C4964B",
+          textDecoration: "none",
+      }
+  })
+)

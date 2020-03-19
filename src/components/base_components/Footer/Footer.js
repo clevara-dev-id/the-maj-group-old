@@ -129,12 +129,9 @@ export class Footer extends Component {
                                 <SubscribeForm
                                 {...this.props}
                                 >
-                                    <ButtonPrimary
-                                    type='submit'
-                                    buttonName="subscribe"
-                                    background="#fff"
-                                    color="#000"
-                                     />
+                                    <ButtonSubmit type='submit'>
+                                        <b>DEFAULT</b>
+                                    </ButtonSubmit>
                             </SubscribeForm>
                             </Col>
                         </Row>
@@ -257,5 +254,19 @@ const A = styled.a`
         opacity:.5
     }
 `;
+
+const ButtonSubmit = styled.button({
+    backgroundColor: "#FEFEFE",
+    borderColor: "transparent",
+    fontSize: "bold",
+    fontWeight: "normal",
+    fontSize: "13px",
+    lineHeight: "18px",
+    textAlign: "center",
+    letterSpacing: "2px",
+    color: "#000000",
+    height: "37px",
+    width: "110px",
+})
 
 export default Footer

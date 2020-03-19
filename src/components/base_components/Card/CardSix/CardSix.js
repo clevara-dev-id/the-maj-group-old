@@ -24,7 +24,7 @@ export class CardSix extends Component {
         return (
             <Container style={this.props.containerStyle} className={this.props.className}>
                 {this.state.localStore && this.state.localStore.map((item, i) => (
-                    <CardItem image={item.image} head={item.head} {...this.props} />
+                    <CardItem key={i} image={item.image} head={item.head} {...this.props} />
                 ))}
             </Container>
         )

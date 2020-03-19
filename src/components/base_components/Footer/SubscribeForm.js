@@ -16,9 +16,9 @@ export class SubscribeForm extends Component {
         return (
             // add this ti validate
             // validated={this.props.validated}
-            <Form onSubmit={this.props.onSubmit}>
+            <Form onSubmit={this.props.onSubmit} method="post">
                 <Form.Row>
-                    <Form.Group as={Col} sm="4">
+                    <Form.Group as={Col} lg={4} sm={4} xs={4}>
                         <Form.Control 
                             as='select'
                             ref={this.props.titleRef}
@@ -36,7 +36,7 @@ export class SubscribeForm extends Component {
                             Please choose a Title
                         </Form.Control.Feedback>
                     </Form.Group>
-                    <Form.Group as={Col} sm="8">
+                    <Form.Group as={Col}  lg={8} sm={8} xs={8}>
                         <Form.Control 
                             type="text"
                             placeholder='Fullname' 
@@ -52,7 +52,7 @@ export class SubscribeForm extends Component {
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
-                    <Form.Group as={Col} sm="12">
+                    <Form.Group as={Col}>
                         <Form.Control 
                             type="email"
                             placeholder='Email address'

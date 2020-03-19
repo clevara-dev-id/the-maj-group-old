@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
-import { NavigationBar, Footer, HeadComponent } from '../components/base_components'
+import React from 'react'
+import { NavigationBar, Footer } from '../components/base_components'
 
-import { OnDesktop, OnMobileAndTablet } from '../constants/Breackpoint'
+import { OnDesktop, OnMobileAndTablet } from '../constants/Breakpoint'
 import MobileFooter from '../components/base_components/MobileFooter/MobileFooter'
 
-// tmp img
-import HeadBackground from '../Assets/tmp/headBg.png'
 import Base from './Base'
 
 export default class ApplicationLayout extends Base {
@@ -14,14 +12,14 @@ export default class ApplicationLayout extends Base {
             <div>
                 <header>
                     {/* <NavigationBar /> */}
-                    <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
+                    {/* <HeadComponent bg={this.state.pageActive.head_background} text="An Epicurean Journey of the Ages" /> */}
                 </header>
 
                 <div id="content">
                     {this.props.children}
                 </div>
 
-                <footer>
+                {/* <footer>
                     <OnDesktop>
                         <Footer
                             validated={this.state.footer.validated}
@@ -40,7 +38,7 @@ export default class ApplicationLayout extends Base {
                             emailRef={this.footrefemail}
                         />
                     </OnMobileAndTablet>
-                </footer>
+                </footer> */}
             </div>
         )
     }

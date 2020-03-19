@@ -15,8 +15,9 @@ import ImageCardTopdown1 from '../Assets/Image/Occasions/imageTopDown1.png';
 import ImageCardTopdown2 from '../Assets/Image/Occasions/imageTopDown2.png';
 import ImageCardTopdown3 from '../Assets/Image/Occasions/imageTopDown3.png';
 import ImageCarousel from '../Assets/Image/Occasions/imageCarousel.png';
-import ImageMeeting from '../Assets/Image/Occasions/ImageCardMeeting.png'
-import ImageWedding from '../Assets/Image/Occasions/imageWedding.png'
+import ImageMeeting from '../Assets/Image/Occasions/ImageCardMeeting.png';
+import Poster from '../Assets/tmp/Portfolio.png';
+import LoremVideo from '../Assets/tmp/LoremVideo.mp4'
 
 const dataAboutPage = [{
     article :{
@@ -101,11 +102,17 @@ const dataOccasionsPage = [{
         image : ImageMeeting
     },
     weddings :{
-        title : "Wedding",
-        text  : "Hemmed by jungle and lulled by the lap of the Indian Ocean, the hotel is rich in island spirit",
-        image : ImageWedding
+        video : [{
+            id: 1,
+            caps: null,
+            title: "Weddings",
+            text: "Book in advance and enjoy great savings. It’s the perfect excuse for an unforgettable adventure.",
+            list: ["Luxury accommodation", "Booking conditions apply"],
+            link: "#linkTo",
+            video: LoremVideo
+        }],
+        poster : Poster,
     }
-    
 }]
 
 export{

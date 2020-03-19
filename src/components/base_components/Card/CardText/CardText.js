@@ -21,6 +21,10 @@ export const CardTextSecondary = (props) => (
     </>
 )
 
+CardTextSecondary.defaultProps = {
+  caption: "Destination"
+}
+
 const Container = styled.div(
   props => ({
     className: props.className,

@@ -1,4 +1,4 @@
-import React, { Component, Image, Stylesheet } from "react";
+import React, { Component } from "react";
 import Slider from "react-slick";
 import styled from 'styled-components';
 
@@ -9,7 +9,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, color:"red"}}
+      style={{ ...style}}
       onClick={onClick}
     />
   );
@@ -101,7 +101,7 @@ class CustomSlide extends Component {
     const { index, ...props } = this.props;
     return (
       <div {...props}>
-        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="825px" height="450px" /></Card>
+        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="825px" height="450px" alt="slider-corousel-master" /></Card>
         <Card2>
             <Mydiv>
               <HeaderTitle><h2>{index.name}</h2></HeaderTitle>
@@ -189,7 +189,7 @@ class CustomSlideRight extends Component {
     const { index, ...props } = this.props;
     return (
       <div {...props}>
-        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="825px" height="450px" /></Card>
+        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="825px" height="450px" alt="slider-img-carousel-master" /></Card>
         <Card2>
             <Mydiv>
               <HeaderTitle><h2>{index.name}</h2></HeaderTitle>
@@ -223,12 +223,16 @@ export default class CarousellPrimary extends Component {
   render() {
     let orient="";
     let margin="";
+    let LeftCenter="";
+    let centered="";
     this.props.orientation === "left" ? orient="Left" : orient="Right";
     this.props.orientation === "left" ? margin="margin-left: -10px" : margin="margin-right: -10px";
+    this.props.orientation === "left" ? LeftCenter="Left: 359px" : LeftCenter="Left: -498px";
+    this.props.center      === "true" ? centered = LeftCenter : centered = "Left: 0px";
     const Divstyle = styled.div` 
             color: #000;
             position: absolute;
-            Left: 0px;
+            ${centered};
             background-color: #366666;
             margin-top: -25px;
         `;
@@ -261,27 +265,39 @@ export default class CarousellPrimary extends Component {
     return (
       <Container id="carouselOverlayPrimary" {...this.props}>
         <style dangerouslySetInnerHTML={{__html: `
-            .container, .container-lg, .container-md, 
-            .container-sm, .container-xl{ width: 1110px; height:450px; }`}} />
+                .container, .container-lg, .container-md, 
+                .container-sm, .container-xl{ width: 1110px; height:450px; }
+
+                #carouselOverlayPrimary > .slick-slider > .slick-prev::before, .slick-next::before {
+                  font-size: 32px;
+                  color: ${this.props.arrowColor ? this.props.arrowColor : "#232323"};
+                }
+            
+                #carouselOverlayPrimary > .slick-slider > .slick-dots > ul > li > button::before {
+                  font-size: 12px;
+                  color :${this.props.dotColor ? this.props.dotColor : "#232323"};
+                }
+            `}} />
         <Slider {...settings}>
-            {this.props.orientation==="left" ? 
+          {this.props.orientation==="left" ? (
             this.state.localStore && this.state.localStore.map((data, i) => (
-                <CustomSlide index={{
-                  source : data.source,
-                  name   : data.name,
-                  description : data.description,
-                  link   : data.link
-                }} />
-              )
-            ) : (
-            this.state.localStore && this.state.localStore.map((data, i) =>  (
-              <CustomSlideRight 
-                  index={{
+              <CustomSlide key={i} index={{
                   source : data.source,
                   name   : data.name,
                   description : data.description,
                   link   : data.link
                 }} 
+              />
+            ))
+          ) : (
+            this.state.localStore && this.state.localStore.map((data, i) =>  (
+              <CustomSlideRight key={i}
+                index={{
+                  source : data.source,
+                  name   : data.name,
+                  description : data.description,
+                  link   : data.link
+                }}
               />
               )
             ))}

@@ -6,3 +6,31 @@
     padding: 0px 0px;
     margin: 132px 0px;
 }
+
+#cardImageOccatons > div {
+    padding: 113px 0px;
+}
+
+#cardImageOccatons > div > div > div > div > a {
+    color: #C4964B;
+    border: 2px solid #C4964B;
+}
+
+#cardImageOccatons > div > div > div > div > a:hover{
+    background-color: #C4964B;
+    color : #ffffff;
+}
+
+#cardVideoOccations > div {
+    padding-top: 174px;
+} 
+
+#cardVideoOccations > div > div > div > div > a {
+    color: #C4964B;
+    border: 2px solid #C4964B;
+}
+
+#cardVideoOccations > div > div > div > div > a:hover{
+    background-color: #C4964B;
+    color : #ffffff;
+}

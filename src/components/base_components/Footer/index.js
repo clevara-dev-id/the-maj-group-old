@@ -1,4 +1,5 @@
 import Footer from './Footer'
 import SubscribeForm from './SubscribeForm'
+import { FooterSecondary } from './FooterSecondary'
 
-export { Footer, SubscribeForm }
+export { Footer, FooterSecondary, SubscribeForm }

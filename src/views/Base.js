@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react'
+import { Component, createRef } from 'react'
 
 export default class Base extends Component {
     constructor(props){
@@ -6,7 +6,7 @@ export default class Base extends Component {
     this.state = {
         footer: {
             validated: true,
-            data: {}
+            data: {},
         }
     }
 

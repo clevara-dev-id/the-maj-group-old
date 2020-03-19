@@ -1,6 +1,6 @@
-import React, { Component, Image, Stylesheet } from "react";
+import React, { Component } from "react";
 import Slider from "react-slick";
-import styled from 'styled-components';
+import styled from 'styled-components'; 
 
 import '../../css/mobileCarouselOverlap.css'
 
@@ -15,7 +15,7 @@ export default class MobileSliderImageOverlap extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.store, prevState.localStore) {
+    if (nextProps.store !== prevState.localStore) {
       return {
         localStore: nextProps.store
       }

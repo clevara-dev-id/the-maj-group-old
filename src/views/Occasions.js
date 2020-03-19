@@ -19,6 +19,7 @@ import {
   CardItem,
   CardText,
   CardTextSecondary,
+  CardVideo,
   
   CarousellPrimary,
   CarousellSecondary,
@@ -31,7 +32,8 @@ import {
   HeadComponent,
   device,
   Footer,
-  
+  FooterSecondary,
+
   MobileCardImage, 
   MobileCardImageLarge, 
   MobileCardImageTopDown,
@@ -129,12 +131,15 @@ export default class Home extends Component {
                 margin="80px auto 96px auto"
                 store={dataOccasionsPage[0].carousel}
                 orientation="left"
+                arrowColor ="#C4964B"
+                dotColor ="#C4964B"
+                center ="true"
               />
             </div>
           </section>
 
           <section>
-            <div className="container">
+            <div className="container" id="cardImageOccatons">
               <CardImage
                 caps="Destination"
                 title={dataOccasionsPage[0].meetings.title}
@@ -146,34 +151,28 @@ export default class Home extends Component {
               />
             </div>
           </section>
+
           <section>
-            <div className="container">
-              <CardImage
-                caps="Philosophy"
-                title={dataOccasionsPage[0].weddings.title}
-                text={dataOccasionsPage[0].weddings.text}
-                link="#linkTo"
-                buttonName="Learn More"
-                btnClassName="float-right"
-                background={dataOccasionsPage[0].weddings.image}
-                imageWidth="540px"
-                imageHeight="400px"
-                contentWidth="1110px"
-                contentHeight="400px"
-                colContentSize={6}
-                colImageSize={6}
-                contentStyle={{margin: "auto 0"}}
-                containerPadding="150px 0"
-                // margin="150px 0 0 0"
-              />
+            <div className="container" id="cardVideoOccations">
+                <CardVideo
+                    containerPadding="100px auto 142px auto"
+                    store={dataOccasionsPage[0].weddings.video} 
+                    textAlign="left"
+                    buttonName="View More"
+                    poster={dataOccasionsPage[0].weddings.poster}
+                />
             </div>
           </section>
 
-          <section>
-            <footer>
-              <Footer />
-            </footer>
-          </section>
+        <footer>
+            <FooterSecondary
+                validated={this.state.footer.validated}
+                onSubmit={this._footer}
+                titleRef={this.footreftitle}
+                nameRef={this.footrefname}
+                emailRef={this.footrefemail}
+            />
+        </footer>
       </div>
     )
   }

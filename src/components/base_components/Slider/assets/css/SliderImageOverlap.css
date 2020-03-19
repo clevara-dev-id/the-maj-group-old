@@ -1,8 +1,7 @@
-#carouselOverlayPrimary > .slick-slider > .slick-prev::before, .slick-next::before {
+/* #carouselOverlayPrimary > .slick-slider > .slick-prev::before, .slick-next::before {
     font-size: 32px;
-    background-color:#000 ;
-    -webkit-filter: invert(100%);
-}
+    color: #000;
+} */
 #carouselOverlayPrimary > .slick-slider > .slick-prev, .slick-next{
     width: 33px;
     height: 33px;

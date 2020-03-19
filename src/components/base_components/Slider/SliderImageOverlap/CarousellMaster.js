@@ -225,16 +225,19 @@ export default class CarousellPrimary extends Component {
     let margin="";
     let LeftCenter="";
     let centered="";
+    let widthCenter="";
     this.props.orientation === "left" ? orient="Left" : orient="Right";
     this.props.orientation === "left" ? margin="margin-left: -10px" : margin="margin-right: -10px";
     this.props.orientation === "left" ? LeftCenter="Left: 359px" : LeftCenter="Left: -498px";
     this.props.center      === "true" ? centered = LeftCenter : centered = "Left: 0px";
+    this.props.center      === "true" ? widthCenter = "40%" : centered = "100%";
     const Divstyle = styled.div` 
             color: #000;
             position: absolute;
             ${centered};
             background-color: #366666;
             margin-top: -25px;
+            width : ${widthCenter};
         `;
     const DotStyle = styled.ul`
         padding   : 0px;

@@ -16,6 +16,7 @@ import {
   TitlePage,
   device,
   HeadComponent,
+  NavigationBar,
 } from '../components/base_components'
 
 //CSS
@@ -30,6 +31,7 @@ export default class Home extends Base {
     return(
       <div id="about">
         <OnDesktop>
+          <NavigationBar />
           <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
 
           <section>

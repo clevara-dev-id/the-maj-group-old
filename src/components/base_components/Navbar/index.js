@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { ButtonOutline, ButtonLink, ButtonSearch } from '../Button'
+import $ from 'jquery';
 
 import LogoImg from '../../../Assets/logo.svg'
 import { Navbar, Nav } from 'react-bootstrap'
@@ -20,26 +21,46 @@ export class NavigationBar extends Component {
     componentWillMount(){
         window.addEventListener('scroll', this.handleScroll);
     }
-    componentWillUnmount(){
-        window.removeEventListener('scroll', this.handleScroll);
+    componentDidUpdate(){
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     handleScroll = () => {
-        let lastScroll = 100;
-        const currentScroll = window.scrollY;
-        if(currentScroll > lastScroll){
-            this.setState({isScroll:true});
-        }else if(this.state.isScroll){
-            this.setState({isScroll:false});
+        // let lastScroll = 100;
+        // const currentScroll = window.scrollY;
+        // if(currentScroll > lastScroll){
+        //     this.setState({isScroll:true});
+        // }else if(this.state.isScroll){
+        //     this.setState({isScroll:false});
+        // }
+        let navbar = document.getElementById("navbar");
+        let sticky = navbar.offsetTop;
+        if(window.pageYOffset >= sticky)
+        {
+            $(".addColor").css({"color" : "#C4964B" });
         }
+        if (document.body.scrollTop > 290 || document.documentElement.scrollTop > 290) {
+            navbar.classList.add("sticky");
+            $("#buttonsearch").show();
+            $("#buttonNav").show();
+            $("#navbartop").hide();
+            // document.getElementById("#destination").style.color = "#C4964B";
+            $(".addColor").css({"color" : "#C4964B" });
+          } else {
+            navbar.classList.remove("sticky");
+            $("#buttonsearch").hide();
+            $("#buttonNav").hide();
+            $("#navbartop").show();
+            $(".addColor").css({"color" : "#ffffff" });
+          }
     }
 
     render(){
         return(
             <>
-                <Container id="navbar" className={this.state.isScroll?"bg-white":"bg-dark-transparent"}>
+                <Container id="navbar" className={"bg-dark-transparent"}>
                     <NavHead 
-                        className={this.state.isScroll?"hide":"show"}
+                        className={"show"} id="navbartop"
                     >
                         <Navbar>
                             <Nav className="justify-content-start">
@@ -53,27 +74,51 @@ export class NavigationBar extends Component {
                             </Nav>
                         </Navbar>
                     </NavHead>
-                    <NavBottom 
-                        className={this.state.isScroll?"border-none":"border-top-1"}
-                    >
-                        <NavBottomContainer>
-                            <Nav className="justify-content-center">
-                                <Nav.Item>
-                                    <ButtonLink className={this.state.isScroll?"text-dark":"text-white"} link="#destination" buttonName="destination" />
+                    <NavBottom className={"border-top-1"} >
+                        <NavBottomContainer >
+                            {/* <Nav className="justify-content-start">
+                                <ButtonSearch className={"addColor"} link="#search" buttonName="Search" />
+                                <div style={{width:"120px"}}></div>
+                            </Nav> */}
+                            <Nav className="justify-content-center" >
+                                <Nav.Item >
+                                    <div id="buttonsearch">
+                                        <ButtonSearch className={"addColor"} link="#search" buttonName="Search" />
+                                    </div>
+                                </Nav.Item>
+                                <Nav.Item > 
+                                    <ButtonLink className={"addColor"} link="#destination" buttonName="destination" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink className={this.state.isScroll?"text-dark":"text-white"} link="#portfolio" buttonName="portfolio" />
+                                    <ButtonLink className={"addColor"} link="#portfolio" buttonName="portfolio" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink className={this.state.isScroll?"text-dark":"text-white"} link="#occasions" buttonName="occasions" />
+                                    <ButtonLink className={"addColor"}  link="#occasions" buttonName="occasions" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink className={this.state.isScroll?"text-dark":"text-white"} link="#offers" buttonName="offers" />
+                                    <ButtonLink className={"addColor"}  link="#offers" buttonName="offers" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink className={this.state.isScroll?"text-dark":"text-white"} link="#about" buttonName="about" />
+                                    <ButtonLink className={"addColor"} link="#about" buttonName="about" />
+                                </Nav.Item>
+                                
+                                <Nav.Item>
+                                    <div id="buttonNav">
+                                        <ButtonLink className={"addColor"} link="/login" buttonName="Login" />
+                                        <ButtonOutline 
+                                            className="booking" 
+                                            link="/booking" 
+                                            border="2px solid #C4964B" 
+                                            color="#C4964B" 
+                                            buttonName="Book Now" 
+                                            padding="11px"
+                                        />
+                                    </div>
                                 </Nav.Item>
                             </Nav>
+                            {/* <Nav className="justify-content-end" >
+                                
+                            </Nav> */}
                         </NavBottomContainer>
                     </NavBottom>
                 </Container>
@@ -101,7 +146,6 @@ const NavBottom = styled.div`
     padding-top:25px;
 `;
 const NavBottomContainer = styled.div`
-    max-width:848px;
     width:100%;
     margin-bottom:34px;
     margin-left:auto;

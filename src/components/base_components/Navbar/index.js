@@ -20,6 +20,7 @@ export class NavigationBar extends Component {
 
     componentWillMount(){
         window.addEventListener('scroll', this.handleScroll);
+
     }
     componentDidUpdate(){
         window.addEventListener('scroll', this.handleScroll);

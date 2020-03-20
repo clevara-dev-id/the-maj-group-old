@@ -44,10 +44,6 @@ export default class Home extends Base {
       <div id="home">
         <OnDesktop>
           <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
-          <button>
-            <Link to="/about">Go to about</Link>
-          </button>
-          
           <section>
             <div className="container">
               <CardTextSecondary
@@ -294,6 +290,7 @@ export default class Home extends Base {
         </OnDesktop>
         
         <OnMobileAndTablet>
+          <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
           <section>
             <div className="container">
               <MobileCardTextSecondary 
@@ -376,7 +373,7 @@ export default class Home extends Base {
           <section>
             <div className="container">
               <MobilePortfolioVideo
-                margin="71px auto 37px auto"
+                margin="0 auto 37px auto"
               />
             </div>
           </section>

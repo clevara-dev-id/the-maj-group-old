@@ -22,7 +22,7 @@ export class MobileCardSix extends Component {
     render() {
     
         return (
-            <Container style={this.props.containerStyle} className={this.props.className}>
+            <Container style={this.props.containerStyle} className={this.props.className} margin="0 auto">
                 {this.state.localStore && this.state.localStore.map((item, i) => (
                     <CardItem image={item.image} head={item.head} {...this.props} />
                 ))}

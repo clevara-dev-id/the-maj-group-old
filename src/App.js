@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './views/Home'
 
-
 class App extends Component {
   render() {
     return(

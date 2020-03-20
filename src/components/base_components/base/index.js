@@ -45,8 +45,11 @@ import {
  } from './NavbarComponent'
  import { HeadComponent } from './HeadComponent'
 //Import Carousel
-import CarousellPrimary from "./CarousellMaster"
-import CarousellSecondary from "./CarousellMasterSecondary"
+import CarousellPrimary from "./CarousellMaster";
+import CarousellSecondary from "./CarousellMasterSecondary";
+
+//Import Sliderbar
+import { SlidebarComponent } from './SlidebarComponent';
 
 import {Footer} from './footer/FooterComponent'
 
@@ -183,8 +186,7 @@ export {
     NavigationBar,
     CarousellPrimary,
     CarousellSecondary,
-    Footer,
-    HeadComponent,
-    device,
+    SlidebarComponent,
+    HeadComponent
 };
 

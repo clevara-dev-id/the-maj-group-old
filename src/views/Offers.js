@@ -1,7 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import Base from './Base'
+import { setHeadBackground } from '../redux/action/actionCreators'
 import { 
-    HeadComponent, 
     CardTextSecondary, 
     CarousellPrimary, 
     CardImage, 
@@ -18,13 +19,20 @@ import Poster from '../Assets/tmp/Portfolio.png'
 import LoremVideo from '../Assets/tmp/LoremVideo.mp4'
 
 
-export default class Offers extends Base {
+const mapDispatchToProps = dispatch => (
+    {
+        dispatchHeadBackground: args => (
+        dispatch(setHeadBackground(args))
+        )
+    }
+)
+
+class connectOffers extends Base {
     render() {
+        this.props.dispatchHeadBackground({image: HeadBackground, text: "Offers"})
         return (
             <div id="offers">
                 <OnDesktop>
-                    <HeadComponent bg={HeadBackground} text="Offers" />
-                    
                     <section>
                         <div className="container">
                             <CardTextSecondary
@@ -122,3 +130,6 @@ export default class Offers extends Base {
         )
     }
 }
+
+const Offers = connect(null, mapDispatchToProps)(connectOffers)
+export default Offers

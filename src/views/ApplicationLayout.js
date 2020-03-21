@@ -1,17 +1,25 @@
 import React from 'react'
-import { Footer } from '../components/base_components'
+import { connect } from 'react-redux'
 
 import { OnDesktop, OnMobileAndTablet } from '../constants/Breakpoint'
+import Base from './Base'
+import { Footer, HeadComponent, BreadcrumbHook } from '../components/base_components'
 import MobileFooter from '../components/base_components/MobileFooter/MobileFooter'
 
-import Base from './Base'
+const mapStateToProps = state => (
+    {
+        head_backgound: state.page.head_background,
+    }
+)
 
-export default class ApplicationLayout extends Base {
+class connectApplicationLayout extends Base {
     render() {
         return (
             <div>
                 <header>
                     {/* <NavigationBar /> */}
+                    <HeadComponent bg={this.props.head_backgound.image} text={this.props.head_backgound.text} />
+                    <BreadcrumbHook />
                 </header>
 
                 <div id="content">
@@ -42,3 +50,6 @@ export default class ApplicationLayout extends Base {
         )
     }
 }
+
+const ApplicationLayout = connect(mapStateToProps, null)(connectApplicationLayout) 
+export default ApplicationLayout

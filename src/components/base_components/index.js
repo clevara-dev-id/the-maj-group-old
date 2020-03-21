@@ -41,7 +41,7 @@ import {
 } from './Slider'
 
 import { PortfolioVideo, VideoPlayer } from './VIdeo/'
-
+import { BreadcrumbHook } from './Breadcrum'
 import { Title } from './Divider/Title'
 import { NavigationBar } from './Navbar'
 import { HeadComponent } from './HeadComponent'
@@ -53,13 +53,10 @@ import {
     MobileCardImageTopDown 
 } from './MobileCard'
 
-import { TitlePage } from './Titlepage/'
-
 import { ContentLoader } from './Loader'
 
 import { MobileSliderImageOverlap } from './MobileSlider'
 import { MobilePortfolioVideo } from './MobileVideo'
-
 import { Footer, FooterSecondary, SubscribeForm } from './Footer'
 
 
@@ -115,6 +112,6 @@ export {
     FooterSecondary,
     SubscribeForm,
 
-    TitlePage,
+    BreadcrumbHook,
 };
 

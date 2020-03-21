@@ -1,8 +1,10 @@
 import React from 'react'
+import Base from './Base'
+import { connect } from 'react-redux'
+import { setHeadBackground } from '../redux/action/actionCreators'
 
 // tmp img
 import HeadBackground from '../Assets/Image/About/Background.png'
-
 // dummy image
 import background from '../Assets/tmp/CardImage.png'
 import backgroundLarge from '../Assets/tmp/CardImageLarge.png'
@@ -13,9 +15,7 @@ import {
   CardImageLarge,
   CardSix,
   Title,
-  TitlePage,
   device,
-  HeadComponent,
 } from '../components/base_components'
 
 //CSS
@@ -23,21 +23,21 @@ import '../Assets/tmp/css/about.css'
 
 import { dataAboutPage } from '../services/dummyData'
 import { OnDesktop } from '../constants/Breakpoint'
-import Base from './Base'
 
-export default class Home extends Base {
-  render(){  
+const mapDispatchToProps = dispatch => (
+  {
+    dispatchHeadBackground: args => (
+      dispatch(setHeadBackground(args))
+    )
+  }
+)
+
+class connectAbout extends Base {
+  render(){
+    this.props.dispatchHeadBackground({image: HeadBackground, text: "About Us"})
     return(
       <div id="about">
         <OnDesktop>
-          <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
-
-          <section>
-              <div className="container">
-                  <TitlePage name="ABOUT" marginLeft="91px" />
-              </div>
-          </section>
-
           <section>
               <div className="container">
                   <div style={{marginTop : "38px"}}></div>
@@ -147,3 +147,6 @@ export default class Home extends Base {
     )
   }
 }
+
+const About = connect(null, mapDispatchToProps)(connectAbout)
+export default About

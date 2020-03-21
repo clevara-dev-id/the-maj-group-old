@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 // dummy image
 import background from '../Assets/tmp/CardImage.png'
@@ -37,13 +38,22 @@ import Base from './Base'
 // tmp img
 import HeadBackground from '../Assets/tmp/headBg.png'
 import { Link } from 'react-router-dom'
+import { setHeadBackground } from '../redux/action/actionCreators'
 
-export default class Home extends Base {
+const mapDispatchToProps = dispatch => (
+  {
+    dispatchHeadBackground: args => (
+      dispatch(setHeadBackground(args))
+    )
+  }
+)
+
+class connectHome extends Base {
   render(){
+    this.props.dispatchHeadBackground({image: HeadBackground, text: "An Epicurean Journey of the Ages"})
     return(
       <div id="home">
         <OnDesktop>
-          <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
           <section>
             <div className="container">
               <CardTextSecondary
@@ -515,3 +525,6 @@ export default class Home extends Base {
     )
   }
 }
+
+const Home = connect(null, mapDispatchToProps)(connectHome)
+export default Home

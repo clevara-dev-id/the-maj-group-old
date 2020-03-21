@@ -1,0 +1,4 @@
+export const ADD_TODO = 'ADD_TODO'
+
+// PAGE
+export const SET_HEAD_BACKGROUND = 'SET_HEAD_BACKGROUND'

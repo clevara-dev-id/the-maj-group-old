@@ -1,7 +1,7 @@
 import React from 'react'
 import Base from './Base'
 import { connect } from 'react-redux'
-import { setHeadBackground } from '../redux/action/actionCreators'
+import { setHeadBackground, setFooter } from '../redux/action/actionCreators'
 
 // tmp img
 import HeadBackground from '../Assets/Image/About/Background.png'
@@ -24,17 +24,20 @@ import '../Assets/tmp/css/about.css'
 import { dataAboutPage } from '../services/dummyData'
 import { OnDesktop } from '../constants/Breakpoint'
 
-const mapDispatchToProps = dispatch => (
-  {
-    dispatchHeadBackground: args => (
-      dispatch(setHeadBackground(args))
-    )
-  }
-)
+const mapDispatchToProps = dispatch => ({
+  dispatchHeadBackground: args => (
+    dispatch(setHeadBackground(args))
+  ),
+
+  dispatchFooter: args => (
+    dispatch(setFooter(args))
+  )
+})
 
 class connectAbout extends Base {
   render(){
     this.props.dispatchHeadBackground({image: HeadBackground, text: "About Us"})
+    this.props.dispatchFooter("primary")
     return(
       <div id="about">
         <OnDesktop>

@@ -1,10 +1,11 @@
-import { SET_HEAD_BACKGROUND } from "../action/actionTypes"
+import { SET_HEAD_BACKGROUND, SET_FOOTER } from "../action/actionTypes"
 
 const initalState = {
     head_background: {
         image: "",
         text: "",
     },
+    footer: "primary",
 }
 
 const pageReducers = (state = initalState, action) => {
@@ -13,6 +14,12 @@ const pageReducers = (state = initalState, action) => {
             return {
                 ...state,
                 head_background: action.payload
+            }
+        
+        case SET_FOOTER:
+            return {
+                ...state,
+                footer: action.payload
             }
         
         default:

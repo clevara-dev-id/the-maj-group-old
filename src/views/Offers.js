@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Base from './Base'
-import { setHeadBackground } from '../redux/action/actionCreators'
+import { setHeadBackground, setFooter } from '../redux/action/actionCreators'
 import { 
     CardTextSecondary, 
     CarousellPrimary, 
@@ -19,17 +19,20 @@ import Poster from '../Assets/tmp/Portfolio.png'
 import LoremVideo from '../Assets/tmp/LoremVideo.mp4'
 
 
-const mapDispatchToProps = dispatch => (
-    {
-        dispatchHeadBackground: args => (
+const mapDispatchToProps = dispatch => ({
+    dispatchHeadBackground: args => (
         dispatch(setHeadBackground(args))
-        )
-    }
-)
+    ),
+
+    dispatchFooter: args => (
+        dispatch(setFooter(args))
+    )
+})
 
 class connectOffers extends Base {
     render() {
         this.props.dispatchHeadBackground({image: HeadBackground, text: "Offers"})
+        this.props.dispatchFooter("secondary")
         return (
             <div id="offers">
                 <OnDesktop>
@@ -85,7 +88,7 @@ class connectOffers extends Base {
                                 buttonName="View More"
                                 btnClassName="float-right"
                                 background={background}
-                                margin="174px 0 0 0"
+                                containerMargin="174px 0 0 0"
                                 reverse
                             />
                         </div>
@@ -117,15 +120,6 @@ class connectOffers extends Base {
                         <rect x="80" y="40" rx="3" ry="3" width="250" height="10" />
                     </ContentLoader> */}
                 </OnDesktop>
-                <footer>
-                    <FooterSecondary
-                        validated={this.state.footer.validated}
-                        onSubmit={this._footer}
-                        titleRef={this.footreftitle}
-                        nameRef={this.footrefname}
-                        emailRef={this.footrefemail}
-                    />
-                </footer>
             </div>
         )
     }

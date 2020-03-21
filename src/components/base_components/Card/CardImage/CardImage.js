@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { Row, Col } from 'react-bootstrap'
 import { ButtonOutline } from '../../Button'
 
 export const CardImage = (props) => (
-  <Container containerPadding={props.containerPadding}>
+  <Container containerPadding={props.containerPadding} containerMargin={props.containerMargin}>
     <Content {...props}>
       <Row>
         {
@@ -34,7 +35,7 @@ export const CardImage = (props) => (
 
 const FirstCol = (props) => (
   <Col lg={props.colContentSize || 4} style={{...MarginContentStyle, ...props.contentStyle}}>
-    <Caps1 textAlign={props.textAlign}>{props.caps}</Caps1>
+    {props.caps? <Caps1 textAlign={props.textAlign}>{props.caps}</Caps1> : null }
     <Title textAlign={props.textAlign}>{props.title}</Title>
     <P textAlign={props.textAlign}>{props.text}</P>
     <ButtonOutline className={props.reverse?"float-left":"float-right"} link={props.link} buttonName={props.buttonName} />
@@ -50,6 +51,20 @@ const SecondCol = (props) => (
   </Col>
 )
 
+CardImage.propTypes = {
+  containerPadding: PropTypes.string,
+  caps: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  title: PropTypes.string,
+  text: PropTypes.string,
+  link: PropTypes.string,
+  buttonName: PropTypes.string,
+  btnClassName: PropTypes.string,
+  background: PropTypes.string,
+  margin: PropTypes.string,
+  margin: PropTypes.string,
+  reverse: PropTypes.bool,
+}
+
 const Caps1 = styled.h5(
   props => ({
     textAlign: props.textAlign,
@@ -62,7 +77,7 @@ const Caps1 = styled.h5(
 const Container = styled.div`
   width: 100%;
   padding: ${props => props.containerPadding || "175px 0px"};
-  margin: ${props => props.margin};
+  margin: ${props => props.containerMargin};
 `;
 
 const Content = styled.div`

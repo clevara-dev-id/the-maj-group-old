@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 export const CardText = (props) => (
     <>
@@ -23,6 +24,15 @@ export const CardTextSecondary = (props) => (
 
 CardTextSecondary.defaultProps = {
   caption: "Destination"
+}
+
+CardTextSecondary.propTypes = {
+  caption: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  title: PropTypes.string,
+  text: PropTypes.string,
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  margin: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  className: PropTypes.string,
 }
 
 const Container = styled.div(

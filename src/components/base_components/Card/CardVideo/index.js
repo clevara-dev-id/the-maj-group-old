@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
+import PropTypes from 'prop-types'
+
 import { ButtonOutline } from '../../Button'
 import 'video-react/dist/video-react.css'
 import { VideoPlayer } from '../../VIdeo'
@@ -25,7 +27,7 @@ export class CardVideo extends Component{
     
     render() {
         return (
-            <Container {...this.props}>
+            <Container containerPadding={this.props.containerPadding} containerMargin={this.props.containerMargin} border={this.props.border}>
                 {this.state.localStore.length && this.state.localStore.map((data, i) => (
                     <Content {...this.props} key={i}>
                         <Row>
@@ -96,6 +98,15 @@ const SecondCol = (props) => (
     </Col>
 )
 
+CardVideo.propTypes = {
+    containerPadding: PropTypes.string,
+    containerMargin: PropTypes.string,
+    store: PropTypes.array,
+    textAlign: PropTypes.string,
+    buttonName: PropTypes.string,
+    poster: PropTypes.string,   
+}
+
 const Caps1 = styled.h5(
     props => ({
         textAlign: props.textAlign,
@@ -107,8 +118,9 @@ const Caps1 = styled.h5(
 
 const Container = styled.div`
     width: 100%;
-    padding: ${props => props.containerPadding || "175px 0px"};
-    margin: ${props => props.margin};
+    padding: ${props => props.containerPadding};
+    margin: ${props => props.containerMargin};
+    border: ${props => props.border? "1px solid": null}
 `;
 
 const Content = styled.div`

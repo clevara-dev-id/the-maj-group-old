@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 export default class CardImageTopDown extends Component {
     constructor(props) {
@@ -35,7 +36,8 @@ export default class CardImageTopDown extends Component {
                                     style={{width: "350px", height: "400px", ...this.props.imageStyle}} 
                                     alt="card-img-top-down" 
                                 />
-                                <Button href={item.link} color="#C4964B" margin="48px auto" padding="10px 40px">View More</Button>
+                                
+                                {this.props.button? <Button href={item.link} color="#C4964B" margin="48px auto" padding="10px 40px"> {this.props.buttonName} </Button> : null}
                             </ContainerContent>
                         ) : (
                             <ContainerContent key={i} style={this.props.containerStyle}>
@@ -49,13 +51,25 @@ export default class CardImageTopDown extends Component {
                                     <H2>{item.head}</H2>
                                     <P width="350px">{item.desc}</P>
                                 </Group>
-                                <Button href={item.link} color="#C4964B" margin="48px auto" padding="10px 40px">View More</Button>
+                                {this.props.button? <Button href={item.link} color="#C4964B" margin="48px auto" padding="10px 40px"> {this.props.buttonName} </Button> : null}
+                                
                             </ContainerContent>
                         )
                     })}
             </Container>
         )
     }
+}
+
+CardImageTopDown.defaultProps = {
+    buttonName: "View More"
+}
+
+CardImageTopDown.propTypes = {
+    store: PropTypes.array,
+    margin: PropTypes.string,
+    button: PropTypes.bool,
+    buttonName: PropTypes.string,
 }
 
 const Container = styled.div(

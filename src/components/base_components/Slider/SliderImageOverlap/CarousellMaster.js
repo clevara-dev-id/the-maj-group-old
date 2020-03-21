@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import '../assets/css/SliderImageOverlap.css'
 
@@ -203,7 +204,7 @@ class CustomSlideRight extends Component {
   }
 }
 
-export default class CarousellPrimary extends Component {
+class CarousellPrimary extends Component {
   constructor(props){
     super(props);
 
@@ -292,6 +293,12 @@ export default class CarousellPrimary extends Component {
   }
 }
 
+CarousellPrimary.propTypes = {
+  store: PropTypes.array,
+  orientation: PropTypes.oneOfType([PropTypes.string, "left", "right"]),
+  margin: PropTypes.string,
+}
+
 const Container = styled.div(
   props => ({
     className: props.className,
@@ -299,3 +306,5 @@ const Container = styled.div(
     padding: props.padding,
   })
 )
+
+export default CarousellPrimary

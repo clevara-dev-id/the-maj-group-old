@@ -1,5 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { setHeadBackground, setFooter } from '../redux/action/actionCreators'
+import { OnDesktop, OnMobileAndTablet } from '../constants/Breakpoint'
+import Base from './Base'
 
 // dummy image
 import background from '../Assets/tmp/CardImage.png'
@@ -32,25 +36,24 @@ import MobileCardTextSecondary from '../components/base_components/MobileCard/Ca
 import { MobileTitle } from '../components/base_components/MobileDivider/Title'
 import MobileCardTextPrimary from '../components/base_components/MobileCard/CardText/MobileCardTextPrimary'
 import MobileCardSix from '../components/base_components/MobileCard/CardSix/CardSix'
-import { OnDesktop, OnMobileAndTablet } from '../constants/Breakpoint'
-import Base from './Base'
 
 // tmp img
 import HeadBackground from '../Assets/tmp/headBg.png'
-import { Link } from 'react-router-dom'
-import { setHeadBackground } from '../redux/action/actionCreators'
 
-const mapDispatchToProps = dispatch => (
-  {
-    dispatchHeadBackground: args => (
-      dispatch(setHeadBackground(args))
-    )
-  }
-)
+const mapDispatchToProps = dispatch => ({
+  dispatchHeadBackground: args => (
+    dispatch(setHeadBackground(args))
+  ),
+
+  dispatchFooter: args => (
+    dispatch(setFooter(args))
+  )
+})
 
 class connectHome extends Base {
   render(){
     this.props.dispatchHeadBackground({image: HeadBackground, text: "An Epicurean Journey of the Ages"})
+    this.props.dispatchFooter("primary")
     return(
       <div id="home">
         <OnDesktop>
@@ -96,6 +99,7 @@ class connectHome extends Base {
           <section>
             <div className="container">
               <CardImageTopDown
+                button
                 margin="124px 0px"
                 store={[
                   {
@@ -143,7 +147,7 @@ class connectHome extends Base {
                 buttonName="View More"
                 btnClassName="float-right"
                 background={background}
-                margin="174px 0 0 0"
+                containerMargin="174px 0 0 0"
                 textAlign="right"
               />
 

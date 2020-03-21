@@ -10,7 +10,10 @@ const BreadcrumbHook = props => {
                 <Navlink to="/">Home</Navlink>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
-                <Navlink to="/about" activeStyle={{ color: "#C4964B" }}> About</Navlink>
+                <Navlink to="/about" activeStyle={{ color: "#C4964B" }}>About</Navlink>
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>
+                <Navlink to="/occasions" activeStyle={{ color: "#C4964B" }}>Occasions</Navlink>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
                 <Navlink to="/offers" activeStyle={{ color: "#C4964B" }}>Offers</Navlink>

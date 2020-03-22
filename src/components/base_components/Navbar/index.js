@@ -15,10 +15,12 @@ export class NavigationBar extends Component {
         this.state = {
             isScroll:false
         }
-        this.handleScroll = this.handleScroll.bind(this);
+        
     }
 
     componentWillMount(){
+        
+        window.addEventListener('load',this.firstload);
         window.addEventListener('scroll', this.handleScroll);
 
     }
@@ -26,14 +28,11 @@ export class NavigationBar extends Component {
         window.addEventListener('scroll', this.handleScroll);
     }
 
+    firstload = () => {
+        $("#buttonsearch").hide();
+        $("#buttonNav").hide();
+    }
     handleScroll = () => {
-        // let lastScroll = 100;
-        // const currentScroll = window.scrollY;
-        // if(currentScroll > lastScroll){
-        //     this.setState({isScroll:true});
-        // }else if(this.state.isScroll){
-        //     this.setState({isScroll:false});
-        // }
         let navbar = document.getElementById("navbar");
         let sticky = navbar.offsetTop;
         if(window.pageYOffset >= sticky)
@@ -45,8 +44,10 @@ export class NavigationBar extends Component {
             $("#buttonsearch").show();
             $("#buttonNav").show();
             $("#navbartop").hide();
-            // document.getElementById("#destination").style.color = "#C4964B";
-            $(".addColor").css({"color" : "#C4964B" });
+            $(".addColor").css({"color" : "#C4964B" });  
+            $("#buttonsearch > a").css({"color" : "#C4964B" });
+            $("#buttonNav > a").css({"color" : "#C4964B" });
+            $("#buttonNav > .booking").css({"border": "2px solid #C4964B" });
           } else {
             navbar.classList.remove("sticky");
             $("#buttonsearch").hide();
@@ -88,19 +89,19 @@ export class NavigationBar extends Component {
                                     </div>
                                 </Nav.Item>
                                 <Nav.Item > 
-                                    <ButtonLink className={"addColor"} link="#destination" buttonName="destination" />
+                                    <ButtonLink className={"addColor"} link="#" buttonName="destination" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink className={"addColor"} link="#portfolio" buttonName="portfolio" />
+                                    <ButtonLink className={"addColor"} link="#" buttonName="portfolio" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink className={"addColor"}  link="#occasions" buttonName="occasions" />
+                                    <ButtonLink className={"addColor"}  link="#" buttonName="occasions" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink className={"addColor"}  link="#offers" buttonName="offers" />
+                                    <ButtonLink className={"addColor"}  link="#" buttonName="offers" />
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <ButtonLink className={"addColor"} link="#about" buttonName="about" />
+                                    <ButtonLink className={"addColor"} link="#" buttonName="about" />
                                 </Nav.Item>
                                 
                                 <Nav.Item>

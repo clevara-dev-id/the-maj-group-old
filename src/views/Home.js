@@ -111,7 +111,6 @@ export default class Home extends Component {
                 margin="92px auto 80px auto"
                 width="920px"
               />
-              
               <CarousellPrimary
                 margin="80px auto 96px auto"
                 store={[
@@ -430,7 +429,7 @@ export default class Home extends Component {
                 ]}
               />
           </OnMobileAndTablet>
-        </section> */}
+        </section> */} */}
 
         {/* <section>
           <OnDesktop>
@@ -474,16 +473,10 @@ export default class Home extends Component {
               ]}
             />
           </OnMobileAndTablet>
-        </section> */}
+        </section>
         
-        {/* <OnDesktop>
-          <Title 
-            text="Occasions & Offers"
-            image="http://timpietrusky.com/cdn/army.png"
-          />
-        </OnDesktop> */}
 
-        {/* <section>
+        <section>
           <OnMobileAndTablet>
             <MobileCardImageLarge
               store={[
@@ -506,7 +499,7 @@ export default class Home extends Component {
               ]}
             />
           </OnMobileAndTablet>
-        </section> */}
+        </section>
 
         {/* <Title 
           text="Occasions & Offers"

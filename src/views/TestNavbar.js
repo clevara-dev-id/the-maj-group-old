@@ -116,54 +116,6 @@ export default class Home extends Component {
             </div>
         </section>
 
-        <section>
-            <div className="container" id="imageTopDown">
-              <CardImageTopDown
-                margin="124px 0px"
-                store={dataOccasionsPage[0].cardImageTopDown}
-              />
-            </div>
-          </section>
-
-          <section>
-            <div className="container">
-              <CarousellPrimary
-                margin="80px auto 96px auto"
-                store={dataOccasionsPage[0].carousel}
-                orientation="left"
-                arrowColor ="#C4964B"
-                dotColor ="#C4964B"
-                center ="true"
-              />
-            </div>
-          </section>
-
-          <section>
-            <div className="container" id="cardImageOccatons">
-              <CardImage
-                caps="Destination"
-                title={dataOccasionsPage[0].meetings.title}
-                text={dataOccasionsPage[0].meetings.text}
-                link="#linkTo"
-                buttonName="View More"
-                background={dataOccasionsPage[0].meetings.image}
-                reverse
-              />
-            </div>
-          </section>
-
-          <section>
-            <div className="container" id="cardVideoOccations">
-                <CardVideo
-                    containerPadding="100px auto 142px auto"
-                    store={dataOccasionsPage[0].weddings.video} 
-                    textAlign="left"
-                    buttonName="View More"
-                    poster={dataOccasionsPage[0].weddings.poster}
-                />
-            </div>
-          </section>
-
         <footer>
             <FooterSecondary
                 validated={this.state.footer.validated}

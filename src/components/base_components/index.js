@@ -54,6 +54,7 @@ import {
 
 import { TitlePage } from './Titlepage/'
 
+import { MobileNavbar } from './MobileNavbar'
 import { MobileSliderImageOverlap } from './MobileSlider'
 import { MobilePortfolioVideo } from './MobileVideo'
 
@@ -104,6 +105,7 @@ export {
     MobileCardImageTopDown,
     MobileSliderImageOverlap,
     MobilePortfolioVideo,
+    MobileNavbar,
 
     Footer,
     SubscribeForm,

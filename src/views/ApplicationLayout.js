@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
-import { NavigationBar, Footer, HeadComponent } from '../components/base_components'
+import 
+{   
+    NavigationBar, 
+    Footer, 
+    HeadComponent,
+    MobileNavbar
+
+} from '../components/base_components'
 
 import { OnDesktop, OnMobileAndTablet } from '../constants/Breakpoint'
 import MobileFooter from '../components/base_components/MobileFooter/MobileFooter'
@@ -14,6 +21,31 @@ export default class ApplicationLayout extends Base {
             <div>
                 <header>
                     {/* <NavigationBar /> */}
+                    <OnMobileAndTablet>
+                        <MobileNavbar store={[{
+                            "name" :"DESTINATION",
+                            "link" : "/destination",
+                            },{
+                                "name" : "FORTOFOLIO",
+                                "link" : "/fortofolio"
+                            }
+                            ,{
+                                "name" : "OCCASIONS",
+                                "link" : "/occasions"
+                            }
+                            ,{
+                                "name" : "OFFERS",
+                                "link" : "/offers"
+                            }
+                            ,{
+                                "name" : "ABOUT US",
+                                "link" : "/about"
+                            }
+                            ,{
+                                "name" : "BOOK",
+                                "link" : "/book"
+                        }]} />
+                    </OnMobileAndTablet>
                     <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
                 </header>
 

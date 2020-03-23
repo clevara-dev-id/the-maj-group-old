@@ -1,0 +1,222 @@
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 22px;
+    text-align:left;
+  }
+  
+  .sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+  
+  }
+  
+  .sidenav a:hover{
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #C4964B;
+    padding-top: 41px;
+  }
+.buttonHum {
+  position: inherit;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  text-align:left;
+  margin-top: 72px;
+  margin-left: 15px;
+
+}
+.imageHum {
+  position: inherit;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  text-align:center;
+  margin-top: -40px;
+}
+.labelHum {
+  position: inherit;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  text-align:right;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  color : #C4964B;
+  margin-top: -42px;
+  margin-right: 15px;
+}
+#main{
+
+  position: fixed;
+  z-index: 9;
+  transition: 0.5s;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  transition: .7s all;
+  
+}
+
+@media screen and (max-width: 960px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {
+      font-size: 18px;
+  }
+  #main{
+    width: 960px;
+    height: 144px;
+    position: fixed;
+    z-index: 9;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 854px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {
+      font-size: 18px;
+  }
+  #main{
+    width: 854px;
+    height: 144px;
+    position: fixed;
+    z-index: 9;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {
+      font-size: 18px;
+  }
+  #main{
+    width: 800px;
+    height: 144px;
+    position: fixed;
+    z-index: 9;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {
+      font-size: 18px;
+  }
+  #main{
+    width: 768px;
+    height: 144px;
+    position: fixed;
+    z-index: 9;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 640px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {
+      font-size: 18px;
+  }
+  #main{
+    width: 640px;
+    height: 144px;
+    position: fixed;
+    z-index: 9;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {
+      font-size: 18px;
+  }
+  #main{
+    width: 480px;
+    height: 144px;
+    position: fixed;
+    z-index: 9;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 414px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {
+      font-size: 18px;
+  }
+  #main{
+    width: 414px;
+    height: 144px;
+    position: fixed;
+    z-index: 9;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {
+      font-size: 18px;
+  }
+  #main{
+    width: 375px;
+    height: 144px;
+    position: fixed;
+    z-index: 9;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {
+      font-size: 18px;
+  }
+  #main{
+    width: 360px;
+    height: 144px;
+    position: fixed;
+    z-index: 9;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {
+      font-size: 18px;
+  }
+  #main{
+    width: 320px;
+    height: 144px;
+    position: fixed;
+    z-index: 9;
+    transition: 0.5s;
+  }
+}

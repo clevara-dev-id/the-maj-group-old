@@ -4,6 +4,7 @@ import LoremVideo from '../../../../Assets/tmp/LoremVideo.mp4'
 import Poster from '../../../../Assets/tmp/Portfolio.png'
 import styled from 'styled-components'
 import 'video-react/dist/video-react.css'
+import VideoPlayer from '../base'
 
 export const PortfolioVideo = props => {
     return (
@@ -11,19 +12,13 @@ export const PortfolioVideo = props => {
             <Caps1>Portfolio</Caps1>
             <H1>Phinisy Cruise</H1>
 
-            <ContainerVideo id="portfolio-video" margin="32px auto 0 auto">
-                <Player 
-                    aspectRatio="auto"
-                    fluid={true}
-                    height={500}
-                    playInline
-                    poster={Poster}
-                    src={LoremVideo}
-                >
-                    <BigPlayButton position="center" />
-                    <LoadingSpinner />
-                </Player>
-            </ContainerVideo>
+            <VideoPlayer
+                id="portfolio-video" 
+                margin="32px auto 0 auto"
+                height={500}
+                poster={Poster}
+                src={LoremVideo}
+            />
         </Container>
     )
 }
@@ -57,11 +52,5 @@ const H1 = styled.h1(
         color: "#000000",
         margin: props.margin,
         padding: props.padding,
-    })
-)
-
-const ContainerVideo = styled.div(
-    props => ({
-        margin: props.margin,
     })
 )

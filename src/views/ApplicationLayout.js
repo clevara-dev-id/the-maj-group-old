@@ -22,29 +22,33 @@ export default class ApplicationLayout extends Base {
                 <header>
                     {/* <NavigationBar /> */}
                     <OnMobileAndTablet>
-                        <MobileNavbar store={[{
-                            "name" :"DESTINATION",
-                            "link" : "/destination",
-                            },{
-                                "name" : "FORTOFOLIO",
-                                "link" : "/fortofolio"
-                            }
-                            ,{
-                                "name" : "OCCASIONS",
-                                "link" : "/occasions"
-                            }
-                            ,{
-                                "name" : "OFFERS",
-                                "link" : "/offers"
-                            }
-                            ,{
-                                "name" : "ABOUT US",
-                                "link" : "/about"
-                            }
-                            ,{
-                                "name" : "BOOK",
-                                "link" : "/book"
-                        }]} />
+                        <MobileNavbar 
+                            store={[{
+                                "name" :"DESTINATION",
+                                "link" : "/destination",
+                                },{
+                                    "name" : "FORTOFOLIO",
+                                    "link" : "/fortofolio"
+                                }
+                                ,{
+                                    "name" : "OCCASIONS",
+                                    "link" : "/occasions"
+                                }
+                                ,{
+                                    "name" : "OFFERS",
+                                    "link" : "/offers"
+                                }
+                                ,{
+                                    "name" : "ABOUT US",
+                                    "link" : "/about"
+                                }
+                                ,{
+                                    "name" : "BOOK",
+                                    "link" : "/book"
+                            }]}
+                            booklink="/booking"
+                        
+                        />
                     </OnMobileAndTablet>
                     <HeadComponent bg={HeadBackground} text="An Epicurean Journey of the Ages" />
                 </header>

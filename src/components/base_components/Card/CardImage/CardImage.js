@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap'
 import { ButtonOutline } from '../../Button'
 
 export const CardImage = (props) => (
-  <Container {...props}>
+  <Container containerPadding={props.containerPadding}>
     <Content {...props}>
       <Row>
         {

@@ -4,8 +4,11 @@ import React, { Component } from 'react'
 import styled from 'styled-components';
 import '../css/NavbarMobile.css';
 import logo from '../../../Assets/Image/TheMajGroupLogo.svg';
+import logoWhite from '../../../Assets/Image/TheMajWhite.svg'
 import xcross from '../../../Assets/Image/close.svg';
 import humberger from '../../../Assets/Image/humberger.svg'
+import humWhite from '../../../Assets/Image/TheMajHumWhite.svg'
+
 
 import LogoImg from '../../../Assets/logo.svg'
 import { Navbar, Nav } from 'react-bootstrap'
@@ -18,22 +21,45 @@ export class MobileNavbar extends Component {
         window.addEventListener('load', this.handleScroll);
         window.addEventListener('scroll', this.handleScroll);
     }
+    // checkscreen = ()=>{
+    //     var width = $(window).width(); 
+    //     var height = $(window).height(); 
+
+    //     if ((width <= 960  ) ) {
+    //         return 1;
+    //     }
+    //     else {
+    //         return 0;
+    //     }
+    // }
     handleScroll = () => {
         let navbar = document.getElementById("main");
-        let sticky = navbar.offsetTop;
+        // let sticky = navbar.offsetTop;
+        if(navbar===null)
+        {
+            return;
+        }
         if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
             navbar.classList.add("sticky");
+            $('#buttonHumImg').attr('src',humberger);
+            $('#logoHumImg').attr('src',logo);
+            $('#labelHumColor').css({"color" : "#C4964B" });
         } else {
             navbar.classList.remove("sticky");
+            $('#buttonHumImg').attr('src',humWhite);
+            $('#logoHumImg').attr('src',logoWhite);
+            $('#labelHumColor').css({"color" : "#ffffff" });
         }
     }
+
     openNav = () =>{
         if (
             document.getElementById("mySidenav") &&
             document.getElementById("main")
           ) {
             document.getElementById("mySidenav").style.width = "100%";
-            document.getElementById("main").style.marginLeft = "100%";
+            document.getElementById("main").style.marginLeft = "100%";    
+
           }
     }
     closeNav = () =>{
@@ -88,16 +114,18 @@ export class MobileNavbar extends Component {
                             <span
                                 styles={{ fontSize: "30", cursor: "pointer" }}
                                 onClick={this.openNav}>
-                                <img src={humberger} width="22px" height="18.9px" />
+                                <img src={humWhite} width="22px" height="18.9px" id="buttonHumImg"/>
                             </span>
                         </div>
                     </div>
                     <div>
-                        <div className="imageHum"><img src={logo} width="71.4px" height="63px" /></div>
+                        <div className="imageHum">
+                            <img src={logoWhite} width="71.4px" height="63px" id="logoHumImg" />
+                        </div>
                     </div>
                     <div>
                         <div className="labelHum">
-                            <BookButton href={this.props.booklink}>BOOK</BookButton>
+                            <BookButton href={this.props.booklink} id="labelHumColor">BOOK</BookButton>
                         </div>
                     </div>
                 </Container>
@@ -176,7 +204,8 @@ const BookButton = styled.a`
     color : #C4964B;
     &:hover{
         text-decoration:none;
-        color : #C4964B;    
+        color : #C4964B;  
+        cursor: pointer;  
     }
 `;
 

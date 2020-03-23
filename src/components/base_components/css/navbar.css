@@ -3,7 +3,7 @@
     transition: 1s all;
 }
 .bg-white{
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(255, 255, 255);
     transition: 1s all;
 }
 .hide{
@@ -24,7 +24,6 @@
     transition: 1s all;
 }
 
-
 .sticky {
     position: fixed;
     top: 0;
@@ -38,4 +37,104 @@
     justify-content: center!important; */
     padding-top: 0px;
     
+}
+
+#buttonNav > .booking {
+    width: 135px;
+}
+
+#buttonNav > .booking:hover {
+    color: #fff !important;
+}
+
+#buttonNav{
+    margin-top: -10px;
+    /* margin-top: -30px;
+    margin-right: 63px; */
+    
+}
+
+#buttonsearch{
+    padding-right: 85px;
+    position: relative;
+}
+
+#buttonsearch > a{
+    color: transparent;
+}
+
+#buttonNav > a{
+    color: transparent;
+    border: 2px solid transparent;
+}
+@media only screen and (max-width: 1440px) {
+    #buttonsearch {
+        padding-right: 100px;
+        position: relative;
+        padding-left: 20px;
+    }
+    #buttonNav{
+        padding-left: 46px;         
+    }
+    
+}
+
+@media only screen and (max-width: 1366px) {
+    #buttonsearch {
+        padding-right: 100px;
+        position: relative;
+        padding-left: 20px;
+    }
+    #buttonNav{
+        padding-left: 39px;         
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    #buttonsearch {
+        padding-right: 50px;
+        position: relative;
+        padding-left: 10px;
+    }
+    #buttonNav{
+        padding-left: 20px;         
+    }
+}
+
+@media only screen and (max-width: 1152px) {
+    .sticky {
+        padding-top: 0px;
+    }
+    .sticky #buttonsearch {
+        padding-right: 45px;
+        position: relative;
+        padding-left: 10px;
+    }
+    .sticky #buttonNav{
+        padding-left: 25px;         
+    }
+
+    .sticky .justify-content-center > .nav-item > a {
+        padding: 11px 25px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .sticky {
+        padding-top: 0px;
+    }
+    .sticky #buttonsearch {
+        padding-right:30px;
+        position: relative;
+        padding-left: 0px;
+    }
+    .sticky #buttonNav{
+        padding-left: 10px;         
+    }
+
+    .sticky .justify-content-center > .nav-item > a {
+        padding: 11px 15px;
+    }
+
 }

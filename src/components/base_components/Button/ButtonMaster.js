@@ -322,9 +322,9 @@ export class ButtonOutline extends Component {
             width:100%;
             height:100%;
             &:hover {
-                background-color: #232323;
+                background-color: ${this.state.color};
                 color: #fff;
-                border: 2px solid #232323;
+                border: 2px solid ${this.state.color};
                 cursor: pointer;
                 text-decoration:none;
             }

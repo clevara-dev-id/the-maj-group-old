@@ -30,6 +30,7 @@ import {
     CardItem,
     CardText,
     CardTextSecondary,
+    CardVideo,
 } from './Card/'
 
 import {
@@ -39,7 +40,7 @@ import {
     SliderCardImageTopDown,
 } from './Slider'
 
-import { PortfolioVideo } from './VIdeo/Portfolio'
+import { PortfolioVideo, VideoPlayer } from './VIdeo/'
 
 import { Title } from './Divider/Title'
 import { NavigationBar } from './Navbar'
@@ -58,7 +59,7 @@ import { MobileNavbar } from './MobileNavbar'
 import { MobileSliderImageOverlap } from './MobileSlider'
 import { MobilePortfolioVideo } from './MobileVideo'
 
-import { Footer, SubscribeForm } from './Footer'
+import { Footer, FooterSecondary, SubscribeForm } from './Footer'
 
 
 export {
@@ -87,12 +88,14 @@ export {
     CardItem,
     CardText,
     CardTextSecondary,
+    CardVideo,
     
     CarousellPrimary,
     CarousellSecondary,
     SliderCardSix,
     SliderCardImageTopDown,
 
+    VideoPlayer,
     PortfolioVideo,
 
     Title,
@@ -108,6 +111,7 @@ export {
     MobileNavbar,
 
     Footer,
+    FooterSecondary,
     SubscribeForm,
 
     TitlePage,

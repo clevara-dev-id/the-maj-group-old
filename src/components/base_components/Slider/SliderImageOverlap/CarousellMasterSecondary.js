@@ -1,4 +1,4 @@
-import React, { Component, Image, Stylesheet } from "react";
+import React, { Component } from "react";
 import Slider from "react-slick";
 import styled from 'styled-components';
 
@@ -103,7 +103,7 @@ class CustomSlide extends Component {
     const { index, ...props } = this.props;
     return (
       <div {...props}>
-        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="1095px" height="450px" /></Card>
+        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="1095px" height="450px" alt="carousel-img-secondary" /></Card>
         <Card2>
             <Mydiv>
               <HeaderTitle><h2>{index.name}</h2></HeaderTitle>
@@ -140,15 +140,14 @@ class CustomSlideBottom extends Component {
         box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.03);
         border-radius: 2px;
         `
-    const Card3 = styled.div`
-        z-index: 4;
-        width: 1095px;
-        height: 667px;
-        margin-top: -35%;
-        margin-left: 0%;
-        background-color: red;
-
-        `;
+    // const Card3 = styled.div`
+    //     z-index: 4;
+    //     width: 1095px;
+    //     height: 667px;
+    //     margin-top: -35%;
+    //     margin-left: 0%;
+    //     background-color: red;
+    //     `;
     const Mydiv = styled.div`
         padding: 47px 35px 46.6px 35px;
     `;
@@ -190,7 +189,7 @@ class CustomSlideBottom extends Component {
     const { index, ...props } = this.props;
     return (
       <div {...props}>
-        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="1095px" height="450px" /></Card>
+        <Card><img src={`${process.env.PUBLIC_URL}${index.source}`} width="1095px" height="450px" alt="carousel-img-secondary" /></Card>
         <Card2>
             <Mydiv>
               <HeaderTitle><h2>{index.name}</h2></HeaderTitle>

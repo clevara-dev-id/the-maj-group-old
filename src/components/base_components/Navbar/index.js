@@ -7,7 +7,7 @@ import LogoImg from '../../../Assets/logo.svg'
 import { Navbar, Nav } from 'react-bootstrap'
 
 import '../css/navbar.css'
-
+import '../../../../node_modules/font-awesome/css/font-awesome.min.css'
 
 export class NavigationBar extends Component {
     constructor(props){
@@ -45,7 +45,9 @@ export class NavigationBar extends Component {
             $("#buttonNav").show();
             $("#navbartop").hide();
             $(".addColor").css({"color" : "#C4964B" });  
-            $("#buttonsearch > a").css({"color" : "#C4964B" });
+            $("#buttonsearch > div > i").css({"color" : "#C4964B" });
+            $("#buttonsearch > div > input").css({"color" : "#C4964B" });
+            $("#buttonsearch > div > input").append('<style>#buttonsearch > div > input::placeholder{color:#C4964B}</style>')
             $("#buttonNav > a").css({"color" : "#C4964B" });
             $("#buttonNav > .booking").css({"border": "2px solid #C4964B" });
           } else {
@@ -54,6 +56,7 @@ export class NavigationBar extends Component {
             $("#buttonNav").hide();
             $("#navbartop").show();
             $(".addColor").css({"color" : "#ffffff" });
+            $("#buttonsearch > div > input").append('<style>#buttonsearch > div > input::placeholder{color:#ffffff}</style>')
           }
     }
 
@@ -65,8 +68,12 @@ export class NavigationBar extends Component {
                         className={"show"} id="navbartop"
                     >
                         <Navbar>
-                            <Nav className="justify-content-start">
-                                <ButtonSearch className="" link="#search" buttonName="Search" />
+                            <Nav className="justify-content-start" id="searchbutton">
+                                {/* <ButtonSearch className="" link="#search" buttonName="Search" /> */}
+                                    <div>
+                                        <i className="fa fa-search"></i>
+                                        <Input type="text" placeholder="SEARCH" onChange={(e)=>{console.log(e.target.value)}} />
+                                    </div>
                                 <div style={{width:"120px"}}></div>
                             </Nav>
                             <Navbar.Brand className="mx-auto" href="/"><Img src={LogoImg} alt="Logo The Maj Group" /></Navbar.Brand>
@@ -85,7 +92,11 @@ export class NavigationBar extends Component {
                             <Nav className="justify-content-center" >
                                 <Nav.Item >
                                     <div id="buttonsearch">
-                                        <ButtonSearch className={"addColor"} link="#search" buttonName="Search" />
+                                        {/* <ButtonSearch className={"addColor"} link="#search" buttonName="Search" /> */}
+                                        <div>
+                                            <i className="fa fa-search"></i>
+                                            <Input type="text" className="inputSearch" placeholder="SEARCH" onChange={(e)=>{console.log(e.target.value)}} />
+                                        </div>
                                     </div>
                                 </Nav.Item>
                                 <Nav.Item > 
@@ -155,4 +166,26 @@ const NavBottomContainer = styled.div`
 `;
 const Img = styled.img`
     width:100px;
+`;
+
+const Input = styled.input`
+    font-family: "Ideal Sans N";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    padding : 10px 0px;
+    padding-left: 0px;
+    margin-left: 25.5px;
+    &:hover{
+        border-bottom: 1px solid #ffffff;
+    },&::placeholder {
+        color: #ffffff;
+        opacity: 1; /* Firefox */
+        letter-spacing: 1px;
+    }
 `;

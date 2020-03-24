@@ -7,6 +7,7 @@ import Occasions from './views/Occasions'
 import Offers from './views/Offers'
 import Navbar from './views/TestNavbar'
 
+
 const BaseRoute = () => {
     return (
         <div>
@@ -15,6 +16,7 @@ const BaseRoute = () => {
             <Route exact path="/occasions" component={Occasions} />
             <Route exact path="/offers" component={Offers} />
             <Route exact path="/navbar" component={Navbar} />
+
         </div>
     )
 }

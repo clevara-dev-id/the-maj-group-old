@@ -57,21 +57,41 @@
 #buttonsearch{
     padding-right: 85px;
     position: relative;
-}
-
-#buttonsearch > a{
-    color: transparent;
+    margin-top: -10px;
 }
 
 #buttonNav > a{
     color: transparent;
     border: 2px solid transparent;
 }
-@media only screen and (max-width: 1440px) {
+
+#searchbutton > div > i {
+    color: #ffffff;
+    font-size: 24px;
+    font-style: normal;
+}
+
+#buttonsearch > div > i {
+    color: transparent;
+    font-size: 18px;
+    font-style: normal;
+}
+
+#buttonsearch > div > input {
+    color:  #ffffff;
+}
+#buttonsearch > div > input:hover {
+    border-bottom: 1px solid #C4964B;
+}
+#buttonsearch > div > input::placeholder {
+    color: transparent;
+}
+
+@media screen and (max-width: 1920px) {
     #buttonsearch {
-        padding-right: 100px;
+        padding-right: 0px;
         position: relative;
-        padding-left: 20px;
+        padding-left: px;
     }
     #buttonNav{
         padding-left: 46px;         
@@ -79,53 +99,66 @@
     
 }
 
-@media only screen and (max-width: 1366px) {
+@media screen and (max-width: 1440px) {
     #buttonsearch {
-        padding-right: 100px;
+        padding-right: 0px;
+        position: relative;
+        padding-left: 0px;
+    }
+    #buttonNav{
+        padding-left: 46px;         
+    }
+    
+}
+
+@media screen and (max-width: 1366px) {
+    #buttonsearch {
+        padding-right: 0px;
         position: relative;
         padding-left: 20px;
     }
     #buttonNav{
-        padding-left: 39px;         
+        padding-left: 25px;         
     }
 }
 
-@media only screen and (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
     #buttonsearch {
-        padding-right: 50px;
+        padding-right: 0px;
         position: relative;
-        padding-left: 10px;
+        padding-left: 0px;
     }
     #buttonNav{
-        padding-left: 20px;         
+        padding-left: 0px;         
+    }
+    #buttonsearch > div > input {
+        color: #C4964B;
+        width: 100px;
     }
 }
 
-@media only screen and (max-width: 1152px) {
-    .sticky {
-        padding-top: 0px;
-    }
+@media screen and (max-width: 1152px) {
     .sticky #buttonsearch {
-        padding-right: 45px;
+        padding-right: 0px;
         position: relative;
         padding-left: 10px;
     }
     .sticky #buttonNav{
-        padding-left: 25px;         
+        padding-left: 20px;         
     }
 
     .sticky .justify-content-center > .nav-item > a {
         padding: 11px 25px;
     }
-
+    #buttonsearch > div > input {
+        color: #C4964B;
+        width: 100px;
+    }
 }
 
-@media only screen and (max-width: 1024px) {
-    .sticky {
-        padding-top: 0px;
-    }
+@media screen and (max-width: 1024px) {
     .sticky #buttonsearch {
-        padding-right:30px;
+        padding-right:0px;
         position: relative;
         padding-left: 0px;
     }
